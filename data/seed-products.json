@@ -1,0 +1,135 @@
+[
+  {
+    "name": "Studio Oversized Tee",
+    "price": 48,
+    "description": "A heavyweight cotton T-shirt with a relaxed silhouette, dropped shoulders, and a washed finish built for everyday rotation.",
+    "category": "T-Shirts",
+    "images": [
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Bone", "Graphite", "Olive"],
+    "tags": {
+      "bodyType": ["Slim", "Athletic", "Regular"],
+      "skinTone": ["Fair", "Light", "Medium", "Olive"],
+      "style": ["Minimal", "Streetwear", "Layering"]
+    },
+    "featured": true
+  },
+  {
+    "name": "Selvedge Straight Jeans",
+    "price": 118,
+    "description": "Clean straight-leg denim with subtle fading, structured drape, and a premium selvedge finish that wears in beautifully.",
+    "category": "Jeans",
+    "images": [
+      "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Raw Indigo", "Charcoal"],
+    "tags": {
+      "bodyType": ["Athletic", "Regular", "Heavy", "Plus Size"],
+      "skinTone": ["Light", "Medium", "Olive", "Dark"],
+      "style": ["Tailored", "Minimal", "Everyday"]
+    },
+    "featured": true
+  },
+  {
+    "name": "Signature Pullover Hoodie",
+    "price": 96,
+    "description": "Brushed fleece interior, boxy fit, and tonal embroidery combine for a hoodie that feels refined without losing comfort.",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Stone", "Forest", "Midnight"],
+    "tags": {
+      "bodyType": ["Athletic", "Regular", "Heavy", "Plus Size"],
+      "skinTone": ["Fair", "Light", "Medium", "Dark"],
+      "style": ["Streetwear", "Relaxed", "Layering"]
+    },
+    "featured": true
+  },
+  {
+    "name": "Modern Utility Jacket",
+    "price": 154,
+    "description": "Lightweight layering jacket with a structured collar, hidden placket, and minimalist utility pockets for transitional weather.",
+    "category": "Outerwear",
+    "images": [
+      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Sand", "Black"],
+    "tags": {
+      "bodyType": ["Slim", "Athletic", "Regular"],
+      "skinTone": ["Light", "Medium", "Olive", "Dark"],
+      "style": ["Outerwear", "Minimal", "Structured"]
+    },
+    "featured": false
+  },
+  {
+    "name": "Tailored Pleated Trousers",
+    "price": 132,
+    "description": "Relaxed tailored trousers with front pleats and a fluid drape designed to move from daywear to evening styling.",
+    "category": "Bottoms",
+    "images": [
+      "https://images.unsplash.com/photo-1506629905607-8f0b66e06f27?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Taupe", "Black"],
+    "tags": {
+      "bodyType": ["Slim", "Athletic", "Regular", "Heavy"],
+      "skinTone": ["Fair", "Light", "Medium", "Olive", "Dark"],
+      "style": ["Tailored", "Evening", "Minimal"]
+    },
+    "featured": false
+  },
+  {
+    "name": "Essential Rib Tank",
+    "price": 34,
+    "description": "A fitted ribbed tank cut from soft stretch cotton with clean binding and a close, flattering shape.",
+    "category": "Tops",
+    "images": [
+      "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Ivory", "Espresso", "Black"],
+    "tags": {
+      "bodyType": ["Slim", "Athletic", "Regular"],
+      "skinTone": ["Fair", "Light", "Medium", "Olive"],
+      "style": ["Basics", "Layering", "Minimal"]
+    },
+    "featured": false
+  },
+  {
+    "_id": "demo-style-ai-001",
+    "name": "Classic Crewneck Sweatshirt",
+    "price": 82,
+    "description": "A mid-weight brushed cotton crewneck with a clean dropped shoulder fit and ribbed cuffs — the kind of piece you reach for without thinking.",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1598522325074-042db73aa4e6?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Stone", "Midnight", "Olive"],
+    "tags": {
+      "bodyType": ["Slim", "Athletic", "Regular", "Heavy", "Plus Size"],
+      "skinTone": ["Fair", "Light", "Medium", "Olive", "Dark"],
+      "style": ["Minimal", "Relaxed", "Streetwear", "Layering"]
+    },
+    "featured": true
+  }
+]
