@@ -1,0 +1,11 @@
+accelerate
+diffusers
+invisible_watermark
+torch
+transformers
+xformers
+opencv-python
+requests
+audioop-lts
+pydub
+huggingface-hub==0.25.1
