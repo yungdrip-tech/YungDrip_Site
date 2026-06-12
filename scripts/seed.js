@@ -8,6 +8,22 @@ loadEnvConfig(process.cwd());
 const MONGODB_URI = process.env.MONGODB_URI;
 const MONGODB_DB_NAME = process.env.MONGODB_DB_NAME;
 
+function normalizeSeedProducts(items) {
+  return items.map((item) => {
+    if (!item || typeof item !== "object" || Array.isArray(item)) {
+      return item;
+    }
+
+    const normalized = { ...item };
+
+    if (normalized._id && !mongoose.Types.ObjectId.isValid(normalized._id)) {
+      delete normalized._id;
+    }
+
+    return normalized;
+  });
+}
+
 async function seed() {
   if (!MONGODB_URI) {
     throw new Error("MONGODB_URI is not configured. Add it to .env.local before seeding.");
@@ -42,7 +58,7 @@ async function seed() {
   const Product = mongoose.models.Product || mongoose.model("Product", productSchema);
 
   await Product.deleteMany({});
-  await Product.insertMany(products);
+  await Product.insertMany(normalizeSeedProducts(products));
 
   console.log(`Seeded ${products.length} products into ${MONGODB_DB_NAME || path.basename(MONGODB_URI)}`);
 }
