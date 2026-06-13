@@ -7,6 +7,12 @@ const footerLinks = [
   { href: "/account", label: "Account" }
 ];
 
+const legalLinks = [
+  { href: "/privacy", label: "Privacy Policy" },
+  { href: "/terms", label: "Terms of Service" },
+  { href: "/refund-policy", label: "Refund & Return Policy" }
+];
+
 const socialLinks = [
   { href: "https://instagram.com", label: "Instagram" },
   { href: "https://pinterest.com", label: "Pinterest" },
@@ -16,7 +22,7 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="border-t border-black/10 bg-white py-14">
-      <div className="shell grid gap-10 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
+      <div className="shell grid gap-10 md:grid-cols-[1.2fr_0.8fr_0.8fr_0.8fr]">
         <div>
           <p className="muted-label mb-3">YungDrip</p>
           <p className="font-serif text-4xl font-semibold">Minimal forms. Maximum presence.</p>
@@ -40,6 +46,17 @@ export default function Footer() {
                 </Link>
               )
             )}
+          </div>
+        </div>
+
+        <div>
+          <p className="muted-label mb-3">Legal</p>
+          <div className="space-y-3 text-sm text-black/65">
+            {legalLinks.map((link) => (
+              <Link key={link.href} href={link.href} className="block">
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
 

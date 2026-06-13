@@ -20,6 +20,10 @@ function normalizeSeedProducts(items) {
       delete normalized._id;
     }
 
+    if (!Number.isInteger(normalized.stock)) {
+      normalized.stock = 50;
+    }
+
     return normalized;
   });
 }
@@ -48,7 +52,8 @@ async function seed() {
         skinTone: [String],
         style: [String]
       },
-      featured: Boolean
+      featured: Boolean,
+      stock: Number
     },
     {
       timestamps: true

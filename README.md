@@ -11,6 +11,7 @@ Modern full-stack e-commerce storefront for a clothing brand built with Next.js 
 - User authentication with account pages and order history
 - Checkout flow with Razorpay order creation and payment verification
 - Order tracking view with payment and delivery status
+- Legal pages: privacy policy, terms of service, and refund/return policy
 - Admin order management with status updates
 - MongoDB-backed rate limiting on auth and checkout routes
 - Origin validation on all mutating API routes
@@ -39,12 +40,14 @@ Required variables:
 | `MONGODB_DB_NAME` | Database name |
 | `NEXT_PUBLIC_STORE_CURRENCY` | Currency code (e.g. `INR`) |
 | `APP_URL` | Full origin URL (e.g. `https://yourdomain.com`) |
+| `NEXT_PUBLIC_APP_URL` | Public origin URL fallback for origin validation (optional if `APP_URL` is set) |
 | `NEXT_PUBLIC_RAZORPAY_KEY_ID` | Razorpay public key |
 | `RAZORPAY_KEY_ID` | Razorpay key ID (server) |
 | `RAZORPAY_KEY_SECRET` | Razorpay secret key |
 | `RAZORPAY_WEBHOOK_SECRET` | Razorpay webhook signing secret |
 | `ADMIN_EMAILS` | Comma-separated admin emails |
 | `ENABLE_SEED_ROUTE` | Set to `true` only when seeding (`false` otherwise) |
+| `RESEND_API_KEY`, `EMAIL_FROM` | Resend API key and verified sender (e.g. `YungDrip <noreply@yourdomain.com>`) |
 
 3. Seed the database:
 
@@ -73,6 +76,13 @@ npm run dev
 - `POST /api/auth/login`
 - `POST /api/auth/logout`
 - `GET /api/auth/session`
+- `POST /api/auth/forgot-password`
+- `POST /api/auth/reset-password`
+
+**Cart**
+- `GET /api/cart` — authenticated user cart
+- `PUT /api/cart` — save cart
+- `POST /api/cart/merge` — merge guest cart on login
 
 **Orders (user)**
 - `GET /api/orders`
@@ -105,18 +115,5 @@ npm run dev
 - The Razorpay flow: create order on server → open checkout in browser → verify signature on server → mark paid
 - Admin access is granted to users whose email appears in `ADMIN_EMAILS` or whose stored `role` is `admin`
 - For production-grade abuse resistance, place a CDN/WAF (Cloudflare, Vercel Edge) in front as an outer layer
-
-## Remaining Work
-
-| # | Item | Notes |
-|---|------|-------|
-| 1 | **Route guard middleware** | No `middleware.js` exists. Protected pages (`/account`, `/checkout`, `/admin`) currently rely on client-side auth checks — users see a loading flash before redirect. A Next.js middleware should read the session cookie and redirect server-side. |
-| 2 | **Admin order detail — status update UI** | `/admin/orders/[id]` is view-only. Status can only be changed from the list view dropdown, not from the detail page. |
-| 3 | **Admin order search UI** | Backend supports `search` query param (order number, name, email), api-client passes it, but the admin dashboard has no search input wired up. |
-| 4 | **Password reset flow** | No forgot-password or reset-password pages or API routes. Users who lose their password have no self-service recovery. |
-| 5 | **Admin product management UI** | Product create/update/delete APIs exist and are admin-gated, but there is no UI. Catalog management requires hitting the API manually. |
-| 6 | **Nav "Collection" link** | Both "New In" and "Collection" in the navbar point to `/shop`. No separate collection or category landing page exists. |
-| 7 | **Cart merge on login** | Cart is `localStorage`-only. No server-side cart, no merge when a guest logs in on the same browser from a different context, no cross-device cart. |
-| 8 | **Transactional emails** | No emails are sent — not on registration, not on order placed, not on status changes (shipped, delivered, etc.). |
-| 9 | **Inventory / stock tracking** | Products have `sizes` and `colors` but no quantity field. Nothing prevents overselling. |
-| 10 | **`NEXT_PUBLIC_APP_URL` undocumented** | `lib/security.js` reads this as a fallback for origin validation but it is not in `.env.example`. Add it if deploying to Vercel or any host that sets it. |
+- Protected routes (`/account`, `/checkout`, `/admin`) are guarded by Next.js middleware with server-side session validation
+- Transactional emails (welcome, order confirmation, status updates, password reset) are sent via Resend when `RESEND_API_KEY` and `EMAIL_FROM` are set; in dev they log to the console when unset

@@ -131,7 +131,7 @@ export default function AdminProductList() {
                   {product.category} • {formatCurrency(product.price)}
                 </p>
                 <p className="mt-0.5 text-xs text-black/40">
-                  Sizes: {product.sizes?.join(", ")} · Colors: {product.colors?.join(", ")}
+                  Sizes: {product.sizes?.join(", ")} · Colors: {product.colors?.join(", ")} · Stock: {product.stock ?? 0}
                 </p>
               </div>
 

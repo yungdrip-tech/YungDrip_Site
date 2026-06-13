@@ -16,6 +16,8 @@ export default function ProductPurchasePanel({ product }) {
   const [styleAIOpen, setStyleAIOpen] = useState(false);
   const { addItem } = useCart();
   const canAddToCart = Boolean(selectedSize && selectedColor);
+  const availableStock = Number.isInteger(product.stock) ? product.stock : null;
+  const isOutOfStock = availableStock !== null && availableStock <= 0;
 
   async function handleAddToCart() {
     if (!canAddToCart) {
@@ -38,6 +40,11 @@ export default function ProductPurchasePanel({ product }) {
       <p className="muted-label">{product.category}</p>
       <h1 className="mt-3 text-5xl font-semibold text-balance">{product.name}</h1>
       <p className="mt-4 text-2xl font-semibold">{formatCurrency(product.price)}</p>
+      {availableStock !== null ? (
+        <p className={cn("mt-2 text-sm", isOutOfStock ? "text-red-600" : "text-black/55")}>
+          {isOutOfStock ? "Out of stock" : `${availableStock} in stock`}
+        </p>
+      ) : null}
       <p className="mt-5 leading-7 text-black/65">{product.description}</p>
 
       <div className="mt-8 space-y-6">
@@ -91,12 +98,14 @@ export default function ProductPurchasePanel({ product }) {
       </div>
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-        <Button onClick={handleAddToCart} className="min-w-[220px]" disabled={!canAddToCart || isAdding}>
+        <Button onClick={handleAddToCart} className="min-w-[220px]" disabled={!canAddToCart || isAdding || isOutOfStock}>
           {isAdding ? (
             <span className="inline-flex items-center gap-2">
               <Check className="h-4 w-4" />
               Added
             </span>
+          ) : isOutOfStock ? (
+            "Out of Stock"
           ) : (
             "Add to Cart"
           )}

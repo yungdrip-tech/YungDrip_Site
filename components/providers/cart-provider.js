@@ -1,7 +1,9 @@
 "use client";
 
-import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import Toast from "@/components/toast";
+import { useAuth } from "@/components/providers/auth-provider";
+import { mergeCart, saveCart } from "@/lib/api-client";
 
 const CartContext = createContext(null);
 const STORAGE_KEY = "yungdrip-cart";
@@ -36,10 +38,17 @@ function isValidProductForCart(product, selection) {
   );
 }
 
+function getAvailableStock(product) {
+  return Number.isInteger(product?.stock) ? product.stock : null;
+}
+
 export function CartProvider({ children }) {
+  const { user, isLoading: authLoading } = useAuth();
   const [items, setItems] = useState([]);
   const [isHydrated, setIsHydrated] = useState(false);
   const [toast, setToast] = useState(null);
+  const syncedUserIdRef = useRef(null);
+  const skipNextSaveRef = useRef(false);
 
   useEffect(() => {
     const savedCart = window.localStorage.getItem(STORAGE_KEY);
@@ -73,6 +82,63 @@ export function CartProvider({ children }) {
     return () => window.clearTimeout(timer);
   }, [toast]);
 
+  useEffect(() => {
+    if (!isHydrated || authLoading) {
+      return;
+    }
+
+    if (!user) {
+      syncedUserIdRef.current = null;
+      return;
+    }
+
+    if (syncedUserIdRef.current === user._id) {
+      return;
+    }
+
+    let cancelled = false;
+
+    async function syncCartWithServer() {
+      try {
+        const localItems = JSON.parse(window.localStorage.getItem(STORAGE_KEY) || "[]");
+        const payload = await mergeCart({ items: Array.isArray(localItems) ? localItems : [] });
+
+        if (!cancelled) {
+          skipNextSaveRef.current = true;
+          setItems(Array.isArray(payload.items) ? payload.items.filter(isValidCartItem) : []);
+          syncedUserIdRef.current = user._id;
+        }
+      } catch {
+        if (!cancelled) {
+          syncedUserIdRef.current = user._id;
+        }
+      }
+    }
+
+    syncCartWithServer();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [authLoading, isHydrated, user]);
+
+  useEffect(() => {
+    if (!isHydrated || authLoading || !user) {
+      return;
+    }
+
+    if (skipNextSaveRef.current) {
+      skipNextSaveRef.current = false;
+      return;
+    }
+
+    const timer = window.setTimeout(() => {
+      saveCart({ items }).catch(() => {});
+    }, 400);
+
+    return () => window.clearTimeout(timer);
+  }, [authLoading, isHydrated, items, user]);
+
   const showToast = useCallback((message) => {
     setToast(message);
   }, []);
@@ -80,6 +146,13 @@ export function CartProvider({ children }) {
   const addItem = useCallback((product, selection) => {
     if (!isValidProductForCart(product, selection)) {
       showToast("This product is unavailable for cart.");
+      return false;
+    }
+
+    const availableStock = getAvailableStock(product);
+
+    if (availableStock !== null && availableStock <= 0) {
+      showToast(`${product.name} is out of stock.`);
       return false;
     }
 
@@ -94,13 +167,23 @@ export function CartProvider({ children }) {
       quantity: 1
     };
 
+    let didAdd = false;
+
     setItems((currentItems) => {
       const existingItem = currentItems.find((item) => item.cartKey === cartItem.cartKey);
+      const nextQuantity = existingItem ? existingItem.quantity + 1 : 1;
+
+      if (availableStock !== null && nextQuantity > availableStock) {
+        showToast(`Only ${availableStock} left in stock.`);
+        return currentItems;
+      }
+
+      didAdd = true;
 
       if (existingItem) {
         return currentItems.map((item) =>
           item.cartKey === cartItem.cartKey
-            ? { ...item, quantity: item.quantity + 1 }
+            ? { ...item, quantity: nextQuantity }
             : item
         );
       }
@@ -108,8 +191,11 @@ export function CartProvider({ children }) {
       return [...currentItems, cartItem];
     });
 
-    showToast(`${product.name} added to cart`);
-    return true;
+    if (didAdd) {
+      showToast(`${product.name} added to cart`);
+    }
+
+    return didAdd;
   }, [showToast]);
 
   const removeItem = useCallback(

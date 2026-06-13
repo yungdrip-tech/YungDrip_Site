@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useDeferredValue, useEffect, useState } from "react";
 import Link from "next/link";
 import Button from "@/components/button";
 import { useAuth } from "@/components/providers/auth-provider";
@@ -16,7 +16,9 @@ export default function AdminOrdersDashboard() {
   const [error, setError] = useState("");
   const [isLoadingOrders, setIsLoadingOrders] = useState(true);
   const [activeStatus, setActiveStatus] = useState("all");
+  const [search, setSearch] = useState("");
   const [updatingOrderId, setUpdatingOrderId] = useState("");
+  const deferredSearch = useDeferredValue(search);
 
   useEffect(() => {
     if (!user?.isAdmin) {
@@ -30,7 +32,8 @@ export default function AdminOrdersDashboard() {
       try {
         setIsLoadingOrders(true);
         const payload = await fetchAdminOrders({
-          status: activeStatus === "all" ? "" : activeStatus
+          status: activeStatus === "all" ? "" : activeStatus,
+          search: deferredSearch
         });
 
         if (!cancelled) {
@@ -52,7 +55,7 @@ export default function AdminOrdersDashboard() {
     return () => {
       cancelled = true;
     };
-  }, [activeStatus, user?.isAdmin]);
+  }, [activeStatus, deferredSearch, user?.isAdmin]);
 
   async function handleStatusChange(orderId, status) {
     try {
@@ -86,17 +89,30 @@ export default function AdminOrdersDashboard() {
   return (
     <div className="space-y-6">
       <div className="panel p-6">
-        <div className="flex flex-wrap gap-3">
-          {["all", ...statusOptions].map((status) => (
-            <button
-              key={status}
-              type="button"
-              onClick={() => setActiveStatus(status)}
-              className={`rounded-full border px-4 py-2 text-xs uppercase tracking-[0.18em] transition ${activeStatus === status ? "border-black bg-black text-white" : "border-black/10 bg-white text-black/65 hover:border-black/20"}`}
-            >
-              {status.replaceAll("_", " ")}
-            </button>
-          ))}
+        <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div className="flex flex-wrap gap-3">
+            {["all", ...statusOptions].map((status) => (
+              <button
+                key={status}
+                type="button"
+                onClick={() => setActiveStatus(status)}
+                className={`rounded-full border px-4 py-2 text-xs uppercase tracking-[0.18em] transition ${activeStatus === status ? "border-black bg-black text-white" : "border-black/10 bg-white text-black/65 hover:border-black/20"}`}
+              >
+                {status.replaceAll("_", " ")}
+              </button>
+            ))}
+          </div>
+
+          <label className="block w-full max-w-sm space-y-2 text-sm text-black/60">
+            <span className="sr-only">Search orders</span>
+            <input
+              type="search"
+              value={search}
+              onChange={(event) => setSearch(event.target.value)}
+              placeholder="Search order #, name, or email"
+              className="w-full rounded-full border border-black/10 px-4 py-3 outline-none transition focus:border-black/25"
+            />
+          </label>
         </div>
       </div>
 

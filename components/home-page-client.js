@@ -80,18 +80,21 @@ export default function HomePageClient() {
         {
           eyebrow: "Featured",
           title: "Hoodies",
+          category: "Hoodies",
           image: nextHoodies[0]?.images?.[0],
           count: nextHoodies.length
         },
         {
           eyebrow: "Core",
           title: "T-Shirts",
+          category: "T-Shirts",
           image: nextTshirts[0]?.images?.[0],
           count: nextTshirts.length
         },
         {
           eyebrow: "Tailored",
           title: "Trousers",
+          category: "Bottoms",
           image: nextTailoring[0]?.images?.[0],
           count: nextTailoring.length
         }

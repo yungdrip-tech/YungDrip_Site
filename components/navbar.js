@@ -13,7 +13,7 @@ import { usePathname } from "next/navigation";
 
 const navLinks = [
   { href: "/shop", label: "New In" },
-  { href: "/shop", label: "Collection" }
+  { href: "/collection", label: "Collection" }
 ];
 
 export default function Navbar() {
@@ -146,7 +146,7 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href="/shop"
+            href="/collection"
             className="flex min-h-14 flex-col items-center justify-center gap-1 rounded-[1.25rem] px-2 text-center text-[10px] uppercase tracking-[0.18em] text-black/75 transition hover:bg-black/5"
           >
             <LayoutGrid className="h-4 w-4" />

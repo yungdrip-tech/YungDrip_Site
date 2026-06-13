@@ -31,6 +31,16 @@ const userSchema = new Schema(
       enum: ["user", "admin"],
       default: "user",
       index: true
+    },
+    resetTokenHash: {
+      type: String,
+      default: null,
+      select: false
+    },
+    resetTokenExpiresAt: {
+      type: Date,
+      default: null,
+      select: false
     }
   },
   {

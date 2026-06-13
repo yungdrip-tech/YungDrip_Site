@@ -26,6 +26,7 @@ const EMPTY_FORM = {
   sizes: "",
   colors: "",
   featured: false,
+  stock: "50",
   tagsBodyType: "",
   tagsSkinTone: "",
   tagsStyle: ""
@@ -60,6 +61,7 @@ export default function AdminProductForm({ productId }) {
             sizes: arrayToInput(product.sizes),
             colors: arrayToInput(product.colors),
             featured: Boolean(product.featured),
+            stock: String(product.stock ?? 0),
             tagsBodyType: arrayToInput(product.tags?.bodyType),
             tagsSkinTone: arrayToInput(product.tags?.skinTone),
             tagsStyle: arrayToInput(product.tags?.style)
@@ -101,6 +103,7 @@ export default function AdminProductForm({ productId }) {
       sizes: inputToArray(form.sizes),
       colors: inputToArray(form.colors),
       featured: form.featured,
+      stock: Number(form.stock),
       tags: {
         bodyType: inputToArray(form.tagsBodyType),
         skinTone: inputToArray(form.tagsSkinTone),
@@ -182,7 +185,21 @@ export default function AdminProductForm({ productId }) {
             />
           </label>
 
-          <label className="flex items-center gap-3 text-sm text-black/60">
+          <label className={labelClass}>
+            <span>Stock quantity</span>
+            <input
+              type="number"
+              min="0"
+              step="1"
+              value={form.stock}
+              onChange={(e) => updateField("stock", e.target.value)}
+              className={inputClass}
+              placeholder="e.g. 50"
+              required
+            />
+          </label>
+
+          <label className="flex items-center gap-3 text-sm text-black/60 md:col-span-2">
             <input
               type="checkbox"
               checked={form.featured}

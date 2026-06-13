@@ -21,6 +21,7 @@ const menuColumns = [
     links: [
       { label: "Home", href: "/" },
       { label: "Shop", href: "/shop" },
+      { label: "Collections", href: "/collection" },
       { label: "Account", href: "/account" },
       { label: "Cart", href: "/cart" }
     ]

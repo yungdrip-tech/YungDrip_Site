@@ -63,7 +63,10 @@ export default function CollectionCarousel({ title, items }) {
             transition={{ duration: 0.45, delay: index * 0.08 }}
             className="min-w-[82vw] snap-start sm:min-w-[420px] lg:min-w-[31%]"
           >
-            <Link href="/shop" className="group block overflow-hidden rounded-[2rem] border border-black/10 bg-white">
+            <Link
+              href={item.category ? `/shop?category=${encodeURIComponent(item.category)}` : "/collection"}
+              className="group block overflow-hidden rounded-[2rem] border border-black/10 bg-white"
+            >
               <div className="relative aspect-[4/5] overflow-hidden">
                 <Image
                   src={item.image}
