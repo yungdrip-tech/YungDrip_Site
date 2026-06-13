@@ -36,17 +36,16 @@ const menuColumns = [
     ]
   },
   {
-    title: "Accessories",
+    title: "Quick Links",
     links: [
-      { label: "Style Me", href: "/shop" },
-      { label: "Checkout", href: "/checkout" },
-      { label: "Orders", href: "/account/orders" },
-      { label: "Support", href: "/account" }
+      { label: "Account", href: "/account" },
+      { label: "My Orders", href: "/account/orders" },
+      { label: "Contact", href: "mailto:hello@yungdrip.in" }
     ]
   }
 ];
 
-export default function HamburgerMenu({ open, onClose, cartCount }) {
+export default function HamburgerMenu({ open, onClose, cartCount, onStyleMe }) {
   useEffect(() => {
     function handleKeyDown(event) {
       if (event.key === "Escape") {
@@ -112,17 +111,28 @@ export default function HamburgerMenu({ open, onClose, cartCount }) {
                     >
                       <p className="muted-label mb-4">{column.title}</p>
                       <div className="space-y-4">
-                        {column.links.map((link) => (
-                          <Link
-                            key={link.label}
-                            href={link.href}
-                            onClick={onClose}
-                            className="group flex items-center justify-between border-b border-black/10 pb-4 text-2xl font-medium"
-                          >
-                            <span>{link.label}</span>
-                            <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-1 group-hover:-translate-y-1" />
-                          </Link>
-                        ))}
+                        {column.links.map((link) =>
+                          link.href.startsWith("mailto:") ? (
+                            <a
+                              key={link.label}
+                              href={link.href}
+                              className="group flex items-center justify-between border-b border-black/10 pb-4 text-2xl font-medium"
+                            >
+                              <span>{link.label}</span>
+                              <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-1 group-hover:-translate-y-1" />
+                            </a>
+                          ) : (
+                            <Link
+                              key={link.label}
+                              href={link.href}
+                              onClick={onClose}
+                              className="group flex items-center justify-between border-b border-black/10 pb-4 text-2xl font-medium"
+                            >
+                              <span>{link.label}</span>
+                              <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-1 group-hover:-translate-y-1" />
+                            </Link>
+                          )
+                        )}
                       </div>
                     </motion.div>
                   ))}
@@ -154,8 +164,12 @@ export default function HamburgerMenu({ open, onClose, cartCount }) {
                       <Button href="/shop" asChild onClick={onClose}>
                         Browse shop
                       </Button>
-                      <Button href="/cart" asChild variant="secondary" onClick={onClose}>
-                        View cart
+                      <Button
+                        asChild={false}
+                        variant="secondary"
+                        onClick={() => { onClose(); onStyleMe?.(); }}
+                      >
+                        Style Me
                       </Button>
                     </div>
                   </div>

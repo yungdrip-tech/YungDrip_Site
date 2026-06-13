@@ -2,9 +2,9 @@ import Link from "next/link";
 
 const footerLinks = [
   { href: "/shop", label: "Shop" },
-  { href: "/cart", label: "Cart" },
-  { href: "/checkout", label: "Checkout" },
-  { href: "/account", label: "Account" }
+  { href: "/collection", label: "Collection" },
+  { href: "/account", label: "Account" },
+  { href: "/account/orders", label: "My Orders" }
 ];
 
 const legalLinks = [
@@ -14,9 +14,7 @@ const legalLinks = [
 ];
 
 const socialLinks = [
-  { href: "https://instagram.com", label: "Instagram" },
-  { href: "https://pinterest.com", label: "Pinterest" },
-  { href: "https://x.com", label: "X" }
+  { href: "https://www.instagram.com/yungdrip.in/", label: "Instagram" }
 ];
 
 export default function Footer() {
@@ -27,7 +25,7 @@ export default function Footer() {
           <p className="muted-label mb-3">YungDrip</p>
           <p className="font-serif text-4xl font-semibold">Minimal forms. Maximum presence.</p>
           <p className="mt-4 max-w-md text-sm leading-7 text-black/60">
-            A refined monochrome storefront built with Next.js, Tailwind CSS, Framer Motion, and MongoDB.
+            Premium everyday essentials crafted for those who wear silence. Monochrome. Minimal. Uncompromising.
           </p>
         </div>
 
@@ -70,6 +68,11 @@ export default function Footer() {
             ))}
           </div>
         </div>
+      </div>
+      <div className="shell mt-10 border-t border-black/10 pt-6">
+        <p className="text-xs text-black/35">
+          &copy; {new Date().getFullYear()} YungDrip. All rights reserved.
+        </p>
       </div>
     </footer>
   );

@@ -187,7 +187,7 @@ export default function Navbar() {
         </div>
       </motion.nav>
 
-      <HamburgerMenu open={menuOpen} onClose={() => setMenuOpen(false)} cartCount={cartCount} />
+      <HamburgerMenu open={menuOpen} onClose={() => setMenuOpen(false)} cartCount={cartCount} onStyleMe={() => setStyleMeOpen(true)} />
       <StyleMeModal open={styleMeOpen} onClose={() => setStyleMeOpen(false)} />
     </>
   );

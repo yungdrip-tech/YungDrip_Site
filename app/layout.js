@@ -6,7 +6,38 @@ import { CartProvider } from "@/components/providers/cart-provider";
 
 export const metadata = {
   title: "YungDrip | Premium Everyday Essentials",
-  description: "A modern full-stack clothing storefront built with Next.js, Tailwind CSS, and MongoDB."
+  description: "Premium monochrome essentials for those who wear silence. Shop hoodies, tees, and tailored pieces at YungDrip.",
+  metadataBase: new URL("https://yungdrip.in"),
+  openGraph: {
+    title: "YungDrip | Premium Everyday Essentials",
+    description: "Premium monochrome essentials for those who wear silence. Shop hoodies, tees, and tailored pieces at YungDrip.",
+    url: "https://yungdrip.in",
+    siteName: "YungDrip",
+    images: [
+      {
+        url: "/hero/site-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "YungDrip — Minimal forms. Maximum presence."
+      }
+    ],
+    locale: "en_IN",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "YungDrip | Premium Everyday Essentials",
+    description: "Premium monochrome essentials for those who wear silence.",
+    images: ["/hero/site-image.jpg"]
+  },
+  themeColor: "#ffffff",
+  icons: {
+    icon: "/favicon.ico"
+  }
+};
+
+export const viewport = {
+  themeColor: "#ffffff"
 };
 
 export default function RootLayout({ children }) {
