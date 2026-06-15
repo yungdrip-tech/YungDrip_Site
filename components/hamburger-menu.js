@@ -40,7 +40,7 @@ const menuColumns = [
     links: [
       { label: "Account", href: "/account" },
       { label: "My Orders", href: "/account/orders" },
-      { label: "Contact", href: "mailto:hello@yungdrip.in" }
+      { label: "Contact", href: "mailto:support@yungdrip.in" }
     ]
   }
 ];
