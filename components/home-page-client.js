@@ -111,7 +111,7 @@ export default function HomePageClient() {
   }, [products]);
 
   return (
-    <div className="-mt-20 pb-24">
+    <div className="-mt-14 pb-24 md:-mt-20">
       <HeroSection image="/hero/site-image.jpg" />
 
       {isLoading ? <HomePageSkeleton /> : null}

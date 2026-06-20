@@ -14,7 +14,7 @@ export default function HeroSection({ image }) {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/55" />
 
-      <div className="shell relative flex min-h-screen items-center justify-center pt-20">
+      <div className="shell relative flex min-h-screen items-center justify-center pt-14 md:pt-20">
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 sm:bottom-10">
           <Button href="#collections" asChild variant="light" size="sm" className="min-w-[132px]">
             Shop Now

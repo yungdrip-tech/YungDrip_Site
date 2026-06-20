@@ -48,7 +48,7 @@ export default function RootLayout({ children }) {
           <CartProvider>
             <div className="relative flex min-h-screen flex-col overflow-x-hidden">
               <Navbar />
-              <main className="flex-1 pb-28 pt-0 md:pb-0 md:pt-20">{children}</main>
+              <main className="flex-1 pb-[calc(5.5rem+env(safe-area-inset-bottom,0px))] pt-14 md:pb-0 md:pt-20">{children}</main>
               <Footer />
             </div>
           </CartProvider>
