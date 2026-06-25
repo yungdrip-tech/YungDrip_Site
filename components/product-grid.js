@@ -9,15 +9,23 @@ const sortOptions = [
   { value: "price-desc", label: "Price: High to Low" }
 ];
 
+const seasonOptions = [
+  { value: "All", label: "All seasons" },
+  { value: "Winter", label: "Winter" },
+  { value: "Summer", label: "Summer" }
+];
+
 export default function ProductGrid({
   products,
   categories,
   heading = "All Products",
   search,
   selectedCategory,
+  selectedSeason = "All",
   selectedSort,
   onSearchChange,
   onCategoryChange,
+  onSeasonChange,
   onSortChange,
   isLoading,
   error,
@@ -32,7 +40,7 @@ export default function ProductGrid({
             <h1 className="text-4xl font-semibold">{heading}</h1>
           </div>
 
-          <div className="grid gap-3 md:grid-cols-3">
+          <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
             <label className="flex flex-col gap-2 text-sm text-black/60">
               Search
               <input
@@ -42,6 +50,20 @@ export default function ProductGrid({
                 placeholder="Search pieces"
                 className="rounded-2xl border border-black/10 bg-white px-4 py-3 text-ink outline-none transition focus:border-clay"
               />
+            </label>
+            <label className="flex flex-col gap-2 text-sm text-black/60">
+              Season
+              <select
+                value={selectedSeason}
+                onChange={(event) => onSeasonChange?.(event.target.value)}
+                className="rounded-2xl border border-black/10 bg-white px-4 py-3 text-ink outline-none transition focus:border-clay"
+              >
+                {seasonOptions.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
             </label>
             <label className="flex flex-col gap-2 text-sm text-black/60">
               Category

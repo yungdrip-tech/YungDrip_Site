@@ -1,15 +1,18 @@
 "use client";
 
 import { useDeferredValue, useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import ProductGrid from "@/components/product-grid";
 import Reveal from "@/components/reveal";
 import { fetchProducts } from "@/lib/api-client";
 import { getCategories } from "@/lib/product-utils";
 
 export default function ShopPageClient() {
+  const searchParams = useSearchParams();
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState(["All"]);
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState(() => searchParams.get("category") || "All");
+  const [selectedSeason, setSelectedSeason] = useState(() => searchParams.get("season") || "All");
   const [selectedSort, setSelectedSort] = useState("default");
   const [search, setSearch] = useState("");
   const [isLoading, setIsLoading] = useState(true);
@@ -51,6 +54,7 @@ export default function ShopPageClient() {
 
         const nextProducts = await fetchProducts({
           category: selectedCategory === "All" ? "" : selectedCategory,
+          season: selectedSeason === "All" ? "" : selectedSeason,
           sort: selectedSort === "default" ? "" : selectedSort,
           search: deferredSearch
         });
@@ -74,7 +78,7 @@ export default function ShopPageClient() {
     return () => {
       isCancelled = true;
     };
-  }, [deferredSearch, selectedCategory, selectedSort]);
+  }, [deferredSearch, selectedCategory, selectedSeason, selectedSort]);
 
   return (
     <div className="shell py-12">
@@ -85,9 +89,11 @@ export default function ShopPageClient() {
           heading="The full collection"
           search={search}
           selectedCategory={selectedCategory}
+          selectedSeason={selectedSeason}
           selectedSort={selectedSort}
           onSearchChange={setSearch}
           onCategoryChange={setSelectedCategory}
+          onSeasonChange={setSelectedSeason}
           onSortChange={setSelectedSort}
           isLoading={isLoading}
           error={error}

@@ -1,142 +1,302 @@
 "use client";
 
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import { Suspense } from "react";
+import {
+  Bounds,
+  ContactShadows,
+  Environment,
+  Html,
+  OrbitControls,
+  useGLTF,
+  useProgress,
+} from "@react-three/drei";
+import {
+  Component,
+  Suspense,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+} from "react";
+import { Box3, Vector3, ACESFilmicToneMapping } from "three";
+import {
+  GARMENT_FIT,
+  STYLE_AI_BODY_MODEL_URL,
+  STYLE_AI_DEMO_MODES,
+  STYLE_AI_FULL_MODEL_URL,
+  STYLE_AI_JEANS_MODEL_URL,
+  STYLE_AI_SINGLE_MODEL_URL,
+  STYLE_AI_TSHIRT_MODEL_URL,
+} from "@/lib/style-ai-test-model";
 
-// Proportions per body type — all values are relative scale units
-const PROPORTIONS = {
-  Slim: { shoulderW: 0.38, hipW: 0.30, torsoD: 0.16, legR: 0.10, armR: 0.065 },
-  Athletic: { shoulderW: 0.48, hipW: 0.38, torsoD: 0.22, legR: 0.13, armR: 0.08 },
-  Average: { shoulderW: 0.43, hipW: 0.40, torsoD: 0.20, legR: 0.12, armR: 0.072 },
-  "Plus Size": { shoulderW: 0.52, hipW: 0.54, torsoD: 0.28, legR: 0.155, armR: 0.095 },
+const BODY_SCALE = {
+  Slim: 0.94,
+  Athletic: 1.03,
+  Average: 1,
+  "Plus Size": 1.1,
 };
 
-const SKIN = "#d4a574";
+function prepareScene(scene, renderOrder) {
+  const clone = scene.clone(true);
+  clone.traverse((child) => {
+    if (child.isMesh) {
+      child.castShadow = true;
+      child.receiveShadow = true;
+      child.renderOrder = renderOrder;
+      if (child.material) {
+        child.material.envMapIntensity = 0.35;
+        child.material.needsUpdate = true;
+      }
+    }
+  });
+  return clone;
+}
 
-function MannequinMesh({ bodyType, topColor, bottomColor, footColor }) {
-  const p = PROPORTIONS[bodyType] ?? PROPORTIONS.Average;
-  const tc = topColor || "#8b7355";
-  const bc = bottomColor || "#4a5568";
-  const fc = footColor || "#2d3748";
+// Measure ONLY the base body — never the full assembly (that inflates the bbox with clothes).
+function fitGarmentToBody(garment, bodyAnchor, fit) {
+  garment.position.set(0, 0, 0);
+  garment.rotation.set(0, 0, 0);
+  garment.scale.set(1, 1, 1);
+  garment.updateMatrixWorld(true);
 
-  return (
-    // Group centred so the figure stands at y ≈ 0 when camera looks at origin
-    <group position={[0, -0.95, 0]}>
-      {/* ── HEAD ─────────────────────────────────────────────── */}
-      <mesh position={[0, 1.82, 0]}>
-        <sphereGeometry args={[0.16, 20, 20]} />
-        <meshStandardMaterial color={SKIN} roughness={0.7} />
-      </mesh>
+  const bodyBox = new Box3().setFromObject(bodyAnchor);
+  const bodySize = bodyBox.getSize(new Vector3());
+  const bodyCenter = bodyBox.getCenter(new Vector3());
 
-      {/* ── NECK ─────────────────────────────────────────────── */}
-      <mesh position={[0, 1.63, 0]}>
-        <cylinderGeometry args={[0.068, 0.068, 0.14, 10]} />
-        <meshStandardMaterial color={SKIN} roughness={0.7} />
-      </mesh>
+  if (bodySize.x <= 0 || bodySize.y <= 0) return;
 
-      {/* ── TORSO (shirt) ────────────────────────────────────── */}
-      <mesh position={[0, 1.17, 0]}>
-        <boxGeometry args={[p.shoulderW, 0.72, p.torsoD]} />
-        <meshStandardMaterial color={tc} roughness={0.65} />
-      </mesh>
+  const garmentBox = new Box3().setFromObject(garment);
+  const garmentSize = garmentBox.getSize(new Vector3());
+  if (garmentSize.x <= 0 || garmentSize.y <= 0) return;
 
-      {/* ── LEFT UPPER ARM ───────────────────────────────────── */}
-      <mesh position={[-(p.shoulderW / 2 + p.armR + 0.01), 1.24, 0]} rotation={[0, 0, 0.12]}>
-        <cylinderGeometry args={[p.armR, p.armR * 0.88, 0.36, 10]} />
-        <meshStandardMaterial color={tc} roughness={0.65} />
-      </mesh>
+  const scaleX = (bodySize.x * fit.widthRatio) / garmentSize.x;
+  const scaleY = (bodySize.y * fit.heightRatio) / garmentSize.y;
+  const scaleZ = (bodySize.z * fit.depthRatio) / garmentSize.z;
+  garment.scale.set(scaleX, scaleY, scaleZ);
+  garment.updateMatrixWorld(true);
 
-      {/* ── RIGHT UPPER ARM ──────────────────────────────────── */}
-      <mesh position={[p.shoulderW / 2 + p.armR + 0.01, 1.24, 0]} rotation={[0, 0, -0.12]}>
-        <cylinderGeometry args={[p.armR, p.armR * 0.88, 0.36, 10]} />
-        <meshStandardMaterial color={tc} roughness={0.65} />
-      </mesh>
+  garmentBox.setFromObject(garment);
 
-      {/* ── LEFT FOREARM ─────────────────────────────────────── */}
-      <mesh position={[-(p.shoulderW / 2 + p.armR + 0.03), 0.90, 0]} rotation={[0, 0, 0.07]}>
-        <cylinderGeometry args={[p.armR * 0.8, p.armR * 0.68, 0.32, 10]} />
-        <meshStandardMaterial color={SKIN} roughness={0.7} />
-      </mesh>
+  if (fit.alignBottom) {
+    garment.position.set(
+      bodyCenter.x - (garmentBox.min.x + garmentBox.max.x) / 2,
+      bodyBox.min.y - garmentBox.min.y,
+      bodyCenter.z -
+        (garmentBox.min.z + garmentBox.max.z) / 2 +
+        bodySize.z * fit.depthNudge
+    );
+    return;
+  }
 
-      {/* ── RIGHT FOREARM ────────────────────────────────────── */}
-      <mesh position={[p.shoulderW / 2 + p.armR + 0.03, 0.90, 0]} rotation={[0, 0, -0.07]}>
-        <cylinderGeometry args={[p.armR * 0.8, p.armR * 0.68, 0.32, 10]} />
-        <meshStandardMaterial color={SKIN} roughness={0.7} />
-      </mesh>
+  const garmentCenter = garmentBox.getCenter(new Vector3());
+  const targetY = bodyBox.min.y + bodySize.y * fit.anchorYRatio;
 
-      {/* ── HIPS / WAISTBAND ─────────────────────────────────── */}
-      <mesh position={[0, 0.63, 0]}>
-        <boxGeometry args={[p.hipW, 0.28, p.torsoD * 0.88]} />
-        <meshStandardMaterial color={bc} roughness={0.65} />
-      </mesh>
-
-      {/* ── LEFT UPPER LEG ───────────────────────────────────── */}
-      <mesh position={[-(p.hipW * 0.28), 0.26, 0]}>
-        <cylinderGeometry args={[p.legR * 1.08, p.legR, 0.46, 12]} />
-        <meshStandardMaterial color={bc} roughness={0.65} />
-      </mesh>
-
-      {/* ── RIGHT UPPER LEG ──────────────────────────────────── */}
-      <mesh position={[p.hipW * 0.28, 0.26, 0]}>
-        <cylinderGeometry args={[p.legR * 1.08, p.legR, 0.46, 12]} />
-        <meshStandardMaterial color={bc} roughness={0.65} />
-      </mesh>
-
-      {/* ── LEFT LOWER LEG ───────────────────────────────────── */}
-      <mesh position={[-(p.hipW * 0.28), -0.22, 0]}>
-        <cylinderGeometry args={[p.legR, p.legR * 0.82, 0.44, 12]} />
-        <meshStandardMaterial color={fc} roughness={0.6} />
-      </mesh>
-
-      {/* ── RIGHT LOWER LEG ──────────────────────────────────── */}
-      <mesh position={[p.hipW * 0.28, -0.22, 0]}>
-        <cylinderGeometry args={[p.legR, p.legR * 0.82, 0.44, 12]} />
-        <meshStandardMaterial color={fc} roughness={0.6} />
-      </mesh>
-
-      {/* ── LEFT FOOT ────────────────────────────────────────── */}
-      <mesh position={[-(p.hipW * 0.28), -0.49, 0.06]}>
-        <boxGeometry args={[0.13, 0.076, 0.26]} />
-        <meshStandardMaterial color={fc} roughness={0.55} />
-      </mesh>
-
-      {/* ── RIGHT FOOT ───────────────────────────────────────── */}
-      <mesh position={[p.hipW * 0.28, -0.49, 0.06]}>
-        <boxGeometry args={[0.13, 0.076, 0.26]} />
-        <meshStandardMaterial color={fc} roughness={0.55} />
-      </mesh>
-    </group>
+  garment.position.set(
+    bodyCenter.x - garmentCenter.x,
+    targetY - garmentCenter.y,
+    bodyCenter.z - garmentCenter.z + bodySize.z * fit.depthNudge
   );
 }
 
-export default function StyleAIMannequin({ bodyType = "Average", outfitColors = {} }) {
+function Loader() {
+  const { progress } = useProgress();
   return (
-    <Canvas
-      camera={{ position: [0, 0.2, 2.6], fov: 48 }}
-      style={{ background: "#f8f5f0", borderRadius: "0 1.5rem 1.5rem 0" }}
-    >
-      <ambientLight intensity={0.55} />
-      <directionalLight position={[2, 4, 3]} intensity={0.9} castShadow />
-      <directionalLight position={[-2, 2, -1]} intensity={0.3} />
-      <pointLight position={[0, 3, 2]} intensity={0.2} />
+    <Html center>
+      <div className="flex flex-col items-center gap-3 text-black/60">
+        <div className="h-8 w-8 animate-spin rounded-full border-2 border-black/15 border-t-black" />
+        <p className="text-[10px] font-semibold uppercase tracking-[0.2em]">
+          Loading {Math.round(progress)}%
+        </p>
+      </div>
+    </Html>
+  );
+}
 
+class ViewerErrorBoundary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="flex h-full w-full items-center justify-center bg-[#f8f5f0] p-6 text-center">
+          <p className="max-w-xs text-xs font-medium uppercase tracking-[0.16em] text-black/45">
+            Unable to load the 3D preview. Please try again.
+          </p>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+class SafeEnvironment extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { failed: false };
+  }
+  static getDerivedStateFromError() {
+    return { failed: true };
+  }
+  render() {
+    if (this.state.failed) return null;
+    return (
       <Suspense fallback={null}>
-        <MannequinMesh
-          bodyType={bodyType}
-          topColor={outfitColors.top}
-          bottomColor={outfitColors.bottom}
-          footColor={outfitColors.footwear}
-        />
+        <Environment preset="warehouse" environmentIntensity={0.35} background={false} />
       </Suspense>
+    );
+  }
+}
 
-      <OrbitControls
-        enablePan={false}
-        enableZoom={false}
-        minPolarAngle={Math.PI / 4}
-        maxPolarAngle={Math.PI * 0.78}
-        autoRotate={false}
-      />
-    </Canvas>
+function StandaloneModel({ url, bodyType }) {
+  const { scene } = useGLTF(url);
+  const model = useMemo(() => prepareScene(scene, 0), [scene]);
+  const scale = BODY_SCALE[bodyType] ?? BODY_SCALE.Average;
+
+  return (
+    <Bounds fit clip observe margin={1.15}>
+      <group scale={scale}>
+        <primitive object={model} />
+      </group>
+    </Bounds>
+  );
+}
+
+function CharacterModel({ bodyType, showTshirt, showJeans }) {
+  const bodyRef = useRef(null);
+  const jeansRef = useRef(null);
+  const tshirtRef = useRef(null);
+
+  const { scene: bodyScene } = useGLTF(STYLE_AI_BODY_MODEL_URL);
+  const { scene: tshirtScene } = useGLTF(STYLE_AI_TSHIRT_MODEL_URL);
+  const { scene: jeansScene } = useGLTF(STYLE_AI_JEANS_MODEL_URL);
+
+  const body = useMemo(() => prepareScene(bodyScene, 0), [bodyScene]);
+  const tshirt = useMemo(() => prepareScene(tshirtScene, 2), [tshirtScene]);
+  const jeans = useMemo(() => prepareScene(jeansScene, 1), [jeansScene]);
+
+  const scale = BODY_SCALE[bodyType] ?? BODY_SCALE.Average;
+
+  useLayoutEffect(() => {
+    if (!bodyRef.current) return;
+
+    if (showJeans && jeansRef.current) {
+      fitGarmentToBody(jeansRef.current, bodyRef.current, GARMENT_FIT.jeans);
+    }
+    if (showTshirt && tshirtRef.current) {
+      fitGarmentToBody(tshirtRef.current, bodyRef.current, GARMENT_FIT.tshirt);
+    }
+  }, [showTshirt, showJeans, bodyType, body, tshirt, jeans]);
+
+  return (
+    <Bounds fit clip observe margin={1.15}>
+      <group scale={scale}>
+        {/* bodyRef must contain ONLY the base mesh — clothes are siblings */}
+        <group ref={bodyRef}>
+          <primitive object={body} />
+        </group>
+        {showJeans ? (
+          <group ref={jeansRef}>
+            <primitive object={jeans} />
+          </group>
+        ) : null}
+        {showTshirt ? (
+          <group ref={tshirtRef}>
+            <primitive object={tshirt} />
+          </group>
+        ) : null}
+      </group>
+    </Bounds>
+  );
+}
+
+useGLTF.preload(STYLE_AI_BODY_MODEL_URL);
+useGLTF.preload(STYLE_AI_TSHIRT_MODEL_URL);
+useGLTF.preload(STYLE_AI_JEANS_MODEL_URL);
+useGLTF.preload(STYLE_AI_SINGLE_MODEL_URL);
+useGLTF.preload(STYLE_AI_FULL_MODEL_URL);
+
+export default function StyleAIMannequin({
+  viewMode = STYLE_AI_DEMO_MODES.outfit,
+  bodyType = "Average",
+  showTshirt = false,
+  showJeans = false,
+}) {
+  const isOutfit = viewMode === STYLE_AI_DEMO_MODES.outfit;
+  const standaloneUrl =
+    viewMode === STYLE_AI_DEMO_MODES.full
+      ? STYLE_AI_FULL_MODEL_URL
+      : viewMode === STYLE_AI_DEMO_MODES.single
+      ? STYLE_AI_SINGLE_MODEL_URL
+      : null;
+
+  return (
+    <ViewerErrorBoundary>
+      <Canvas
+        shadows
+        dpr={[1, 2]}
+        camera={{ position: [0, 0.9, 4.2], fov: 42 }}
+        gl={{
+          antialias: true,
+          preserveDrawingBuffer: true,
+          toneMapping: ACESFilmicToneMapping,
+          toneMappingExposure: 0.82,
+        }}
+        style={{ background: "#e8e4dc", borderRadius: "0 1.5rem 1.5rem 0" }}
+        key={viewMode}
+      >
+        <color attach="background" args={["#e8e4dc"]} />
+        <ambientLight intensity={0.28} />
+        <directionalLight
+          position={[3, 6, 4]}
+          intensity={0.75}
+          castShadow
+          shadow-mapSize-width={2048}
+          shadow-mapSize-height={2048}
+          shadow-bias={-0.0001}
+        />
+        <directionalLight position={[-4, 3, -2]} intensity={0.18} />
+        <pointLight position={[0, 4, 3]} intensity={0.08} />
+
+        <Suspense fallback={<Loader />}>
+          {isOutfit ? (
+            <CharacterModel
+              bodyType={bodyType}
+              showTshirt={showTshirt}
+              showJeans={showJeans}
+            />
+          ) : (
+            <StandaloneModel url={standaloneUrl} bodyType={bodyType} />
+          )}
+          <SafeEnvironment />
+        </Suspense>
+
+        <ContactShadows
+          position={[0, -1.0, 0]}
+          opacity={0.5}
+          scale={10}
+          blur={2.8}
+          far={4}
+          resolution={1024}
+        />
+
+        <OrbitControls
+          makeDefault
+          enablePan={false}
+          enableZoom
+          enableDamping
+          dampingFactor={0.08}
+          rotateSpeed={0.7}
+          minDistance={2.4}
+          maxDistance={7}
+          minPolarAngle={Math.PI / 6}
+          maxPolarAngle={Math.PI * 0.62}
+          target={[0, 0.2, 0]}
+        />
+      </Canvas>
+    </ViewerErrorBoundary>
   );
 }

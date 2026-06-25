@@ -1,135 +1,4507 @@
 [
   {
-    "name": "Studio Oversized Tee",
-    "price": 48,
-    "description": "A heavyweight cotton T-shirt with a relaxed silhouette, dropped shoulders, and a washed finish built for everyday rotation.",
-    "category": "T-Shirts",
-    "images": [
-      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80"
-    ],
-    "sizes": ["S", "M", "L", "XL"],
-    "colors": ["Bone", "Graphite", "Olive"],
-    "tags": {
-      "bodyType": ["Slim", "Athletic", "Regular"],
-      "skinTone": ["Fair", "Light", "Medium", "Olive"],
-      "style": ["Minimal", "Streetwear", "Layering"]
-    },
-    "featured": true
-  },
-  {
-    "name": "Selvedge Straight Jeans",
-    "price": 118,
-    "description": "Clean straight-leg denim with subtle fading, structured drape, and a premium selvedge finish that wears in beautifully.",
-    "category": "Jeans",
-    "images": [
-      "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=1200&q=80"
-    ],
-    "sizes": ["S", "M", "L", "XL"],
-    "colors": ["Raw Indigo", "Charcoal"],
-    "tags": {
-      "bodyType": ["Athletic", "Regular", "Heavy", "Plus Size"],
-      "skinTone": ["Light", "Medium", "Olive", "Dark"],
-      "style": ["Tailored", "Minimal", "Everyday"]
-    },
-    "featured": true
-  },
-  {
-    "name": "Signature Pullover Hoodie",
-    "price": 96,
-    "description": "Brushed fleece interior, boxy fit, and tonal embroidery combine for a hoodie that feels refined without losing comfort.",
+    "sku": "UW001",
+    "season": "Winter",
+    "name": "Premium Hoodie — Dark Chocolate Brown",
+    "price": 2499,
+    "description": "Elevate your everyday fit with our premium 100% cotton fleece hoodie. Built for streetwear comfort, it features a soft, brushed interior that keeps you warm without the bulk. Designed with dropped shoulders and a roomy kangaroo pocket, this hoodie delivers that clean, laid-back vibe. Ribbed cuffs and hem add structure, while the relaxed, loose fit gives you a generous silhouette that stays sharp — not oversized. Made to move with you, made to last, and made for the streets. Fit: Oversized. Length: Regular length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton, 350 GSM. Care: Machine wash cold (30°C).",
     "category": "Hoodies",
     "images": [
       "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80"
     ],
-    "sizes": ["S", "M", "L", "XL"],
-    "colors": ["Stone", "Forest", "Midnight"],
-    "tags": {
-      "bodyType": ["Athletic", "Regular", "Heavy", "Plus Size"],
-      "skinTone": ["Fair", "Light", "Medium", "Dark"],
-      "style": ["Streetwear", "Relaxed", "Layering"]
-    },
-    "featured": true
-  },
-  {
-    "name": "Modern Utility Jacket",
-    "price": 154,
-    "description": "Lightweight layering jacket with a structured collar, hidden placket, and minimalist utility pockets for transitional weather.",
-    "category": "Outerwear",
-    "images": [
-      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80"
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
     ],
-    "sizes": ["S", "M", "L", "XL"],
-    "colors": ["Sand", "Black"],
+    "colors": [
+      "Dark Chocolate Brown"
+    ],
     "tags": {
-      "bodyType": ["Slim", "Athletic", "Regular"],
-      "skinTone": ["Light", "Medium", "Olive", "Dark"],
-      "style": ["Outerwear", "Minimal", "Structured"]
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
     },
-    "featured": false
+    "featured": true,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest/Bust (in)": "45",
+        "Front Length (in)": "27"
+      },
+      {
+        "Size": "S",
+        "Chest/Bust (in)": "47",
+        "Front Length (in)": "27.5"
+      },
+      {
+        "Size": "M",
+        "Chest/Bust (in)": "49",
+        "Front Length (in)": "28.5"
+      },
+      {
+        "Size": "L",
+        "Chest/Bust (in)": "51",
+        "Front Length (in)": "29.5"
+      },
+      {
+        "Size": "XL",
+        "Chest/Bust (in)": "53",
+        "Front Length (in)": "30.5"
+      },
+      {
+        "Size": "XXL",
+        "Chest/Bust (in)": "55",
+        "Front Length (in)": "31.5"
+      }
+    ],
+    "details": {
+      "fit": "Oversized",
+      "length": "Regular length",
+      "sleeveLength": "Long sleeve",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton, 350 GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "BASICS",
+      "style": "Hoodie",
+      "sizeChartKey": "HOODIES - CASUAL WEAR - UNISEX"
+    }
   },
   {
-    "name": "Tailored Pleated Trousers",
-    "price": 132,
-    "description": "Relaxed tailored trousers with front pleats and a fluid drape designed to move from daywear to evening styling.",
+    "sku": "UW002",
+    "season": "Winter",
+    "name": "Premium Hoodie — Black",
+    "price": 2499,
+    "description": "Elevate your everyday fit with our premium 100% cotton fleece hoodie. Built for streetwear comfort, it features a soft, brushed interior that keeps you warm without the bulk. Designed with dropped shoulders and a roomy kangaroo pocket, this hoodie delivers that clean, laid-back vibe. Ribbed cuffs and hem add structure, while the relaxed, loose fit gives you a generous silhouette that stays sharp — not oversized. Made to move with you, made to last, and made for the streets. Fit: Oversized. Length: Regular length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton, 350 GSM. Care: Machine wash cold (30°C).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Black"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": true,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest/Bust (in)": "45",
+        "Front Length (in)": "27"
+      },
+      {
+        "Size": "S",
+        "Chest/Bust (in)": "47",
+        "Front Length (in)": "27.5"
+      },
+      {
+        "Size": "M",
+        "Chest/Bust (in)": "49",
+        "Front Length (in)": "28.5"
+      },
+      {
+        "Size": "L",
+        "Chest/Bust (in)": "51",
+        "Front Length (in)": "29.5"
+      },
+      {
+        "Size": "XL",
+        "Chest/Bust (in)": "53",
+        "Front Length (in)": "30.5"
+      },
+      {
+        "Size": "XXL",
+        "Chest/Bust (in)": "55",
+        "Front Length (in)": "31.5"
+      }
+    ],
+    "details": {
+      "fit": "Oversized",
+      "length": "Regular length",
+      "sleeveLength": "Long sleeves",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton, 350 GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Hoodie",
+      "sizeChartKey": "HOODIES - CASUAL WEAR - UNISEX"
+    }
+  },
+  {
+    "sku": "UW003",
+    "season": "Winter",
+    "name": "Premium Hoodie — Off White",
+    "price": 2499,
+    "description": "Elevate your everyday fit with our premium 100% cotton fleece hoodie. Built for streetwear comfort, it features a soft, brushed interior that keeps you warm without the bulk. Designed with dropped shoulders and a roomy kangaroo pocket, this hoodie delivers that clean, laid-back vibe. Ribbed cuffs and hem add structure, while the relaxed, loose fit gives you a generous silhouette that stays sharp — not oversized. Made to move with you, made to last, and made for the streets. Fit: Oversized. Length: Regular length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton 350 GSM. Care: Machine wash cold (30°C).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Off White"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": true,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest/Bust (in)": "45",
+        "Front Length (in)": "27"
+      },
+      {
+        "Size": "S",
+        "Chest/Bust (in)": "47",
+        "Front Length (in)": "27.5"
+      },
+      {
+        "Size": "M",
+        "Chest/Bust (in)": "49",
+        "Front Length (in)": "28.5"
+      },
+      {
+        "Size": "L",
+        "Chest/Bust (in)": "51",
+        "Front Length (in)": "29.5"
+      },
+      {
+        "Size": "XL",
+        "Chest/Bust (in)": "53",
+        "Front Length (in)": "30.5"
+      },
+      {
+        "Size": "XXL",
+        "Chest/Bust (in)": "55",
+        "Front Length (in)": "31.5"
+      }
+    ],
+    "details": {
+      "fit": "Oversized",
+      "length": "Regular length",
+      "sleeveLength": "Long sleeve",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton 350 GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Hoodie",
+      "sizeChartKey": "HOODIES - CASUAL WEAR - UNISEX"
+    }
+  },
+  {
+    "sku": "UW004",
+    "season": "Winter",
+    "name": "Premium Hoodie — Black",
+    "price": 2499,
+    "description": "Elevate your everyday fit with our premium 100% cotton fleece hoodie. Built for streetwear comfort, it features a soft, brushed interior that keeps you warm without the bulk. Designed with dropped shoulders and a roomy kangaroo pocket, this hoodie delivers that clean, laid-back vibe. Ribbed cuffs and hem add structure, while the relaxed, loose fit gives you a generous silhouette that stays sharp — not oversized. Made to move with you, made to last, and made for the streets. Fit: Oversized. Length: Regular length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton 350 GSM. Care: Machine wash cold (30°C).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Black"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest/Bust (in)": "45",
+        "Front Length (in)": "27"
+      },
+      {
+        "Size": "S",
+        "Chest/Bust (in)": "47",
+        "Front Length (in)": "27.5"
+      },
+      {
+        "Size": "M",
+        "Chest/Bust (in)": "49",
+        "Front Length (in)": "28.5"
+      },
+      {
+        "Size": "L",
+        "Chest/Bust (in)": "51",
+        "Front Length (in)": "29.5"
+      },
+      {
+        "Size": "XL",
+        "Chest/Bust (in)": "53",
+        "Front Length (in)": "30.5"
+      },
+      {
+        "Size": "XXL",
+        "Chest/Bust (in)": "55",
+        "Front Length (in)": "31.5"
+      }
+    ],
+    "details": {
+      "fit": "Oversized",
+      "length": "Regular length",
+      "sleeveLength": "Long sleeve",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton 350 GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Hoodie",
+      "sizeChartKey": "HOODIES - CASUAL WEAR - UNISEX"
+    }
+  },
+  {
+    "sku": "UW005",
+    "season": "Winter",
+    "name": "Premium Hoodie — Dark Chocolate Brown",
+    "price": 2499,
+    "description": "Elevate your everyday fit with our premium 100% cotton fleece hoodie. Built for streetwear comfort, it features a soft, brushed interior that keeps you warm without the bulk. Designed with dropped shoulders and a roomy kangaroo pocket, this hoodie delivers that clean, laid-back vibe. Ribbed cuffs and hem add structure, while the relaxed, loose fit gives you a generous silhouette that stays sharp — not oversized. Made to move with you, made to last, and made for the streets. Fit: Oversized. Length: Regular length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton 350 GSM. Care: Machine wash cold (30°C).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Dark Chocolate Brown"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest/Bust (in)": "45",
+        "Front Length (in)": "27"
+      },
+      {
+        "Size": "S",
+        "Chest/Bust (in)": "47",
+        "Front Length (in)": "27.5"
+      },
+      {
+        "Size": "M",
+        "Chest/Bust (in)": "49",
+        "Front Length (in)": "28.5"
+      },
+      {
+        "Size": "L",
+        "Chest/Bust (in)": "51",
+        "Front Length (in)": "29.5"
+      },
+      {
+        "Size": "XL",
+        "Chest/Bust (in)": "53",
+        "Front Length (in)": "30.5"
+      },
+      {
+        "Size": "XXL",
+        "Chest/Bust (in)": "55",
+        "Front Length (in)": "31.5"
+      }
+    ],
+    "details": {
+      "fit": "Oversized",
+      "length": "Regular length",
+      "sleeveLength": "Long sleeves",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton 350 GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Hoodie",
+      "sizeChartKey": "HOODIES - CASUAL WEAR - UNISEX"
+    }
+  },
+  {
+    "sku": "UW006",
+    "season": "Winter",
+    "name": "Premium Hoodie — Off White",
+    "price": 2499,
+    "description": "Elevate your everyday fit with our premium 100% cotton fleece hoodie. Built for streetwear comfort, it features a soft, brushed interior that keeps you warm without the bulk. Designed with dropped shoulders and a roomy kangaroo pocket, this hoodie delivers that clean, laid-back vibe. Ribbed cuffs and hem add structure, while the relaxed, loose fit gives you a generous silhouette that stays sharp — not oversized. Made to move with you, made to last, and made for the streets. Fit: Oversized. Length: Regular length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton 350 GSM. Care: Machine wash cold (30°C).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Off White"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest/Bust (in)": "45",
+        "Front Length (in)": "27"
+      },
+      {
+        "Size": "S",
+        "Chest/Bust (in)": "47",
+        "Front Length (in)": "27.5"
+      },
+      {
+        "Size": "M",
+        "Chest/Bust (in)": "49",
+        "Front Length (in)": "28.5"
+      },
+      {
+        "Size": "L",
+        "Chest/Bust (in)": "51",
+        "Front Length (in)": "29.5"
+      },
+      {
+        "Size": "XL",
+        "Chest/Bust (in)": "53",
+        "Front Length (in)": "30.5"
+      },
+      {
+        "Size": "XXL",
+        "Chest/Bust (in)": "55",
+        "Front Length (in)": "31.5"
+      }
+    ],
+    "details": {
+      "fit": "Oversized",
+      "length": "Regular length",
+      "sleeveLength": "Long sleeves",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton 350 GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Hoodie",
+      "sizeChartKey": "HOODIES - CASUAL WEAR - UNISEX"
+    }
+  },
+  {
+    "sku": "UW007",
+    "season": "Winter",
+    "name": "Premium Hoodie — Cadmium Red",
+    "price": 2499,
+    "description": "Elevate your everyday fit with our premium 100% cotton fleece hoodie. Built for streetwear comfort, it features a soft, brushed interior that keeps you warm without the bulk. Designed with dropped shoulders and a roomy kangaroo pocket, this hoodie delivers that clean, laid-back vibe. Ribbed cuffs and hem add structure, while the relaxed, loose fit gives you a generous silhouette that stays sharp — not oversized. Made to move with you, made to last, and made for the streets. Fit: Oversized. Length: Regular length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton 350GSM. Care: Machine wash cold (30°C).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Cadmium Red"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest/Bust (in)": "45",
+        "Front Length (in)": "27"
+      },
+      {
+        "Size": "S",
+        "Chest/Bust (in)": "47",
+        "Front Length (in)": "27.5"
+      },
+      {
+        "Size": "M",
+        "Chest/Bust (in)": "49",
+        "Front Length (in)": "28.5"
+      },
+      {
+        "Size": "L",
+        "Chest/Bust (in)": "51",
+        "Front Length (in)": "29.5"
+      },
+      {
+        "Size": "XL",
+        "Chest/Bust (in)": "53",
+        "Front Length (in)": "30.5"
+      },
+      {
+        "Size": "XXL",
+        "Chest/Bust (in)": "55",
+        "Front Length (in)": "31.5"
+      }
+    ],
+    "details": {
+      "fit": "Oversized",
+      "length": "Regular length",
+      "sleeveLength": "Long sleeves",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton 350GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Hoodie",
+      "sizeChartKey": "HOODIES - CASUAL WEAR - UNISEX"
+    }
+  },
+  {
+    "sku": "UW008",
+    "season": "Winter",
+    "name": "Premium Hoodie — Off White",
+    "price": 2499,
+    "description": "Elevate your everyday fit with our premium 100% cotton fleece hoodie. Built for streetwear comfort, it features a soft, brushed interior that keeps you warm without the bulk. Designed with dropped shoulders and a roomy kangaroo pocket, this hoodie delivers that clean, laid-back vibe. Ribbed cuffs and hem add structure, while the relaxed, loose fit gives you a generous silhouette that stays sharp — not oversized. Made to move with you, made to last, and made for the streets. Fit: Oversized. Length: Regular length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton 350GSM. Care: Machine wash cold (30°C).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Off White"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest/Bust (in)": "45",
+        "Front Length (in)": "27"
+      },
+      {
+        "Size": "S",
+        "Chest/Bust (in)": "47",
+        "Front Length (in)": "27.5"
+      },
+      {
+        "Size": "M",
+        "Chest/Bust (in)": "49",
+        "Front Length (in)": "28.5"
+      },
+      {
+        "Size": "L",
+        "Chest/Bust (in)": "51",
+        "Front Length (in)": "29.5"
+      },
+      {
+        "Size": "XL",
+        "Chest/Bust (in)": "53",
+        "Front Length (in)": "30.5"
+      },
+      {
+        "Size": "XXL",
+        "Chest/Bust (in)": "55",
+        "Front Length (in)": "31.5"
+      }
+    ],
+    "details": {
+      "fit": "Oversized",
+      "length": "Regular length",
+      "sleeveLength": "Long sleeves",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton 350GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Hoodie",
+      "sizeChartKey": "HOODIES - CASUAL WEAR - UNISEX"
+    }
+  },
+  {
+    "sku": "UW009",
+    "season": "Winter",
+    "name": "Premium Hoodie — Cadmium Red",
+    "price": 2499,
+    "description": "Elevate your everyday fit with our premium 100% cotton fleece hoodie. Built for streetwear comfort, it features a soft, brushed interior that keeps you warm without the bulk. Designed with dropped shoulders and a roomy kangaroo pocket, this hoodie delivers that clean, laid-back vibe. Ribbed cuffs and hem add structure, while the relaxed, loose fit gives you a generous silhouette that stays sharp — not oversized. Made to move with you, made to last, and made for the streets. Fit: Oversized. Length: Regular length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton 350GSM. Care: Machine wash cold (30°C).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Cadmium Red"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest/Bust (in)": "45",
+        "Front Length (in)": "27"
+      },
+      {
+        "Size": "S",
+        "Chest/Bust (in)": "47",
+        "Front Length (in)": "27.5"
+      },
+      {
+        "Size": "M",
+        "Chest/Bust (in)": "49",
+        "Front Length (in)": "28.5"
+      },
+      {
+        "Size": "L",
+        "Chest/Bust (in)": "51",
+        "Front Length (in)": "29.5"
+      },
+      {
+        "Size": "XL",
+        "Chest/Bust (in)": "53",
+        "Front Length (in)": "30.5"
+      },
+      {
+        "Size": "XXL",
+        "Chest/Bust (in)": "55",
+        "Front Length (in)": "31.5"
+      }
+    ],
+    "details": {
+      "fit": "Oversized",
+      "length": "Regular length",
+      "sleeveLength": "Long sleeves",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton 350GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Hoodie",
+      "sizeChartKey": "HOODIES - CASUAL WEAR - UNISEX"
+    }
+  },
+  {
+    "sku": "UW0010",
+    "season": "Winter",
+    "name": "Premium Hoodie — Light Gray",
+    "price": 2499,
+    "description": "Elevate your everyday fit with our premium 100% cotton fleece hoodie. Built for streetwear comfort, it features a soft, brushed interior that keeps you warm without the bulk. Designed with dropped shoulders and a roomy kangaroo pocket, this hoodie delivers that clean, laid-back vibe. Ribbed cuffs and hem add structure, while the relaxed, loose fit gives you a generous silhouette that stays sharp — not oversized. Made to move with you, made to last, and made for the streets. Fit: Oversized. Length: Regular length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton 350GSM. Care: Machine wash cold (30°C).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Light Gray"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest/Bust (in)": "45",
+        "Front Length (in)": "27"
+      },
+      {
+        "Size": "S",
+        "Chest/Bust (in)": "47",
+        "Front Length (in)": "27.5"
+      },
+      {
+        "Size": "M",
+        "Chest/Bust (in)": "49",
+        "Front Length (in)": "28.5"
+      },
+      {
+        "Size": "L",
+        "Chest/Bust (in)": "51",
+        "Front Length (in)": "29.5"
+      },
+      {
+        "Size": "XL",
+        "Chest/Bust (in)": "53",
+        "Front Length (in)": "30.5"
+      },
+      {
+        "Size": "XXL",
+        "Chest/Bust (in)": "55",
+        "Front Length (in)": "31.5"
+      }
+    ],
+    "details": {
+      "fit": "Oversized",
+      "length": "Regular length",
+      "sleeveLength": "Long sleeves",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton 350GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Hoodie",
+      "sizeChartKey": "HOODIES - CASUAL WEAR - UNISEX"
+    }
+  },
+  {
+    "sku": "UW0011",
+    "season": "Winter",
+    "name": "Crop Hoodie — Black",
+    "price": 2499,
+    "description": "A cropped hoodie designed for queens who masters the art of chill. Crafted in ultra-soft fabric ,it wraps you in comfort while delivering street-smart style. Whether you're lounging,layering or stepping out,it keeps the energy balanced- effortlessly relaxed yet sharp with attitude . This hoodie isn't just about staying cozy; it's about owning your vibe-subtle, fierce and undeniably you. Fit: Oversized. Length: Crop length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton 350GSM. Care: Machine wash cold (30°C).",
+    "category": "Crop Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Black"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest (in)": "38",
+        "Length": "16"
+      },
+      {
+        "Size": "S",
+        "Chest (in)": "40",
+        "Length": "17"
+      },
+      {
+        "Size": "M",
+        "Chest (in)": "42",
+        "Length": "18"
+      },
+      {
+        "Size": "L",
+        "Chest (in)": "44",
+        "Length": "19"
+      },
+      {
+        "Size": "XL",
+        "Chest (in)": "46",
+        "Length": "20"
+      },
+      {
+        "Size": "XXL",
+        "Chest (in)": "48",
+        "Length": "21"
+      }
+    ],
+    "details": {
+      "fit": "Oversized",
+      "length": "Crop length",
+      "sleeveLength": "Long sleeves",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton 350GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Hoodie",
+      "sizeChartKey": "Crop Hoodie"
+    }
+  },
+  {
+    "sku": "UW0012",
+    "season": "Winter",
+    "name": "Crop Hoodie — Off White",
+    "price": 2499,
+    "description": "A cropped hoodie designed for queens who masters the art of chill. Crafted in ultra-soft fabric ,it wraps you in comfort while delivering street-smart style. Whether you're lounging,layering or stepping out,it keeps the energy balanced- effortlessly relaxed yet sharp with attitude . This hoodie isn't just about staying cozy; it's about owning your vibe-subtle, fierce and undeniably you. Fit: Oversized. Length: Crop length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton 350GSM. Care: Machine wash cold (30°C).",
+    "category": "Crop Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Off White"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest (in)": "38",
+        "Length": "16"
+      },
+      {
+        "Size": "S",
+        "Chest (in)": "40",
+        "Length": "17"
+      },
+      {
+        "Size": "M",
+        "Chest (in)": "42",
+        "Length": "18"
+      },
+      {
+        "Size": "L",
+        "Chest (in)": "44",
+        "Length": "19"
+      },
+      {
+        "Size": "XL",
+        "Chest (in)": "46",
+        "Length": "20"
+      },
+      {
+        "Size": "XXL",
+        "Chest (in)": "48",
+        "Length": "21"
+      }
+    ],
+    "details": {
+      "fit": "Oversized",
+      "length": "Crop length",
+      "sleeveLength": "Long sleeves",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton 350GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Hoodie",
+      "sizeChartKey": "Crop Hoodie"
+    }
+  },
+  {
+    "sku": "UW0013",
+    "season": "Winter",
+    "name": "Crop Hoodie — Cadmium Red",
+    "price": 2499,
+    "description": "A cropped hoodie designed for queens who masters the art of chill. Crafted in ultra-soft fabric ,it wraps you in comfort while delivering street-smart style. Whether you're lounging,layering or stepping out,it keeps the energy balanced- effortlessly relaxed yet sharp with attitude . This hoodie isn't just about staying cozy; it's about owning your vibe-subtle, fierce and undeniably you. Fit: Oversized. Length: Crop length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton 350GSM. Care: Machine wash cold (30°C).",
+    "category": "Crop Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Cadmium Red"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest (in)": "38",
+        "Length": "16"
+      },
+      {
+        "Size": "S",
+        "Chest (in)": "40",
+        "Length": "17"
+      },
+      {
+        "Size": "M",
+        "Chest (in)": "42",
+        "Length": "18"
+      },
+      {
+        "Size": "L",
+        "Chest (in)": "44",
+        "Length": "19"
+      },
+      {
+        "Size": "XL",
+        "Chest (in)": "46",
+        "Length": "20"
+      },
+      {
+        "Size": "XXL",
+        "Chest (in)": "48",
+        "Length": "21"
+      }
+    ],
+    "details": {
+      "fit": "Oversized",
+      "length": "Crop length",
+      "sleeveLength": "Long sleeves",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton 350GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Hoodie",
+      "sizeChartKey": "Crop Hoodie"
+    }
+  },
+  {
+    "sku": "UW0014",
+    "season": "Winter",
+    "name": "Crop Hoodie — Dark Chocolate Brown",
+    "price": 2499,
+    "description": "A cropped hoodie designed for queens who masters the art of chill. Crafted in ultra-soft fabric ,it wraps you in comfort while delivering street-smart style. Whether you're lounging,layering or stepping out,it keeps the energy balanced- effortlessly relaxed yet sharp with attitude . This hoodie isn't just about staying cozy; it's about owning your vibe-subtle, fierce and undeniably you. Fit: Oversized. Length: Crop length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton 350GSM. Care: Machine wash cold (30°C).",
+    "category": "Crop Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Dark Chocolate Brown"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest (in)": "38",
+        "Length": "16"
+      },
+      {
+        "Size": "S",
+        "Chest (in)": "40",
+        "Length": "17"
+      },
+      {
+        "Size": "M",
+        "Chest (in)": "42",
+        "Length": "18"
+      },
+      {
+        "Size": "L",
+        "Chest (in)": "44",
+        "Length": "19"
+      },
+      {
+        "Size": "XL",
+        "Chest (in)": "46",
+        "Length": "20"
+      },
+      {
+        "Size": "XXL",
+        "Chest (in)": "48",
+        "Length": "21"
+      }
+    ],
+    "details": {
+      "fit": "Oversized",
+      "length": "Crop length",
+      "sleeveLength": "Long sleeves",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton 350GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Hoodie",
+      "sizeChartKey": "Crop Hoodie"
+    }
+  },
+  {
+    "sku": "UW0015",
+    "season": "Winter",
+    "name": "Crop Hoodie — Light Gray",
+    "price": 2499,
+    "description": "A cropped hoodie designed for queens who masters the art of chill. Crafted in ultra-soft fabric ,it wraps you in comfort while delivering street-smart style. Whether you're lounging,layering or stepping out,it keeps the energy balanced- effortlessly relaxed yet sharp with attitude . This hoodie isn't just about staying cozy; it's about owning your vibe-subtle, fierce and undeniably you. Fit: Oversized. Length: Crop length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton 350GSM. Care: Machine wash cold (30°C).",
+    "category": "Crop Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Light Gray"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest (in)": "38",
+        "Length": "16"
+      },
+      {
+        "Size": "S",
+        "Chest (in)": "40",
+        "Length": "17"
+      },
+      {
+        "Size": "M",
+        "Chest (in)": "42",
+        "Length": "18"
+      },
+      {
+        "Size": "L",
+        "Chest (in)": "44",
+        "Length": "19"
+      },
+      {
+        "Size": "XL",
+        "Chest (in)": "46",
+        "Length": "20"
+      },
+      {
+        "Size": "XXL",
+        "Chest (in)": "48",
+        "Length": "21"
+      }
+    ],
+    "details": {
+      "fit": "Oversized",
+      "length": "Crop length",
+      "sleeveLength": "Long sleeves",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton 350GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Hoodie",
+      "sizeChartKey": "Crop Hoodie"
+    }
+  },
+  {
+    "sku": "UW0016",
+    "season": "Winter",
+    "name": "Premium Sweatshirt — Black",
+    "price": 2199,
+    "description": "Stay chill, look fierce. This long sleeves 100% cotton fleece sweatshirt nails that balance between cozy and cool. With its soft ,brushed interior and loose fit, it gives you room to move while keeping your look sharp. Dropped shoulders and ribbed trims brings that effortless street vibe,while the clean cut keeps it from going sloppy. Made for layering,lounging,and living loud- built to move,build to last,built for the bold. Fit: Oversized. Length: Regular length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton 350GSM. Care: Machine wash cold (30°C).",
+    "category": "Sweatshirts",
+    "images": [
+      "https://images.unsplash.com/photo-1578581926291-cf242593e5a2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb088d5?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Black"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Minimal"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest / Bust (in)": "42",
+        "Front Length (in)": "26.5",
+        "Across Shoulder (in)": "17"
+      },
+      {
+        "Size": "S",
+        "Chest / Bust (in)": "44",
+        "Front Length (in)": "27",
+        "Across Shoulder (in)": "18"
+      },
+      {
+        "Size": "M",
+        "Chest / Bust (in)": "46",
+        "Front Length (in)": "27.5",
+        "Across Shoulder (in)": "19"
+      },
+      {
+        "Size": "L",
+        "Chest / Bust (in)": "48",
+        "Front Length (in)": "28",
+        "Across Shoulder (in)": "20"
+      },
+      {
+        "Size": "XL",
+        "Chest / Bust (in)": "50",
+        "Front Length (in)": "28.5",
+        "Across Shoulder (in)": "21"
+      },
+      {
+        "Size": "XXL",
+        "Chest / Bust (in)": "52",
+        "Front Length (in)": "29",
+        "Across Shoulder (in)": "22"
+      }
+    ],
+    "details": {
+      "fit": "Oversized",
+      "length": "Regular length",
+      "sleeveLength": "Long sleeves",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton 350GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Sweatshirt",
+      "sizeChartKey": "SWEATSHIRT - CASUAL WEAR - UNISEX"
+    }
+  },
+  {
+    "sku": "UW0017",
+    "season": "Winter",
+    "name": "Premium Sweatshirt — Off White",
+    "price": 2199,
+    "description": "Stay chill, look fierce. This long sleeves 100% cotton fleece sweatshirt nails that balance between cozy and cool. With its soft ,brushed interior and loose fit, it gives you room to move while keeping your look sharp. Dropped shoulders and ribbed trims brings that effortless street vibe,while the clean cut keeps it from going sloppy. Made for layering,lounging,and living loud- built to move,build to last,built for the bold. Fit: Oversized. Length: Regular length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton 350GSM. Care: Machine wash cold (30°C).",
+    "category": "Sweatshirts",
+    "images": [
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb088d5?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578581926291-cf242593e5a2?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Off White"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Minimal"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest / Bust (in)": "42",
+        "Front Length (in)": "26.5",
+        "Across Shoulder (in)": "17"
+      },
+      {
+        "Size": "S",
+        "Chest / Bust (in)": "44",
+        "Front Length (in)": "27",
+        "Across Shoulder (in)": "18"
+      },
+      {
+        "Size": "M",
+        "Chest / Bust (in)": "46",
+        "Front Length (in)": "27.5",
+        "Across Shoulder (in)": "19"
+      },
+      {
+        "Size": "L",
+        "Chest / Bust (in)": "48",
+        "Front Length (in)": "28",
+        "Across Shoulder (in)": "20"
+      },
+      {
+        "Size": "XL",
+        "Chest / Bust (in)": "50",
+        "Front Length (in)": "28.5",
+        "Across Shoulder (in)": "21"
+      },
+      {
+        "Size": "XXL",
+        "Chest / Bust (in)": "52",
+        "Front Length (in)": "29",
+        "Across Shoulder (in)": "22"
+      }
+    ],
+    "details": {
+      "fit": "Oversized",
+      "length": "Regular length",
+      "sleeveLength": "Long sleeves",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton 350GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Sweatshirt",
+      "sizeChartKey": "SWEATSHIRT - CASUAL WEAR - UNISEX"
+    }
+  },
+  {
+    "sku": "UW0018",
+    "season": "Winter",
+    "name": "Premium Sweatshirt — Cadmium Red",
+    "price": 2199,
+    "description": "Stay chill, look fierce. This long sleeves 100% cotton fleece sweatshirt nails that balance between cozy and cool. With its soft ,brushed interior and loose fit, it gives you room to move while keeping your look sharp. Dropped shoulders and ribbed trims brings that effortless street vibe,while the clean cut keeps it from going sloppy. Made for layering,lounging,and living loud- built to move,build to last,built for the bold. Fit: Oversized. Length: Regular length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton 350GSM. Care: Machine wash cold (30°C).",
+    "category": "Sweatshirts",
+    "images": [
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb088d5?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578581926291-cf242593e5a2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Cadmium Red"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Minimal"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest / Bust (in)": "42",
+        "Front Length (in)": "26.5",
+        "Across Shoulder (in)": "17"
+      },
+      {
+        "Size": "S",
+        "Chest / Bust (in)": "44",
+        "Front Length (in)": "27",
+        "Across Shoulder (in)": "18"
+      },
+      {
+        "Size": "M",
+        "Chest / Bust (in)": "46",
+        "Front Length (in)": "27.5",
+        "Across Shoulder (in)": "19"
+      },
+      {
+        "Size": "L",
+        "Chest / Bust (in)": "48",
+        "Front Length (in)": "28",
+        "Across Shoulder (in)": "20"
+      },
+      {
+        "Size": "XL",
+        "Chest / Bust (in)": "50",
+        "Front Length (in)": "28.5",
+        "Across Shoulder (in)": "21"
+      },
+      {
+        "Size": "XXL",
+        "Chest / Bust (in)": "52",
+        "Front Length (in)": "29",
+        "Across Shoulder (in)": "22"
+      }
+    ],
+    "details": {
+      "fit": "Oversized",
+      "length": "Regular length",
+      "sleeveLength": "Long sleeves",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton 350GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Sweatshirt",
+      "sizeChartKey": "SWEATSHIRT - CASUAL WEAR - UNISEX"
+    }
+  },
+  {
+    "sku": "UW0019",
+    "season": "Winter",
+    "name": "Premium Sweatshirt — Dark Chocolate Brown",
+    "price": 2199,
+    "description": "Stay chill, look fierce. This long sleeves 100% cotton fleece sweatshirt nails that balance between cozy and cool. With its soft ,brushed interior and loose fit, it gives you room to move while keeping your look sharp. Dropped shoulders and ribbed trims brings that effortless street vibe,while the clean cut keeps it from going sloppy. Made for layering,lounging,and living loud- built to move,build to last,built for the bold. Fit: Oversized. Length: Regular length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton 350GSM. Care: Machine wash cold (30°C).",
+    "category": "Sweatshirts",
+    "images": [
+      "https://images.unsplash.com/photo-1578581926291-cf242593e5a2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb088d5?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Dark Chocolate Brown"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Minimal"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest / Bust (in)": "42",
+        "Front Length (in)": "26.5",
+        "Across Shoulder (in)": "17"
+      },
+      {
+        "Size": "S",
+        "Chest / Bust (in)": "44",
+        "Front Length (in)": "27",
+        "Across Shoulder (in)": "18"
+      },
+      {
+        "Size": "M",
+        "Chest / Bust (in)": "46",
+        "Front Length (in)": "27.5",
+        "Across Shoulder (in)": "19"
+      },
+      {
+        "Size": "L",
+        "Chest / Bust (in)": "48",
+        "Front Length (in)": "28",
+        "Across Shoulder (in)": "20"
+      },
+      {
+        "Size": "XL",
+        "Chest / Bust (in)": "50",
+        "Front Length (in)": "28.5",
+        "Across Shoulder (in)": "21"
+      },
+      {
+        "Size": "XXL",
+        "Chest / Bust (in)": "52",
+        "Front Length (in)": "29",
+        "Across Shoulder (in)": "22"
+      }
+    ],
+    "details": {
+      "fit": "Oversized",
+      "length": "Regular length",
+      "sleeveLength": "Long sleeves",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton 350GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Sweatshirt",
+      "sizeChartKey": "SWEATSHIRT - CASUAL WEAR - UNISEX"
+    }
+  },
+  {
+    "sku": "UW0020",
+    "season": "Winter",
+    "name": "Premium Sweatshirt — Light Gray",
+    "price": 2199,
+    "description": "Stay chill, look fierce. This long sleeves 100% cotton fleece sweatshirt nails that balance between cozy and cool. With its soft ,brushed interior and loose fit, it gives you room to move while keeping your look sharp. Dropped shoulders and ribbed trims brings that effortless street vibe,while the clean cut keeps it from going sloppy. Made for layering,lounging,and living loud- built to move,build to last,built for the bold. Fit: Oversized. Length: Regular length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton 350GSM. Care: Machine wash cold (30°C).",
+    "category": "Sweatshirts",
+    "images": [
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb088d5?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578581926291-cf242593e5a2?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Light Gray"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Minimal"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest / Bust (in)": "42",
+        "Front Length (in)": "26.5",
+        "Across Shoulder (in)": "17"
+      },
+      {
+        "Size": "S",
+        "Chest / Bust (in)": "44",
+        "Front Length (in)": "27",
+        "Across Shoulder (in)": "18"
+      },
+      {
+        "Size": "M",
+        "Chest / Bust (in)": "46",
+        "Front Length (in)": "27.5",
+        "Across Shoulder (in)": "19"
+      },
+      {
+        "Size": "L",
+        "Chest / Bust (in)": "48",
+        "Front Length (in)": "28",
+        "Across Shoulder (in)": "20"
+      },
+      {
+        "Size": "XL",
+        "Chest / Bust (in)": "50",
+        "Front Length (in)": "28.5",
+        "Across Shoulder (in)": "21"
+      },
+      {
+        "Size": "XXL",
+        "Chest / Bust (in)": "52",
+        "Front Length (in)": "29",
+        "Across Shoulder (in)": "22"
+      }
+    ],
+    "details": {
+      "fit": "Oversized",
+      "length": "Regular length",
+      "sleeveLength": "Long sleeves",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton 350GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Sweatshirt",
+      "sizeChartKey": "SWEATSHIRT - CASUAL WEAR - UNISEX"
+    }
+  },
+  {
+    "sku": "UW0021",
+    "season": "Winter",
+    "name": "Premium Sweatshirt — Black",
+    "price": 2199,
+    "description": "Stay chill, look fierce. This long sleeves 100% cotton fleece sweatshirt nails that balance between cozy and cool. With its soft ,brushed interior and loose fit, it gives you room to move while keeping your look sharp. Dropped shoulders and ribbed trims brings that effortless street vibe,while the clean cut keeps it from going sloppy. Made for layering,lounging,and living loud- built to move,build to last,built for the bold. Fit: Oversized. Length: Regular length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton 350GSM.",
+    "category": "Sweatshirts",
+    "images": [
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb088d5?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578581926291-cf242593e5a2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Black"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Minimal"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest / Bust (in)": "42",
+        "Front Length (in)": "26.5",
+        "Across Shoulder (in)": "17"
+      },
+      {
+        "Size": "S",
+        "Chest / Bust (in)": "44",
+        "Front Length (in)": "27",
+        "Across Shoulder (in)": "18"
+      },
+      {
+        "Size": "M",
+        "Chest / Bust (in)": "46",
+        "Front Length (in)": "27.5",
+        "Across Shoulder (in)": "19"
+      },
+      {
+        "Size": "L",
+        "Chest / Bust (in)": "48",
+        "Front Length (in)": "28",
+        "Across Shoulder (in)": "20"
+      },
+      {
+        "Size": "XL",
+        "Chest / Bust (in)": "50",
+        "Front Length (in)": "28.5",
+        "Across Shoulder (in)": "21"
+      },
+      {
+        "Size": "XXL",
+        "Chest / Bust (in)": "52",
+        "Front Length (in)": "29",
+        "Across Shoulder (in)": "22"
+      }
+    ],
+    "details": {
+      "fit": "Oversized",
+      "length": "Regular length",
+      "sleeveLength": "Long sleeves",
+      "neckline": "Round neck",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton 350GSM",
+      "concept": "Basics",
+      "style": "Sweatshirt",
+      "sizeChartKey": "SWEATSHIRT - CASUAL WEAR - UNISEX"
+    }
+  },
+  {
+    "sku": "UW0022",
+    "season": "Winter",
+    "name": "Premium Sweatshirt — Off White",
+    "price": 2199,
+    "description": "Stay chill, look fierce. This long sleeves 100% cotton fleece sweatshirt nails that balance between cozy and cool. With its soft ,brushed interior and loose fit, it gives you room to move while keeping your look sharp. Dropped shoulders and ribbed trims brings that effortless street vibe,while the clean cut keeps it from going sloppy. Made for layering,lounging,and living loud- built to move,build to last,built for the bold. Fit: Oversized. Length: Regular length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton 350GSM.",
+    "category": "Sweatshirts",
+    "images": [
+      "https://images.unsplash.com/photo-1578581926291-cf242593e5a2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb088d5?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Off White"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Minimal"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest / Bust (in)": "42",
+        "Front Length (in)": "26.5",
+        "Across Shoulder (in)": "17"
+      },
+      {
+        "Size": "S",
+        "Chest / Bust (in)": "44",
+        "Front Length (in)": "27",
+        "Across Shoulder (in)": "18"
+      },
+      {
+        "Size": "M",
+        "Chest / Bust (in)": "46",
+        "Front Length (in)": "27.5",
+        "Across Shoulder (in)": "19"
+      },
+      {
+        "Size": "L",
+        "Chest / Bust (in)": "48",
+        "Front Length (in)": "28",
+        "Across Shoulder (in)": "20"
+      },
+      {
+        "Size": "XL",
+        "Chest / Bust (in)": "50",
+        "Front Length (in)": "28.5",
+        "Across Shoulder (in)": "21"
+      },
+      {
+        "Size": "XXL",
+        "Chest / Bust (in)": "52",
+        "Front Length (in)": "29",
+        "Across Shoulder (in)": "22"
+      }
+    ],
+    "details": {
+      "fit": "Oversized",
+      "length": "Regular length",
+      "sleeveLength": "Long sleeves",
+      "neckline": "Round neck",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton 350GSM",
+      "concept": "Basics",
+      "style": "Sweatshirt",
+      "sizeChartKey": "SWEATSHIRT - CASUAL WEAR - UNISEX"
+    }
+  },
+  {
+    "sku": "UW0023",
+    "season": "Winter",
+    "name": "Premium Sweatshirt — Cadmium Red",
+    "price": 2199,
+    "description": "Stay chill, look fierce. This long sleeves 100% cotton fleece sweatshirt nails that balance between cozy and cool. With its soft ,brushed interior and loose fit, it gives you room to move while keeping your look sharp. Dropped shoulders and ribbed trims brings that effortless street vibe,while the clean cut keeps it from going sloppy. Made for layering,lounging,and living loud- built to move,build to last,built for the bold. Fit: Oversized. Length: Regular length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton 350GSM.",
+    "category": "Sweatshirts",
+    "images": [
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb088d5?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578581926291-cf242593e5a2?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Cadmium Red"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Minimal"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest / Bust (in)": "42",
+        "Front Length (in)": "26.5",
+        "Across Shoulder (in)": "17"
+      },
+      {
+        "Size": "S",
+        "Chest / Bust (in)": "44",
+        "Front Length (in)": "27",
+        "Across Shoulder (in)": "18"
+      },
+      {
+        "Size": "M",
+        "Chest / Bust (in)": "46",
+        "Front Length (in)": "27.5",
+        "Across Shoulder (in)": "19"
+      },
+      {
+        "Size": "L",
+        "Chest / Bust (in)": "48",
+        "Front Length (in)": "28",
+        "Across Shoulder (in)": "20"
+      },
+      {
+        "Size": "XL",
+        "Chest / Bust (in)": "50",
+        "Front Length (in)": "28.5",
+        "Across Shoulder (in)": "21"
+      },
+      {
+        "Size": "XXL",
+        "Chest / Bust (in)": "52",
+        "Front Length (in)": "29",
+        "Across Shoulder (in)": "22"
+      }
+    ],
+    "details": {
+      "fit": "Oversized",
+      "length": "Regular length",
+      "sleeveLength": "Long sleeves",
+      "neckline": "Round neck",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton 350GSM",
+      "concept": "Basics",
+      "style": "Sweatshirt",
+      "sizeChartKey": "SWEATSHIRT - CASUAL WEAR - UNISEX"
+    }
+  },
+  {
+    "sku": "UW0024",
+    "season": "Winter",
+    "name": "Zip Hoodie — Black",
+    "price": 2499,
+    "description": "Zip up, zone out. This long‑sleeve, regular‑fit hoodie is your everyday flex piece—laid‑back but never basic. Made from premium cotton fleece with a soft, brushed interior, it serves comfort that hits different. The full‑zip front lets you switch from chill to street mode in seconds, while the ribbed cuffs and hem lock in that clean silhouette. Rock it solo or layer it up—this one’s built to move, built to last, and built to keep your vibe unmatched. Fit: Regular fit. Length: Regular length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton 350GSM. Care: Machine wash cold (30°C).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL",
+      "XXXL"
+    ],
+    "colors": [
+      "Black"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest": "41",
+        "Length": "26",
+        "Shoulder": "22.5"
+      },
+      {
+        "Size": "S",
+        "Chest": "43",
+        "Length": "27",
+        "Shoulder": "23"
+      },
+      {
+        "Size": "M",
+        "Chest": "45",
+        "Length": "28",
+        "Shoulder": "23.5"
+      },
+      {
+        "Size": "L",
+        "Chest": "47",
+        "Length": "29",
+        "Shoulder": "24"
+      },
+      {
+        "Size": "XL",
+        "Chest": "49",
+        "Length": "30",
+        "Shoulder": "24.5"
+      },
+      {
+        "Size": "XXL",
+        "Chest": "51",
+        "Length": "31",
+        "Shoulder": "25"
+      },
+      {
+        "Size": "XXXL",
+        "Chest": "53",
+        "Length": "32",
+        "Shoulder": "25.5"
+      }
+    ],
+    "details": {
+      "fit": "Regular fit",
+      "length": "Regular length",
+      "sleeveLength": "Long sleeves",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton 350GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Zip hoodie",
+      "sizeChartKey": "zip hoodie - unisex"
+    }
+  },
+  {
+    "sku": "UW0025",
+    "season": "Winter",
+    "name": "Zip Hoodie — Off White",
+    "price": 2499,
+    "description": "Zip up, zone out. This long‑sleeve, regular‑fit hoodie is your everyday flex piece—laid‑back but never basic. Made from premium cotton fleece with a soft, brushed interior, it serves comfort that hits different. The full‑zip front lets you switch from chill to street mode in seconds, while the ribbed cuffs and hem lock in that clean silhouette. Rock it solo or layer it up—this one’s built to move, built to last, and built to keep your vibe unmatched. Fit: Regular fit. Length: Regular length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton 350GSM. Care: Machine wash cold (30°C).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL",
+      "XXXL"
+    ],
+    "colors": [
+      "Off White"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest": "41",
+        "Length": "26",
+        "Shoulder": "22.5"
+      },
+      {
+        "Size": "S",
+        "Chest": "43",
+        "Length": "27",
+        "Shoulder": "23"
+      },
+      {
+        "Size": "M",
+        "Chest": "45",
+        "Length": "28",
+        "Shoulder": "23.5"
+      },
+      {
+        "Size": "L",
+        "Chest": "47",
+        "Length": "29",
+        "Shoulder": "24"
+      },
+      {
+        "Size": "XL",
+        "Chest": "49",
+        "Length": "30",
+        "Shoulder": "24.5"
+      },
+      {
+        "Size": "XXL",
+        "Chest": "51",
+        "Length": "31",
+        "Shoulder": "25"
+      },
+      {
+        "Size": "XXXL",
+        "Chest": "53",
+        "Length": "32",
+        "Shoulder": "25.5"
+      }
+    ],
+    "details": {
+      "fit": "Regular fit",
+      "length": "Regular length",
+      "sleeveLength": "Long sleeves",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton 350GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Zip hoodie",
+      "sizeChartKey": "zip hoodie - unisex"
+    }
+  },
+  {
+    "sku": "UW0026",
+    "season": "Winter",
+    "name": "Zip Hoodie — Cadmium Red",
+    "price": 2499,
+    "description": "Zip up, zone out. This long‑sleeve, regular‑fit hoodie is your everyday flex piece—laid‑back but never basic. Made from premium cotton fleece with a soft, brushed interior, it serves comfort that hits different. The full‑zip front lets you switch from chill to street mode in seconds, while the ribbed cuffs and hem lock in that clean silhouette. Rock it solo or layer it up—this one’s built to move, built to last, and built to keep your vibe unmatched. Fit: Regular fit. Length: Regular length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton 350GSM. Care: Machine wash cold (30°C).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL",
+      "XXXL"
+    ],
+    "colors": [
+      "Cadmium Red"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest": "41",
+        "Length": "26",
+        "Shoulder": "22.5"
+      },
+      {
+        "Size": "S",
+        "Chest": "43",
+        "Length": "27",
+        "Shoulder": "23"
+      },
+      {
+        "Size": "M",
+        "Chest": "45",
+        "Length": "28",
+        "Shoulder": "23.5"
+      },
+      {
+        "Size": "L",
+        "Chest": "47",
+        "Length": "29",
+        "Shoulder": "24"
+      },
+      {
+        "Size": "XL",
+        "Chest": "49",
+        "Length": "30",
+        "Shoulder": "24.5"
+      },
+      {
+        "Size": "XXL",
+        "Chest": "51",
+        "Length": "31",
+        "Shoulder": "25"
+      },
+      {
+        "Size": "XXXL",
+        "Chest": "53",
+        "Length": "32",
+        "Shoulder": "25.5"
+      }
+    ],
+    "details": {
+      "fit": "Regular fit",
+      "length": "Regular length",
+      "sleeveLength": "Long sleeves",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton 350GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Zip hoodie",
+      "sizeChartKey": "zip hoodie - unisex"
+    }
+  },
+  {
+    "sku": "UW0027",
+    "season": "Winter",
+    "name": "Zip Hoodie — Dark Chocolate Brown",
+    "price": 2499,
+    "description": "Zip up, zone out. This long‑sleeve, regular‑fit hoodie is your everyday flex piece—laid‑back but never basic. Made from premium cotton fleece with a soft, brushed interior, it serves comfort that hits different. The full‑zip front lets you switch from chill to street mode in seconds, while the ribbed cuffs and hem lock in that clean silhouette. Rock it solo or layer it up—this one’s built to move, built to last, and built to keep your vibe unmatched. Fit: Regular fit. Length: Regular length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton 350GSM. Care: Machine wash cold (30°C).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL",
+      "XXXL"
+    ],
+    "colors": [
+      "Dark Chocolate Brown"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest": "41",
+        "Length": "26",
+        "Shoulder": "22.5"
+      },
+      {
+        "Size": "S",
+        "Chest": "43",
+        "Length": "27",
+        "Shoulder": "23"
+      },
+      {
+        "Size": "M",
+        "Chest": "45",
+        "Length": "28",
+        "Shoulder": "23.5"
+      },
+      {
+        "Size": "L",
+        "Chest": "47",
+        "Length": "29",
+        "Shoulder": "24"
+      },
+      {
+        "Size": "XL",
+        "Chest": "49",
+        "Length": "30",
+        "Shoulder": "24.5"
+      },
+      {
+        "Size": "XXL",
+        "Chest": "51",
+        "Length": "31",
+        "Shoulder": "25"
+      },
+      {
+        "Size": "XXXL",
+        "Chest": "53",
+        "Length": "32",
+        "Shoulder": "25.5"
+      }
+    ],
+    "details": {
+      "fit": "Regular fit",
+      "length": "Regular length",
+      "sleeveLength": "Long sleeves",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton 350GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Zip hoodie",
+      "sizeChartKey": "zip hoodie - unisex"
+    }
+  },
+  {
+    "sku": "UW0028",
+    "season": "Winter",
+    "name": "Zip Hoodie — Light Gray",
+    "price": 2499,
+    "description": "Zip up, zone out. This long‑sleeve, regular‑fit hoodie is your everyday flex piece—laid‑back but never basic. Made from premium cotton fleece with a soft, brushed interior, it serves comfort that hits different. The full‑zip front lets you switch from chill to street mode in seconds, while the ribbed cuffs and hem lock in that clean silhouette. Rock it solo or layer it up—this one’s built to move, built to last, and built to keep your vibe unmatched. Fit: Regular fit. Length: Regular length. Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style. Composition: 100% cotton 350GSM. Care: Machine wash cold (30°C).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL",
+      "XXXL"
+    ],
+    "colors": [
+      "Light Gray"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest": "41",
+        "Length": "26",
+        "Shoulder": "22.5"
+      },
+      {
+        "Size": "S",
+        "Chest": "43",
+        "Length": "27",
+        "Shoulder": "23"
+      },
+      {
+        "Size": "M",
+        "Chest": "45",
+        "Length": "28",
+        "Shoulder": "23.5"
+      },
+      {
+        "Size": "L",
+        "Chest": "47",
+        "Length": "29",
+        "Shoulder": "24"
+      },
+      {
+        "Size": "XL",
+        "Chest": "49",
+        "Length": "30",
+        "Shoulder": "24.5"
+      },
+      {
+        "Size": "XXL",
+        "Chest": "51",
+        "Length": "31",
+        "Shoulder": "25"
+      },
+      {
+        "Size": "XXXL",
+        "Chest": "53",
+        "Length": "32",
+        "Shoulder": "25.5"
+      }
+    ],
+    "details": {
+      "fit": "Regular fit",
+      "length": "Regular length",
+      "sleeveLength": "Long sleeves",
+      "material": "Cotton fleece is created by brushing the inside of the fabric to form a warm, cosy texture. This gives the hoodie its soft, plush feel while keeping it lightweight and comfortable. Perfect for streetwear, it provides warmth without compromising mobility or style.",
+      "materialComposition": "100% cotton 350GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Zip hoodie",
+      "sizeChartKey": "zip hoodie - unisex"
+    }
+  },
+  {
+    "sku": "BT001",
+    "season": "Winter",
+    "name": "Fleece Joggers — Black",
+    "price": 1999,
+    "description": "Meet your new everyday essential. These joggers are made from 100% Cotton fleece Composition: 100% cotton 350GSM. Care: Machine wash cold (30°C).",
+    "category": "Bottoms",
+    "images": [
+      "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506629905607-8f0b66e06f27?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Black"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Everyday",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "S",
+        "Waist": "28",
+        "Hip": "38",
+        "Thigh": "23",
+        "Inseam": "29",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "M",
+        "Waist": "30",
+        "Hip": "40",
+        "Thigh": "24",
+        "Inseam": "29.5",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "L",
+        "Waist": "32",
+        "Hip": "42",
+        "Thigh": "25",
+        "Inseam": "30",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "XL",
+        "Waist": "34",
+        "Hip": "44",
+        "Thigh": "26",
+        "Inseam": "30.5",
+        "Outseam": "41.5"
+      }
+    ],
+    "details": {
+      "material": "Cotton fleece",
+      "materialComposition": "100% cotton 350GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Trousers",
+      "sizeChartKey": "Unisex Joggers"
+    }
+  },
+  {
+    "sku": "BT002",
+    "season": "Winter",
+    "name": "Fleece Joggers — Off White",
+    "price": 1999,
+    "description": "Meet your new everyday essential. These joggers are made from 100% Cotton fleece Composition: 100% cotton 350GSM. Care: Machine wash cold (30°C).",
+    "category": "Bottoms",
+    "images": [
+      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506629905607-8f0b66e06f27?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Off White"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Everyday",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "S",
+        "Waist": "28",
+        "Hip": "38",
+        "Thigh": "23",
+        "Inseam": "29",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "M",
+        "Waist": "30",
+        "Hip": "40",
+        "Thigh": "24",
+        "Inseam": "29.5",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "L",
+        "Waist": "32",
+        "Hip": "42",
+        "Thigh": "25",
+        "Inseam": "30",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "XL",
+        "Waist": "34",
+        "Hip": "44",
+        "Thigh": "26",
+        "Inseam": "30.5",
+        "Outseam": "41.5"
+      }
+    ],
+    "details": {
+      "material": "Cotton fleece",
+      "materialComposition": "100% cotton 350GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Trousers",
+      "sizeChartKey": "Unisex Joggers"
+    }
+  },
+  {
+    "sku": "BT003",
+    "season": "Winter",
+    "name": "Fleece Joggers — Cadmium Red",
+    "price": 1999,
+    "description": "Meet your new everyday essential. These joggers are made from 100% Cotton fleece Composition: 100% cotton 350GSM. Care: Machine wash cold (30°C).",
     "category": "Bottoms",
     "images": [
       "https://images.unsplash.com/photo-1506629905607-8f0b66e06f27?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=1200&q=80"
     ],
-    "sizes": ["S", "M", "L", "XL"],
-    "colors": ["Taupe", "Black"],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Cadmium Red"
+    ],
     "tags": {
-      "bodyType": ["Slim", "Athletic", "Regular", "Heavy"],
-      "skinTone": ["Fair", "Light", "Medium", "Olive", "Dark"],
-      "style": ["Tailored", "Evening", "Minimal"]
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Everyday",
+        "Relaxed"
+      ]
     },
-    "featured": false
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "S",
+        "Waist": "28",
+        "Hip": "38",
+        "Thigh": "23",
+        "Inseam": "29",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "M",
+        "Waist": "30",
+        "Hip": "40",
+        "Thigh": "24",
+        "Inseam": "29.5",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "L",
+        "Waist": "32",
+        "Hip": "42",
+        "Thigh": "25",
+        "Inseam": "30",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "XL",
+        "Waist": "34",
+        "Hip": "44",
+        "Thigh": "26",
+        "Inseam": "30.5",
+        "Outseam": "41.5"
+      }
+    ],
+    "details": {
+      "material": "Cotton fleece",
+      "materialComposition": "100% cotton 350GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Trousers",
+      "sizeChartKey": "Unisex Joggers"
+    }
   },
   {
-    "name": "Essential Rib Tank",
-    "price": 34,
-    "description": "A fitted ribbed tank cut from soft stretch cotton with clean binding and a close, flattering shape.",
-    "category": "Tops",
+    "sku": "BT004",
+    "season": "Winter",
+    "name": "Fleece Joggers — Dark Chocolate Brown",
+    "price": 1999,
+    "description": "Meet your new everyday essential. These joggers are made from 100% Cotton fleece Composition: 100% cotton 350GSM. Care: Machine wash cold (30°C).",
+    "category": "Bottoms",
     "images": [
-      "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506629905607-8f0b66e06f27?auto=format&fit=crop&w=1200&q=80"
     ],
-    "sizes": ["S", "M", "L", "XL"],
-    "colors": ["Ivory", "Espresso", "Black"],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Dark Chocolate Brown"
+    ],
     "tags": {
-      "bodyType": ["Slim", "Athletic", "Regular"],
-      "skinTone": ["Fair", "Light", "Medium", "Olive"],
-      "style": ["Basics", "Layering", "Minimal"]
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Everyday",
+        "Relaxed"
+      ]
     },
-    "featured": false
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "S",
+        "Waist": "28",
+        "Hip": "38",
+        "Thigh": "23",
+        "Inseam": "29",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "M",
+        "Waist": "30",
+        "Hip": "40",
+        "Thigh": "24",
+        "Inseam": "29.5",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "L",
+        "Waist": "32",
+        "Hip": "42",
+        "Thigh": "25",
+        "Inseam": "30",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "XL",
+        "Waist": "34",
+        "Hip": "44",
+        "Thigh": "26",
+        "Inseam": "30.5",
+        "Outseam": "41.5"
+      }
+    ],
+    "details": {
+      "material": "Cotton fleece",
+      "materialComposition": "100% cotton 350GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Trousers",
+      "sizeChartKey": "Unisex Joggers"
+    }
   },
   {
-    "_id": "demo-style-ai-001",
-    "name": "Classic Crewneck Sweatshirt",
-    "price": 82,
-    "description": "A mid-weight brushed cotton crewneck with a clean dropped shoulder fit and ribbed cuffs — the kind of piece you reach for without thinking.",
+    "sku": "BT005",
+    "season": "Winter",
+    "name": "Fleece Joggers — Light Gray",
+    "price": 1999,
+    "description": "Meet your new everyday essential. These joggers are made from 100% Cotton fleece Composition: 100% cotton 350GSM. Care: Machine wash cold (30°C).",
+    "category": "Bottoms",
+    "images": [
+      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506629905607-8f0b66e06f27?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Light Gray"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Everyday",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 50,
+    "sizeChart": [
+      {
+        "Size": "S",
+        "Waist": "28",
+        "Hip": "38",
+        "Thigh": "23",
+        "Inseam": "29",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "M",
+        "Waist": "30",
+        "Hip": "40",
+        "Thigh": "24",
+        "Inseam": "29.5",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "L",
+        "Waist": "32",
+        "Hip": "42",
+        "Thigh": "25",
+        "Inseam": "30",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "XL",
+        "Waist": "34",
+        "Hip": "44",
+        "Thigh": "26",
+        "Inseam": "30.5",
+        "Outseam": "41.5"
+      }
+    ],
+    "details": {
+      "material": "Cotton fleece",
+      "materialComposition": "100% cotton 350GSM",
+      "wash": "Machine wash cold (30°C)",
+      "concept": "Basics",
+      "style": "Trousers",
+      "sizeChartKey": "Unisex Joggers"
+    }
+  },
+  {
+    "sku": "1",
+    "season": "Summer",
+    "name": "Oversized Premium T-Shirt — Bright Orange",
+    "price": 1299,
+    "description": "A relaxed-fit oversized T-shirt with dropped shoulders and a ribbed crew neckline. Made from soft heavyweight cotton jersey, it offers a comfortable fit and serves as a versatile base for bold graphics and statement prints.",
+    "category": "T-Shirts",
+    "images": [
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Bright Orange"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Everyday",
+        "Minimal"
+      ]
+    },
+    "featured": true,
+    "stock": 0,
+    "details": {
+      "style": "Oversized Premium T-Shirt",
+      "sizeChartKey": null
+    }
+  },
+  {
+    "sku": "2",
+    "season": "Summer",
+    "name": "Oversized Premium T-Shirt — Olive Green With Vintage Wash",
+    "price": 1299,
+    "description": "A relaxed-fit oversized T-shirt with dropped shoulders and a ribbed crew neckline. Made from soft heavyweight cotton jersey, it offers a comfortable fit and serves as a versatile base for bold graphics and statement prints.",
+    "category": "T-Shirts",
+    "images": [
+      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Olive Green With Vintage Wash"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Everyday",
+        "Minimal"
+      ]
+    },
+    "featured": true,
+    "stock": 0,
+    "details": {
+      "style": "Oversized Premium T-Shirt",
+      "sizeChartKey": null
+    }
+  },
+  {
+    "sku": "3",
+    "season": "Summer",
+    "name": "Oversized Premium T-Shirt — Cream / Off- White",
+    "price": 1299,
+    "description": "A relaxed-fit oversized T-shirt with dropped shoulders and a ribbed crew neckline. Made from soft heavyweight cotton jersey, it offers a comfortable fit and serves as a versatile base for bold graphics and statement prints.",
+    "category": "T-Shirts",
+    "images": [
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Cream / Off- White"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Everyday",
+        "Minimal"
+      ]
+    },
+    "featured": true,
+    "stock": 0,
+    "details": {
+      "style": "Oversized Premium T-Shirt",
+      "sizeChartKey": null
+    }
+  },
+  {
+    "sku": "4",
+    "season": "Summer",
+    "name": "Oversized Premium T-Shirt — Black",
+    "price": 1299,
+    "description": "A relaxed-fit oversized T-shirt with dropped shoulders and a ribbed crew neckline. Made from soft heavyweight cotton jersey, it offers a comfortable fit and serves as a versatile base for bold graphics and statement prints.",
+    "category": "T-Shirts",
+    "images": [
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Black"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Everyday",
+        "Minimal"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "details": {
+      "style": "Oversized Premium T-Shirt",
+      "sizeChartKey": null
+    }
+  },
+  {
+    "sku": "5",
+    "season": "Summer",
+    "name": "Oversized Premium T-Shirt — Washed Dark Brown",
+    "price": 1299,
+    "description": "A relaxed-fit oversized T-shirt with dropped shoulders and a ribbed crew neckline. Made from soft heavyweight cotton jersey, it offers a comfortable fit and serves as a versatile base for bold graphics and statement prints.",
+    "category": "T-Shirts",
+    "images": [
+      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Washed Dark Brown"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Everyday",
+        "Minimal"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "details": {
+      "style": "Oversized Premium T-Shirt",
+      "sizeChartKey": null
+    }
+  },
+  {
+    "sku": "6",
+    "season": "Summer",
+    "name": "Sleeveless — Washed Charcoal Grey",
+    "price": 1199,
+    "description": "A relaxed fit sleeveless crafted from soft cotton jersey design for fertilise every day, comfort, and modern Streetwear styling",
+    "category": "Sleeveless",
+    "images": [
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Washed Charcoal Grey"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Everyday",
+        "Minimal"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "details": {
+      "style": "Sleeveless",
+      "sizeChartKey": null
+    }
+  },
+  {
+    "sku": "7",
+    "season": "Summer",
+    "name": "Crop Tops / Baby Ts — White",
+    "price": 1199,
+    "description": "A fitted cropped silhouette designed for everyday comfort and effortless styling. Constructed in stretch cotton jersey with a clean crew neckline and short sleeves, it provides a flattering fit while complementing contemporary streetwear aesthetics.",
+    "category": "Crop Tops",
+    "images": [
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "White"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Everyday",
+        "Minimal"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "details": {
+      "style": "Crop Tops / Baby Ts",
+      "sizeChartKey": null
+    }
+  },
+  {
+    "sku": "8",
+    "season": "Summer",
+    "name": "Crop Tops / Baby Ts — Bright Yellow",
+    "price": 1199,
+    "description": "A fitted cropped silhouette designed for everyday comfort and effortless styling. Constructed in stretch cotton jersey with a clean crew neckline and short sleeves, it provides a flattering fit while complementing contemporary streetwear aesthetics.",
+    "category": "Crop Tops",
+    "images": [
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Bright Yellow"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Everyday",
+        "Minimal"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "details": {
+      "style": "Crop Tops / Baby Ts",
+      "sizeChartKey": null
+    }
+  },
+  {
+    "sku": "9",
+    "season": "Summer",
+    "name": "Crop Tops / Baby Ts — Bright Pink",
+    "price": 1199,
+    "description": "A fitted cropped silhouette designed for everyday comfort and effortless styling. Constructed in stretch cotton jersey with a clean crew neckline and short sleeves, it provides a flattering fit while complementing contemporary streetwear aesthetics.",
+    "category": "Crop Tops",
+    "images": [
+      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Bright Pink"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Everyday",
+        "Minimal"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "details": {
+      "style": "Crop Tops / Baby Ts",
+      "sizeChartKey": null
+    }
+  },
+  {
+    "sku": "10",
+    "season": "Summer",
+    "name": "Crop Tops / Baby Ts — Black",
+    "price": 1199,
+    "description": "A fitted cropped silhouette designed for everyday comfort and effortless styling. Constructed in stretch cotton jersey with a clean crew neckline and short sleeves, it provides a flattering fit while complementing contemporary streetwear aesthetics.",
+    "category": "Crop Tops",
+    "images": [
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Black"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Everyday",
+        "Minimal"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "details": {
+      "style": "Crop Tops / Baby Ts",
+      "sizeChartKey": null
+    }
+  },
+  {
+    "sku": "11",
+    "season": "Summer",
+    "name": "Crop Tops / Baby Ts — Olive Green",
+    "price": 1199,
+    "description": "A fitted cropped silhouette designed for everyday comfort and effortless styling. Constructed in stretch cotton jersey with a clean crew neckline and short sleeves, it provides a flattering fit while complementing contemporary streetwear aesthetics.",
+    "category": "Crop Tops",
+    "images": [
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Olive Green"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Everyday",
+        "Minimal"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "details": {
+      "style": "Crop Tops / Baby Ts",
+      "sizeChartKey": null
+    }
+  },
+  {
+    "sku": "12",
+    "season": "Summer",
+    "name": "Hoodie — Charcoal Grey",
+    "price": 2499,
+    "description": "A premium heavyweight hoodie featuring a relaxed, oversized fit and a double-layered hood for added structure. Crafted from a soft cotton-blend fleece, it includes a kangaroo pocket and ribbed cuffs and hem, making it an essential piece for layering and street-inspired comfort.",
     "category": "Hoodies",
     "images": [
-      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1598522325074-042db73aa4e6?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80"
     ],
-    "sizes": ["S", "M", "L", "XL"],
-    "colors": ["Stone", "Midnight", "Olive"],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Charcoal Grey"
+    ],
     "tags": {
-      "bodyType": ["Slim", "Athletic", "Regular", "Heavy", "Plus Size"],
-      "skinTone": ["Fair", "Light", "Medium", "Olive", "Dark"],
-      "style": ["Minimal", "Relaxed", "Streetwear", "Layering"]
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
     },
-    "featured": true
+    "featured": false,
+    "stock": 0,
+    "details": {
+      "style": "Hoodie",
+      "sizeChartKey": null
+    }
+  },
+  {
+    "sku": "13",
+    "season": "Summer",
+    "name": "Hoodie — Black",
+    "price": 2499,
+    "description": "A premium heavyweight hoodie featuring a relaxed, oversized fit and a double-layered hood for added structure. Crafted from a soft cotton-blend fleece, it includes a kangaroo pocket and ribbed cuffs and hem, making it an essential piece for layering and street-inspired comfort.",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Black"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "details": {
+      "style": "Hoodie",
+      "sizeChartKey": null
+    }
+  },
+  {
+    "sku": "14",
+    "season": "Summer",
+    "name": "Hoodie — Royal Blue",
+    "price": 2499,
+    "description": "A premium heavyweight hoodie featuring a relaxed, oversized fit and a double-layered hood for added structure. Crafted from a soft cotton-blend fleece, it includes a kangaroo pocket and ribbed cuffs and hem, making it an essential piece for layering and street-inspired comfort.",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Royal Blue"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "details": {
+      "style": "Hoodie",
+      "sizeChartKey": null
+    }
+  },
+  {
+    "sku": "15",
+    "season": "Summer",
+    "name": "Hoodie — Cream / Off- White",
+    "price": 2499,
+    "description": "A premium heavyweight hoodie featuring a relaxed, oversized fit and a double-layered hood for added structure. Crafted from a soft cotton-blend fleece, it includes a kangaroo pocket and ribbed cuffs and hem, making it an essential piece for layering and street-inspired comfort.",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Cream / Off- White"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "details": {
+      "style": "Hoodie",
+      "sizeChartKey": null
+    }
+  },
+  {
+    "sku": "16",
+    "season": "Summer",
+    "name": "Hoodie — Washed Dark Brown",
+    "price": 2499,
+    "description": "A premium heavyweight hoodie featuring a relaxed, oversized fit and a double-layered hood for added structure. Crafted from a soft cotton-blend fleece, it includes a kangaroo pocket and ribbed cuffs and hem, making it an essential piece for layering and street-inspired comfort.",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Washed Dark Brown"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "details": {
+      "style": "Hoodie",
+      "sizeChartKey": null
+    }
+  },
+  {
+    "sku": "17",
+    "season": "Summer",
+    "name": "Joggers — Charcoal Grey",
+    "price": 1999,
+    "description": "Relaxed-fit joggers designed for comfort and style, featuring an adjustable drawstring waistband and elasticated cuffs. Made from a soft cotton-blend fleece, they offer a modern tapered silhouette with side pockets, perfect for everyday wear and lounging.",
+    "category": "Bottoms",
+    "images": [
+      "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506629905607-8f0b66e06f27?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Charcoal Grey"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Everyday",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "sizeChart": [
+      {
+        "Size": "S",
+        "Waist": "28",
+        "Hip": "38",
+        "Thigh": "23",
+        "Inseam": "29",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "M",
+        "Waist": "30",
+        "Hip": "40",
+        "Thigh": "24",
+        "Inseam": "29.5",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "L",
+        "Waist": "32",
+        "Hip": "42",
+        "Thigh": "25",
+        "Inseam": "30",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "XL",
+        "Waist": "34",
+        "Hip": "44",
+        "Thigh": "26",
+        "Inseam": "30.5",
+        "Outseam": "41.5"
+      }
+    ],
+    "details": {
+      "style": "Joggers",
+      "sizeChartKey": "Unisex Joggers"
+    }
+  },
+  {
+    "sku": "18",
+    "season": "Summer",
+    "name": "Joggers — Black",
+    "price": 1999,
+    "description": "Relaxed-fit joggers designed for comfort and style, featuring an adjustable drawstring waistband and elasticated cuffs. Made from a soft cotton-blend fleece, they offer a modern tapered silhouette with side pockets, perfect for everyday wear and lounging.",
+    "category": "Bottoms",
+    "images": [
+      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506629905607-8f0b66e06f27?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Black"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Everyday",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "sizeChart": [
+      {
+        "Size": "S",
+        "Waist": "28",
+        "Hip": "38",
+        "Thigh": "23",
+        "Inseam": "29",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "M",
+        "Waist": "30",
+        "Hip": "40",
+        "Thigh": "24",
+        "Inseam": "29.5",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "L",
+        "Waist": "32",
+        "Hip": "42",
+        "Thigh": "25",
+        "Inseam": "30",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "XL",
+        "Waist": "34",
+        "Hip": "44",
+        "Thigh": "26",
+        "Inseam": "30.5",
+        "Outseam": "41.5"
+      }
+    ],
+    "details": {
+      "style": "Joggers",
+      "sizeChartKey": "Unisex Joggers"
+    }
+  },
+  {
+    "sku": "19",
+    "season": "Summer",
+    "name": "Joggers — Royal Blue",
+    "price": 1999,
+    "description": "Relaxed-fit joggers designed for comfort and style, featuring an adjustable drawstring waistband and elasticated cuffs. Made from a soft cotton-blend fleece, they offer a modern tapered silhouette with side pockets, perfect for everyday wear and lounging.",
+    "category": "Bottoms",
+    "images": [
+      "https://images.unsplash.com/photo-1506629905607-8f0b66e06f27?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Royal Blue"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Everyday",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "sizeChart": [
+      {
+        "Size": "S",
+        "Waist": "28",
+        "Hip": "38",
+        "Thigh": "23",
+        "Inseam": "29",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "M",
+        "Waist": "30",
+        "Hip": "40",
+        "Thigh": "24",
+        "Inseam": "29.5",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "L",
+        "Waist": "32",
+        "Hip": "42",
+        "Thigh": "25",
+        "Inseam": "30",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "XL",
+        "Waist": "34",
+        "Hip": "44",
+        "Thigh": "26",
+        "Inseam": "30.5",
+        "Outseam": "41.5"
+      }
+    ],
+    "details": {
+      "style": "Joggers",
+      "sizeChartKey": "Unisex Joggers"
+    }
+  },
+  {
+    "sku": "20",
+    "season": "Summer",
+    "name": "Joggers — Cream / Off- White",
+    "price": 1999,
+    "description": "Relaxed-fit joggers designed for comfort and style, featuring an adjustable drawstring waistband and elasticated cuffs. Made from a soft cotton-blend fleece, they offer a modern tapered silhouette with side pockets, perfect for everyday wear and lounging.",
+    "category": "Bottoms",
+    "images": [
+      "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506629905607-8f0b66e06f27?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Cream / Off- White"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Everyday",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "sizeChart": [
+      {
+        "Size": "S",
+        "Waist": "28",
+        "Hip": "38",
+        "Thigh": "23",
+        "Inseam": "29",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "M",
+        "Waist": "30",
+        "Hip": "40",
+        "Thigh": "24",
+        "Inseam": "29.5",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "L",
+        "Waist": "32",
+        "Hip": "42",
+        "Thigh": "25",
+        "Inseam": "30",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "XL",
+        "Waist": "34",
+        "Hip": "44",
+        "Thigh": "26",
+        "Inseam": "30.5",
+        "Outseam": "41.5"
+      }
+    ],
+    "details": {
+      "style": "Joggers",
+      "sizeChartKey": "Unisex Joggers"
+    }
+  },
+  {
+    "sku": "21",
+    "season": "Summer",
+    "name": "Joggers — Washed Dark Brown",
+    "price": 1999,
+    "description": "Relaxed-fit joggers designed for comfort and style, featuring an adjustable drawstring waistband and elasticated cuffs. Made from a soft cotton-blend fleece, they offer a modern tapered silhouette with side pockets, perfect for everyday wear and lounging.",
+    "category": "Bottoms",
+    "images": [
+      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506629905607-8f0b66e06f27?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Washed Dark Brown"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Everyday",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "sizeChart": [
+      {
+        "Size": "S",
+        "Waist": "28",
+        "Hip": "38",
+        "Thigh": "23",
+        "Inseam": "29",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "M",
+        "Waist": "30",
+        "Hip": "40",
+        "Thigh": "24",
+        "Inseam": "29.5",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "L",
+        "Waist": "32",
+        "Hip": "42",
+        "Thigh": "25",
+        "Inseam": "30",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "XL",
+        "Waist": "34",
+        "Hip": "44",
+        "Thigh": "26",
+        "Inseam": "30.5",
+        "Outseam": "41.5"
+      }
+    ],
+    "details": {
+      "style": "Joggers",
+      "sizeChartKey": "Unisex Joggers"
+    }
+  },
+  {
+    "sku": "22",
+    "season": "Summer",
+    "name": "Zip-Up Hoodie — Charcoal Grey",
+    "price": 2499,
+    "description": "A versatile zip-up hoodie with a relaxed fit, featuring a full-length front zipper and a double-layered hood. Crafted from a soft cotton-blend fleece with a brushed interior, it includes split kangaroo pockets and ribbed finishes for a classic, comfortable look.",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Charcoal Grey"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "details": {
+      "style": "Zip-Up Hoodie",
+      "sizeChartKey": null
+    }
+  },
+  {
+    "sku": "23",
+    "season": "Summer",
+    "name": "Zip-Up Hoodie — Black",
+    "price": 2499,
+    "description": "A versatile zip-up hoodie with a relaxed fit, featuring a full-length front zipper and a double-layered hood. Crafted from a soft cotton-blend fleece with a brushed interior, it includes split kangaroo pockets and ribbed finishes for a classic, comfortable look.",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Black"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "details": {
+      "style": "Zip-Up Hoodie",
+      "sizeChartKey": null
+    }
+  },
+  {
+    "sku": "24",
+    "season": "Summer",
+    "name": "Zip-Up Hoodie — Royal Blue",
+    "price": 2499,
+    "description": "A versatile zip-up hoodie with a relaxed fit, featuring a full-length front zipper and a double-layered hood. Crafted from a soft cotton-blend fleece with a brushed interior, it includes split kangaroo pockets and ribbed finishes for a classic, comfortable look.",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Royal Blue"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "details": {
+      "style": "Zip-Up Hoodie",
+      "sizeChartKey": null
+    }
+  },
+  {
+    "sku": "25",
+    "season": "Summer",
+    "name": "Zip-Up Hoodie — Cream / Off- White",
+    "price": 2499,
+    "description": "A versatile zip-up hoodie with a relaxed fit, featuring a full-length front zipper and a double-layered hood. Crafted from a soft cotton-blend fleece with a brushed interior, it includes split kangaroo pockets and ribbed finishes for a classic, comfortable look.",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Cream / Off- White"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "details": {
+      "style": "Zip-Up Hoodie",
+      "sizeChartKey": null
+    }
+  },
+  {
+    "sku": "26",
+    "season": "Summer",
+    "name": "Zip-Up Hoodie — Washed Dark Brown",
+    "price": 2499,
+    "description": "A versatile zip-up hoodie with a relaxed fit, featuring a full-length front zipper and a double-layered hood. Crafted from a soft cotton-blend fleece with a brushed interior, it includes split kangaroo pockets and ribbed finishes for a classic, comfortable look.",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Washed Dark Brown"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear",
+        "Layering",
+        "Relaxed"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "details": {
+      "style": "Zip-Up Hoodie",
+      "sizeChartKey": null
+    }
   }
 ]

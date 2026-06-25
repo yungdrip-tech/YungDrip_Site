@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 import { handleApiError } from "@/lib/api-response";
 import { requireAdminUser } from "@/lib/auth";
+import { getCatalogProductById } from "@/lib/catalog";
 import { getFallbackProducts } from "@/lib/fallback-products";
 import { deleteProduct, getProductById, updateProduct } from "@/lib/product-service";
 import { assertTrustedOrigin } from "@/lib/security";
@@ -9,9 +10,9 @@ import { assertTrustedOrigin } from "@/lib/security";
 export async function GET(_request, { params }) {
   const { id } = params;
 
-  // Non-ObjectId IDs (e.g. demo/seed IDs) — serve from fallback data immediately
+  // Catalog / demo IDs — serve from fallback data immediately
   if (!mongoose.Types.ObjectId.isValid(id)) {
-    const product = getFallbackProducts().find((p) => p._id === id);
+    const product = getCatalogProductById(id) || getFallbackProducts().find((p) => p._id === id);
     if (product) return NextResponse.json(product);
     return NextResponse.json({ error: "Product not found" }, { status: 404 });
   }

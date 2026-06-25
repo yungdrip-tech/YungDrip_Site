@@ -6,6 +6,7 @@ import CollectionCarousel from "@/components/collection-carousel";
 import FullScreenCarousel from "@/components/full-screen-carousel";
 import HeroSection from "@/components/hero-section";
 import Button from "@/components/button";
+import { SEASONS } from "@/lib/catalog/constants";
 import { fetchProducts } from "@/lib/api-client";
 import { getFeaturedProducts } from "@/lib/product-utils";
 
@@ -63,52 +64,63 @@ export default function HomePageClient() {
     };
   }, []);
 
-  const { hoodies, tshirts, tailoring, featuredProducts, collectionItems, showcaseSlides } = useMemo(() => {
-    const nextFeaturedProducts = getFeaturedProducts(products);
-    const nextHoodies = products.filter((product) => product.category === "Hoodies");
-    const nextTshirts = products.filter((product) => product.category === "T-Shirts");
-    const nextTailoring = products.filter((product) =>
-      ["Bottoms", "Jeans", "Outerwear"].includes(product.category)
-    );
+  const { hoodies, sweatshirts, tshirts, bottoms, featuredProducts, collectionItems, showcaseSlides } =
+    useMemo(() => {
+      const nextFeaturedProducts = getFeaturedProducts(products);
+      const nextHoodies = products.filter((product) => product.category === "Hoodies");
+      const nextSweatshirts = products.filter((product) => product.category === "Sweatshirts");
+      const nextTshirts = products.filter((product) => product.category === "T-Shirts");
+      const nextBottoms = products.filter((product) => product.category === "Bottoms");
 
-    return {
-      hoodies: nextHoodies,
-      tshirts: nextTshirts,
-      tailoring: nextTailoring,
-      featuredProducts: nextFeaturedProducts,
-      collectionItems: [
-        {
-          eyebrow: "Featured",
-          title: "Hoodies",
-          category: "Hoodies",
-          image: nextHoodies[0]?.images?.[0],
-          count: nextHoodies.length
-        },
-        {
-          eyebrow: "Core",
-          title: "T-Shirts",
-          category: "T-Shirts",
-          image: nextTshirts[0]?.images?.[0],
-          count: nextTshirts.length
-        },
-        {
-          eyebrow: "Tailored",
-          title: "Trousers",
-          category: "Bottoms",
-          image: nextTailoring[0]?.images?.[0],
-          count: nextTailoring.length
-        }
-      ].filter((item) => item.image),
-      showcaseSlides: products
-        .slice(0, 3)
-        .map((product) => ({
-          title: product.name,
-          description: product.category,
-          image: product.images?.[0]
-        }))
-        .filter((slide) => slide.image)
-    };
-  }, [products]);
+      return {
+        hoodies: nextHoodies,
+        sweatshirts: nextSweatshirts,
+        tshirts: nextTshirts,
+        bottoms: nextBottoms,
+        featuredProducts: nextFeaturedProducts,
+        collectionItems: [
+          {
+            eyebrow: "Winter Edit",
+            title: "Hoodies",
+            category: "Hoodies",
+            season: SEASONS.WINTER,
+            image: nextHoodies[0]?.images?.[0],
+            count: nextHoodies.length
+          },
+          {
+            eyebrow: "Winter Edit",
+            title: "Sweatshirts",
+            category: "Sweatshirts",
+            season: SEASONS.WINTER,
+            image: nextSweatshirts[0]?.images?.[0],
+            count: nextSweatshirts.length
+          },
+          {
+            eyebrow: "Summer Edit",
+            title: "T-Shirts",
+            category: "T-Shirts",
+            season: SEASONS.SUMMER,
+            image: nextTshirts[0]?.images?.[0],
+            count: nextTshirts.length
+          },
+          {
+            eyebrow: "Essentials",
+            title: "Bottoms",
+            category: "Bottoms",
+            image: nextBottoms[0]?.images?.[0],
+            count: nextBottoms.length
+          }
+        ].filter((item) => item.image),
+        showcaseSlides: products
+          .slice(0, 3)
+          .map((product) => ({
+            title: product.name,
+            description: [product.category, product.season].filter(Boolean).join(" · "),
+            image: product.images?.[0]
+          }))
+          .filter((slide) => slide.image)
+      };
+    }, [products]);
 
   return (
     <div className="-mt-14 pb-24 md:-mt-20">
@@ -136,7 +148,8 @@ export default function HomePageClient() {
               <p className="muted-label mb-3">Catalog empty</p>
               <h2 className="font-serif text-4xl font-semibold">No products are in the database yet.</h2>
               <p className="mt-3 text-sm text-black/60">
-                Seed the database and the homepage sections will populate automatically.
+                Run <code className="rounded bg-black/5 px-2 py-1">npm run seed</code> to load the winter and summer
+                catalog into MongoDB.
               </p>
             </div>
           </div>
@@ -145,9 +158,10 @@ export default function HomePageClient() {
             <CollectionCarousel title="Collection" items={collectionItems} />
 
             <div className="space-y-20 pt-20">
-              <CategorySection label="Category One" title="Hoodies" products={hoodies} />
-              <CategorySection label="Category Two" title="T-Shirts" products={tshirts} />
-              <CategorySection label="Category Three" title="Trousers / Tailoring" products={tailoring} />
+              <CategorySection label="Winter Edit" title="Hoodies" products={hoodies.slice(0, 6)} />
+              <CategorySection label="Winter Edit" title="Sweatshirts" products={sweatshirts.slice(0, 6)} />
+              <CategorySection label="Summer Edit" title="T-Shirts" products={tshirts.slice(0, 6)} />
+              <CategorySection label="Essentials" title="Bottoms" products={bottoms.slice(0, 6)} />
             </div>
 
             {showcaseSlides.length > 0 ? <FullScreenCarousel slides={showcaseSlides} /> : null}

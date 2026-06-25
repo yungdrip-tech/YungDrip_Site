@@ -9,7 +9,8 @@ import OutfitRecommendationModal from "@/components/outfit-recommendation-modal"
 import Reveal from "@/components/reveal";
 import Button from "@/components/button";
 import { fetchProductById, fetchProducts } from "@/lib/api-client";
-import { getFallbackProducts } from "@/lib/fallback-products";
+import { getCatalogProductById } from "@/lib/catalog";
+import ProductSpecsPanel from "@/components/product-specs-panel";
 
 function ProductDetailSkeleton() {
   return (
@@ -38,9 +39,7 @@ export default function ProductDetailClient({ productId }) {
         try {
           nextProduct = await fetchProductById(productId);
         } catch {
-          // DB unavailable — serve from seed data so the page works offline
-          const fallbacks = getFallbackProducts();
-          nextProduct = fallbacks.find((p) => p._id === productId) ?? null;
+          nextProduct = getCatalogProductById(productId) ?? getFallbackProducts().find((p) => p._id === productId) ?? null;
           if (!nextProduct) throw new Error("Product not found");
         }
 
@@ -109,6 +108,7 @@ export default function ProductDetailClient({ productId }) {
         <Reveal delay={0.08}>
           <div className="space-y-4">
             <ProductPurchasePanel product={product} />
+            <ProductSpecsPanel product={product} />
             <OutfitRecommendationModal product={product} />
           </div>
         </Reveal>

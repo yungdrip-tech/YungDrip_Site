@@ -38,7 +38,14 @@ export default function ProductPurchasePanel({ product }) {
   return (
     <div className="panel p-6 lg:p-8">
       <p className="muted-label">{product.category}</p>
-      <h1 className="mt-3 text-5xl font-semibold text-balance">{product.name}</h1>
+      <div className="mt-3 flex flex-wrap items-center gap-3">
+        <h1 className="text-5xl font-semibold text-balance">{product.name}</h1>
+        {product.season ? (
+          <span className="rounded-full border border-black/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-black/55">
+            {product.season}
+          </span>
+        ) : null}
+      </div>
       <p className="mt-4 text-2xl font-semibold">{formatCurrency(product.price)}</p>
       {availableStock !== null ? (
         <p className={cn("mt-2 text-sm", isOutOfStock ? "text-red-600" : "text-black/55")}>

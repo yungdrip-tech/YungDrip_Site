@@ -56,7 +56,7 @@ export default function CollectionCarousel({ title, items }) {
       <div ref={railRef} className="no-scrollbar flex gap-5 overflow-x-auto scroll-smooth pb-2 snap-x snap-mandatory">
         {items.map((item, index) => (
           <motion.div
-            key={item.title}
+            key={`${item.title}-${item.season || "all"}`}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
@@ -64,7 +64,13 @@ export default function CollectionCarousel({ title, items }) {
             className="min-w-[82vw] snap-start sm:min-w-[420px] lg:min-w-[31%]"
           >
             <Link
-              href={item.category ? `/shop?category=${encodeURIComponent(item.category)}` : "/collection"}
+              href={
+                item.category
+                  ? `/shop?category=${encodeURIComponent(item.category)}${
+                      item.season ? `&season=${encodeURIComponent(item.season)}` : ""
+                    }`
+                  : "/collection"
+              }
               className="group block overflow-hidden rounded-[2rem] border border-black/10 bg-white"
             >
               <div className="relative aspect-[4/5] overflow-hidden">

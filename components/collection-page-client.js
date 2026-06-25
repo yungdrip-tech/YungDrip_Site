@@ -3,15 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { COLLECTION_META } from "@/lib/catalog/constants";
 import { fetchProducts } from "@/lib/api-client";
-
-const collectionMeta = [
-  { category: "Hoodies", eyebrow: "Featured", title: "Hoodies" },
-  { category: "T-Shirts", eyebrow: "Core", title: "T-Shirts" },
-  { category: "Jeans", eyebrow: "Denim", title: "Jeans" },
-  { category: "Bottoms", eyebrow: "Tailored", title: "Bottoms" },
-  { category: "Outerwear", eyebrow: "Layering", title: "Outerwear" }
-];
 
 export default function CollectionPageClient() {
   const [products, setProducts] = useState([]);
@@ -47,16 +40,25 @@ export default function CollectionPageClient() {
   }, []);
 
   const collections = useMemo(() => {
-    return collectionMeta
-      .map((entry) => {
-        const categoryProducts = products.filter((product) => product.category === entry.category);
-        return {
-          ...entry,
-          count: categoryProducts.length,
-          image: categoryProducts[0]?.images?.[0] || null
-        };
-      })
-      .filter((entry) => entry.count > 0);
+    return COLLECTION_META.map((entry) => {
+      const categoryProducts = products.filter((product) => {
+        if (product.category !== entry.category) {
+          return false;
+        }
+
+        if (entry.season) {
+          return product.season === entry.season;
+        }
+
+        return true;
+      });
+
+      return {
+        ...entry,
+        count: categoryProducts.length,
+        image: categoryProducts[0]?.images?.[0] || null
+      };
+    }).filter((entry) => entry.count > 0);
   }, [products]);
 
   return (
@@ -86,31 +88,37 @@ export default function CollectionPageClient() {
 
       {!isLoading && !error ? (
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {collections.map((collection) => (
-            <Link
-              key={collection.category}
-              href={`/shop?category=${encodeURIComponent(collection.category)}`}
-              className="group overflow-hidden rounded-[2rem] border border-black/10 bg-white"
-            >
-              <div className="relative aspect-[4/5] overflow-hidden">
-                <Image
-                  src={collection.image}
-                  alt={collection.title}
-                  fill
-                  className="object-cover grayscale transition duration-700 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-6 text-white">
-                  <p className="text-[11px] uppercase tracking-[0.26em] text-white/70">{collection.eyebrow}</p>
-                  <h2 className="mt-2 font-serif text-4xl font-semibold">{collection.title}</h2>
-                  <p className="mt-4 text-[11px] uppercase tracking-[0.24em] text-white/80">
-                    {collection.count} piece{collection.count === 1 ? "" : "s"}
-                  </p>
+          {collections.map((collection) => {
+            const href = collection.season
+              ? `/shop?category=${encodeURIComponent(collection.category)}&season=${encodeURIComponent(collection.season)}`
+              : `/shop?category=${encodeURIComponent(collection.category)}`;
+
+            return (
+              <Link
+                key={`${collection.category}-${collection.season || "all"}`}
+                href={href}
+                className="group overflow-hidden rounded-[2rem] border border-black/10 bg-white"
+              >
+                <div className="relative aspect-[4/5] overflow-hidden">
+                  <Image
+                    src={collection.image}
+                    alt={collection.title}
+                    fill
+                    className="object-cover grayscale transition duration-700 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-6 text-white">
+                    <p className="text-[11px] uppercase tracking-[0.26em] text-white/70">{collection.eyebrow}</p>
+                    <h2 className="mt-2 font-serif text-4xl font-semibold">{collection.title}</h2>
+                    <p className="mt-4 text-[11px] uppercase tracking-[0.24em] text-white/80">
+                      {collection.count} piece{collection.count === 1 ? "" : "s"}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            );
+          })}
         </div>
       ) : null}
     </div>

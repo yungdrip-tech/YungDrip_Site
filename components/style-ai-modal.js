@@ -9,9 +9,9 @@ import { useCart } from "@/components/providers/cart-provider";
 import { fetchProductsWithFallback } from "@/lib/products-with-fallback";
 import {
   getOutfitRecommendations,
-  getProductColorHex,
 } from "@/lib/style-ai-recommendation";
 import { cn, formatCurrency } from "@/lib/utils";
+import { STYLE_AI_DEMO_MODES } from "@/lib/style-ai-test-model";
 
 // Load Three.js mannequin only on client to avoid SSR issues
 const StyleAIMannequin = dynamic(
@@ -84,6 +84,62 @@ function SelectionCard({ selected, onClick, className, children }) {
       )}
     >
       {children}
+    </button>
+  );
+}
+
+function DemoModeButton({ label, description, active, onClick }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-pressed={active}
+      className={cn(
+        "rounded-[1rem] border px-3 py-2.5 text-left transition",
+        active
+          ? "border-black bg-black text-white"
+          : "border-black/15 bg-white text-black hover:border-black/30"
+      )}
+    >
+      <p className="text-[11px] font-semibold uppercase tracking-[0.16em]">{label}</p>
+      {description ? (
+        <p
+          className={cn(
+            "mt-1 text-[10px] leading-snug",
+            active ? "text-white/60" : "text-black/45"
+          )}
+        >
+          {description}
+        </p>
+      ) : null}
+    </button>
+  );
+}
+
+function GarmentToggle({ label, active, onClick }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-pressed={active}
+      className={cn(
+        "flex items-center justify-between rounded-[1rem] border px-3 py-2.5 text-left transition",
+        active
+          ? "border-black bg-black text-white"
+          : "border-black/15 bg-white text-black hover:border-black/30"
+      )}
+    >
+      <span className="text-[11px] font-semibold uppercase tracking-[0.16em]">
+        {label}
+      </span>
+      <span
+        className={cn(
+          "ml-2 flex h-4 w-4 shrink-0 items-center justify-center rounded-full border text-[9px]",
+          active ? "border-white bg-white text-black" : "border-black/25 text-transparent"
+        )}
+      >
+        ✓
+      </span>
     </button>
   );
 }
@@ -184,20 +240,53 @@ function ColorStep({ selected, onSelect }) {
   );
 }
 
-function OutfitProductCard({ product, isHero, onAddToCart }) {
+function OutfitProductCard({
+  product,
+  slotType,
+  isHero,
+  isOnModel,
+  canTryOnModel,
+  onPreviewSelect,
+  onAddToCart,
+}) {
   const [added, setAdded] = useState(false);
 
-  function handleAdd() {
+  function handleAdd(event) {
+    event.stopPropagation();
     onAddToCart(product);
     setAdded(true);
     window.setTimeout(() => setAdded(false), 1400);
   }
 
+  function handleCardClick() {
+    if (canTryOnModel) {
+      onPreviewSelect(slotType);
+    }
+  }
+
   return (
     <div
+      role={canTryOnModel ? "button" : undefined}
+      tabIndex={canTryOnModel ? 0 : undefined}
+      onClick={canTryOnModel ? handleCardClick : undefined}
+      onKeyDown={
+        canTryOnModel
+          ? (event) => {
+              if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                handleCardClick();
+              }
+            }
+          : undefined
+      }
       className={cn(
         "flex gap-3 rounded-[1.25rem] border p-3 transition",
-        isHero ? "border-black bg-black text-white" : "border-black/10 bg-white"
+        canTryOnModel && "cursor-pointer hover:border-black/25",
+        isOnModel
+          ? "border-black bg-black text-white ring-2 ring-black/15"
+          : isHero
+          ? "border-black/25 bg-black/[0.04]"
+          : "border-black/10 bg-white"
       )}
     >
       {/* Thumbnail */}
@@ -211,10 +300,16 @@ function OutfitProductCard({ product, isHero, onAddToCart }) {
             className="object-cover"
           />
         ) : null}
-        {isHero ? (
+        {isOnModel ? (
           <div className="absolute inset-0 flex items-end justify-center pb-1">
             <span className="rounded-full bg-white/90 px-1.5 py-0.5 text-[8px] font-semibold uppercase tracking-wider text-black">
-              Selected
+              On model
+            </span>
+          </div>
+        ) : isHero ? (
+          <div className="absolute inset-0 flex items-end justify-center pb-1">
+            <span className="rounded-full bg-black/80 px-1.5 py-0.5 text-[8px] font-semibold uppercase tracking-wider text-white">
+              Your piece
             </span>
           </div>
         ) : null}
@@ -226,7 +321,7 @@ function OutfitProductCard({ product, isHero, onAddToCart }) {
           <p
             className={cn(
               "truncate text-xs font-semibold uppercase tracking-[0.14em]",
-              isHero ? "text-white" : "text-black"
+              isOnModel ? "text-white" : "text-black"
             )}
           >
             {product.name}
@@ -234,11 +329,21 @@ function OutfitProductCard({ product, isHero, onAddToCart }) {
           <p
             className={cn(
               "mt-0.5 text-sm font-semibold",
-              isHero ? "text-white/80" : "text-black/70"
+              isOnModel ? "text-white/80" : "text-black/70"
             )}
           >
             {formatCurrency(product.price)}
           </p>
+          {canTryOnModel ? (
+            <p
+              className={cn(
+                "mt-1 text-[10px] uppercase tracking-[0.14em]",
+                isOnModel ? "text-white/60" : "text-black/40"
+              )}
+            >
+              {isOnModel ? "Showing tee + jeans" : "Tap to preview full outfit"}
+            </p>
+          ) : null}
         </div>
         <button
           type="button"
@@ -247,7 +352,7 @@ function OutfitProductCard({ product, isHero, onAddToCart }) {
             "mt-2 self-start rounded-full px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] transition",
             added
               ? "bg-green-500 text-white"
-              : isHero
+              : isOnModel
               ? "bg-white text-black hover:bg-white/90"
               : "border border-black/15 bg-white text-black hover:border-black/30"
           )}
@@ -268,6 +373,11 @@ export default function StyleAIModal({ open, onClose, currentProduct }) {
   const [colorPreference, setColorPreference] = useState("");
   const [products, setProducts] = useState([]);
   const [isLoadingProducts, setIsLoadingProducts] = useState(false);
+  const [previewSlot, setPreviewSlot] = useState(null);
+  // Test mode: layer garments onto the male body independently.
+  const [showTshirt, setShowTshirt] = useState(false);
+  const [showJeans, setShowJeans] = useState(false);
+  const [demoMode, setDemoMode] = useState(STYLE_AI_DEMO_MODES.outfit);
   const { addItem } = useCart();
 
   // Reset + fetch products when modal opens
@@ -277,6 +387,10 @@ export default function StyleAIModal({ open, onClose, currentProduct }) {
       setGender("");
       setBodyType("");
       setColorPreference("");
+      setPreviewSlot(null);
+      setShowTshirt(false);
+      setShowJeans(false);
+      setDemoMode(STYLE_AI_DEMO_MODES.outfit);
       return undefined;
     }
 
@@ -297,16 +411,6 @@ export default function StyleAIModal({ open, onClose, currentProduct }) {
     if (step !== "outfit" || !currentProduct || !products.length) return null;
     return getOutfitRecommendations(products, currentProduct, { bodyType, colorPreference });
   }, [step, products, currentProduct, bodyType, colorPreference]);
-
-  // Derive per-section colors for the mannequin
-  const outfitColors = useMemo(() => {
-    if (!outfit) return {};
-    return {
-      top: getProductColorHex(outfit.top),
-      bottom: getProductColorHex(outfit.bottom),
-      footwear: getProductColorHex(outfit.footwear),
-    };
-  }, [outfit]);
 
   const outfitItems = useMemo(() => {
     if (!outfit) return [];
@@ -333,6 +437,7 @@ export default function StyleAIModal({ open, onClose, currentProduct }) {
   }
   function handleColorSelect(value) {
     setColorPreference(value);
+    setPreviewSlot(null);
     setStep("outfit");
   }
   function goBack() {
@@ -354,6 +459,14 @@ export default function StyleAIModal({ open, onClose, currentProduct }) {
 
   function handleAddAllToCart() {
     outfitItems.forEach((slot) => addOutfitItemToCart(slot.product));
+  }
+
+  function handlePreviewSelect(slotType) {
+    if (slotType === "bottom") {
+      setPreviewSlot((current) => (current === "combo" ? null : "combo"));
+      return;
+    }
+    setPreviewSlot(null);
   }
 
   const stepIndex = STEPS.indexOf(step);
@@ -491,7 +604,54 @@ export default function StyleAIModal({ open, onClose, currentProduct }) {
                       {/* Left panel — product list (40%) */}
                       <div className="flex w-2/5 shrink-0 flex-col border-r border-black/8">
                         <div className="flex-1 overflow-y-auto p-5 space-y-3">
-                          <p className="muted-label mb-1">Your Outfit</p>
+                          {/* Test garments — toggle onto the male body */}
+                          <div className="rounded-[1.25rem] border border-black/10 bg-black/[0.02] p-4">
+                            <p className="muted-label mb-3">Try On (Test)</p>
+                            {demoMode === STYLE_AI_DEMO_MODES.outfit ? (
+                              <div className="grid grid-cols-2 gap-3">
+                                <GarmentToggle
+                                  label="T-Shirt"
+                                  active={showTshirt}
+                                  onClick={() => setShowTshirt((v) => !v)}
+                                />
+                                <GarmentToggle
+                                  label="Jeans"
+                                  active={showJeans}
+                                  onClick={() => setShowJeans((v) => !v)}
+                                />
+                              </div>
+                            ) : (
+                              <p className="text-[11px] leading-relaxed text-black/45">
+                                {demoMode === STYLE_AI_DEMO_MODES.full
+                                  ? "Full mode shows the complete look model."
+                                  : "Single mode shows the patchwork denim model only."}{" "}
+                                Switch to Outfit to layer tee and jeans on the male body.
+                              </p>
+                            )}
+
+                            <div className="mt-4 grid grid-cols-3 gap-2">
+                              <DemoModeButton
+                                label="Full"
+                                description="Complete look"
+                                active={demoMode === STYLE_AI_DEMO_MODES.full}
+                                onClick={() => setDemoMode(STYLE_AI_DEMO_MODES.full)}
+                              />
+                              <DemoModeButton
+                                label="Single"
+                                description="Patchwork denim"
+                                active={demoMode === STYLE_AI_DEMO_MODES.single}
+                                onClick={() => setDemoMode(STYLE_AI_DEMO_MODES.single)}
+                              />
+                              <DemoModeButton
+                                label="Outfit"
+                                description="Male + layers"
+                                active={demoMode === STYLE_AI_DEMO_MODES.outfit}
+                                onClick={() => setDemoMode(STYLE_AI_DEMO_MODES.outfit)}
+                              />
+                            </div>
+                          </div>
+
+                          <p className="muted-label mb-1 pt-1">Your Outfit</p>
 
                           {isLoadingProducts ? (
                             Array.from({ length: 3 }).map((_, i) => (
@@ -505,7 +665,11 @@ export default function StyleAIModal({ open, onClose, currentProduct }) {
                               <OutfitProductCard
                                 key={slot.type}
                                 product={slot.product}
+                                slotType={slot.type}
                                 isHero={slot.product._id === currentProduct?._id}
+                                isOnModel={slot.type === "bottom" && previewSlot === "combo"}
+                                canTryOnModel={slot.type === "bottom"}
+                                onPreviewSelect={handlePreviewSelect}
                                 onAddToCart={addOutfitItemToCart}
                               />
                             ))
@@ -541,13 +705,24 @@ export default function StyleAIModal({ open, onClose, currentProduct }) {
                       <div className="flex w-3/5 flex-col">
                         <div className="flex shrink-0 items-center justify-between px-5 py-3 border-b border-black/8">
                           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-black/45">
-                            {bodyType} · Drag to rotate
+                            {demoMode === STYLE_AI_DEMO_MODES.full
+                              ? "Full · Complete Look"
+                              : demoMode === STYLE_AI_DEMO_MODES.single
+                              ? "Single · Patchwork Denim"
+                              : `${bodyType} · ${
+                                  [showTshirt && "Tee", showJeans && "Jeans"]
+                                    .filter(Boolean)
+                                    .join(" + ") || "Base Body"
+                                } · Outfit`}
+                            {" · Drag to rotate"}
                           </p>
                         </div>
                         <div className="flex-1">
                           <StyleAIMannequin
+                            viewMode={demoMode}
                             bodyType={bodyType}
-                            outfitColors={outfitColors}
+                            showTshirt={showTshirt}
+                            showJeans={showJeans}
                           />
                         </div>
                       </div>

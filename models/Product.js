@@ -73,6 +73,33 @@ const productSchema = new Schema(
       required: true,
       min: 0,
       default: 0
+    },
+    sku: {
+      type: String,
+      trim: true,
+      index: true,
+      sparse: true
+    },
+    season: {
+      type: String,
+      enum: ["Winter", "Summer"],
+      index: true
+    },
+    details: {
+      fit: { type: String, trim: true },
+      length: { type: String, trim: true },
+      sleeveLength: { type: String, trim: true },
+      neckline: { type: String, trim: true },
+      material: { type: String, trim: true },
+      materialComposition: { type: String, trim: true },
+      wash: { type: String, trim: true },
+      concept: { type: String, trim: true },
+      style: { type: String, trim: true },
+      sizeChartKey: { type: String, trim: true }
+    },
+    sizeChart: {
+      type: [Schema.Types.Mixed],
+      default: undefined
     }
   },
   {

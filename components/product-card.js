@@ -36,7 +36,10 @@ export default function ProductCard({ product, priority = false, className }) {
 
         <div className="flex items-start justify-between gap-4 p-5">
           <div>
-            <p className="text-xs uppercase tracking-[0.28em] text-black/45">{product.category}</p>
+            <p className="text-xs uppercase tracking-[0.28em] text-black/45">
+              {product.category}
+              {product.season ? ` · ${product.season}` : ""}
+            </p>
             <h3 className="mt-2 text-[1.55rem] font-semibold leading-tight">{product.name}</h3>
             <p className="mt-3 text-xs uppercase tracking-[0.2em] text-black/55">{formatCurrency(product.price)}</p>
           </div>
