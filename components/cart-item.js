@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import StoreImage from "@/components/store-image";
 import { Minus, Plus, Trash2 } from "lucide-react";
 import { formatCurrency } from "@/lib/utils";
 
@@ -8,7 +8,7 @@ export default function CartItem({ item, onUpdateQuantity, onRemove }) {
   return (
     <article className="panel flex flex-col gap-5 p-4 sm:flex-row sm:items-center">
       <div className="relative aspect-square w-full overflow-hidden rounded-[1.5rem] sm:w-28">
-        <Image src={item.image} alt={item.name} fill className="object-cover" sizes="120px" />
+        <StoreImage src={item.image} alt={item.name} fill className="object-cover" sizes="120px" />
       </div>
 
       <div className="flex-1">

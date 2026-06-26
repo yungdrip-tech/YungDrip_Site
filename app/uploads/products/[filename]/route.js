@@ -7,14 +7,17 @@ export async function GET(_request, { params }) {
     const filename = sanitizeProductUploadFilename(params.filename);
     const image = await readProductImage(filename);
 
-    if (!image) {
+    if (!image?.body?.length) {
       return new Response("Not found", { status: 404 });
     }
 
-    return new Response(image.body, {
+    const body = Buffer.isBuffer(image.body) ? image.body : Buffer.from(image.body);
+
+    return new Response(body, {
       headers: {
         "Content-Type": image.contentType,
-        "Cache-Control": "public, max-age=31536000, immutable"
+        "Content-Length": String(body.length),
+        "Cache-Control": "public, max-age=86400, stale-while-revalidate=604800"
       }
     });
   } catch {

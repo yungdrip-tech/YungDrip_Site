@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import StoreImage from "@/components/store-image";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -29,7 +29,7 @@ export default function FullScreenCarousel({ slides }) {
             transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
             className="absolute inset-0"
           >
-            <Image
+            <StoreImage
               src={activeSlide.image}
               alt={activeSlide.title}
               fill

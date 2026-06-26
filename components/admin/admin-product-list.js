@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import StoreImage from "@/components/store-image";
 import { useDeferredValue, useEffect, useState } from "react";
 import Button from "@/components/button";
 import ConfirmModal from "@/components/confirm-modal";
@@ -279,7 +279,7 @@ export default function AdminProductList() {
             <div key={product._id} className="panel flex items-center gap-4 p-4">
               <div className="relative h-16 w-14 flex-shrink-0 overflow-hidden rounded-[0.875rem] bg-black/5">
                 {product.images?.[0] ? (
-                  <Image
+                  <StoreImage
                     src={product.images[0]}
                     alt={product.name}
                     fill

@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import StoreImage from "@/components/store-image";
 import Link from "next/link";
 import { useRef } from "react";
 import { motion } from "framer-motion";
@@ -74,7 +74,7 @@ export default function CollectionCarousel({ title, items }) {
               className="group block overflow-hidden rounded-[2rem] border border-black/10 bg-white"
             >
               <div className="relative aspect-[4/5] overflow-hidden">
-                <Image
+                <StoreImage
                   src={item.image}
                   alt={item.title}
                   fill

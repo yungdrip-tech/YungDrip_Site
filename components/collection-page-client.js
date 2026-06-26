@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import StoreImage from "@/components/store-image";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { COLLECTION_META } from "@/lib/catalog/constants";
@@ -100,7 +100,7 @@ export default function CollectionPageClient() {
                 className="group overflow-hidden rounded-[2rem] border border-black/10 bg-white"
               >
                 <div className="relative aspect-[4/5] overflow-hidden">
-                  <Image
+                  <StoreImage
                     src={collection.image}
                     alt={collection.title}
                     fill

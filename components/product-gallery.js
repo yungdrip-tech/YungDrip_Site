@@ -1,7 +1,7 @@
 "use client";
 
 import { useLayoutEffect, useMemo, useRef, useState } from "react";
-import Image from "next/image";
+import StoreImage from "@/components/store-image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { cn } from "@/lib/utils";
@@ -13,7 +13,7 @@ function MobileGallery({ images, alt, activeIndex, onSelect }) {
   return (
     <div className="space-y-4 lg:hidden">
       <div className={cn("panel relative overflow-hidden", PIN_HEIGHT_CLASS)}>
-        <Image
+        <StoreImage
           src={images[activeIndex]}
           alt={alt}
           fill
@@ -33,7 +33,7 @@ function MobileGallery({ images, alt, activeIndex, onSelect }) {
                 activeIndex === index ? "border-clay" : "border-transparent",
               )}
             >
-              <Image
+              <StoreImage
                 src={image}
                 alt={`${alt} thumbnail ${index + 1}`}
                 fill
@@ -132,7 +132,7 @@ export default function ProductGallery({ images, alt }) {
   if (!useScrollGallery) {
     return (
       <div className={cn("panel relative overflow-hidden", PIN_HEIGHT_CLASS)}>
-        <Image
+        <StoreImage
           src={safeImages[0]}
           alt={alt}
           fill
@@ -171,7 +171,7 @@ export default function ProductGallery({ images, alt }) {
         >
           <div className="panel relative overflow-hidden">
             {safeImages.map((image, index) => (
-              <Image
+              <StoreImage
                 key={image}
                 src={image}
                 alt={alt}
@@ -193,7 +193,7 @@ export default function ProductGallery({ images, alt }) {
                   data-slide
                   className="panel relative min-h-0 flex-1 overflow-hidden"
                 >
-                  <Image
+                  <StoreImage
                     src={image}
                     alt={`${alt} detail ${index + 2}`}
                     fill

@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import StoreImage from "@/components/store-image";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import Button from "@/components/button";
@@ -118,7 +118,7 @@ export default function OrderDetail({ orderId }) {
             {order.items.map((item) => (
               <div key={`${item.productId}-${item.size}-${item.color}`} className="flex gap-4 rounded-[1.5rem] border border-black/10 p-4">
                 <div className="relative h-24 w-20 overflow-hidden rounded-[1rem] bg-black/5">
-                  <Image src={item.image} alt={item.name} fill className="object-cover" sizes="96px" />
+                  <StoreImage src={item.image} alt={item.name} fill className="object-cover" sizes="96px" />
                 </div>
                 <div className="flex-1">
                   <h2 className="text-xl font-semibold">{item.name}</h2>

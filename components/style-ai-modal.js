@@ -2,6 +2,7 @@
 
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import StoreImage from "@/components/store-image";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLeft, ShoppingBag, Sparkles, X } from "lucide-react";
@@ -293,7 +294,7 @@ function OutfitProductCard({
       {/* Thumbnail */}
       <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-[0.75rem] bg-sand">
         {product.images?.[0] ? (
-          <Image
+          <StoreImage
             src={product.images[0]}
             alt={product.name}
             fill

@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import StoreImage from "@/components/store-image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
@@ -22,7 +22,7 @@ export default function ProductCard({ product, priority = false, className }) {
           <div className="absolute left-3 top-3 z-10">
             <ProductBadges product={product} variant="overlay" />
           </div>
-          <Image
+          <StoreImage
             src={product.images[0]}
             alt={product.name}
             fill
@@ -30,7 +30,7 @@ export default function ProductCard({ product, priority = false, className }) {
             className="object-cover transition duration-700 group-hover:scale-105 group-hover:opacity-0"
             sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
           />
-          <Image
+          <StoreImage
             src={secondaryImage}
             alt={`${product.name} alternate view`}
             fill
