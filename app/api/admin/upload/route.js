@@ -1,10 +1,10 @@
 import crypto from "node:crypto";
-import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { NextResponse } from "next/server";
 import { handleApiError } from "@/lib/api-response";
 import { requireAdminUser } from "@/lib/auth";
 import { HttpError } from "@/lib/http-error";
+import { saveProductImage } from "@/lib/product-upload";
 import { assertTrustedOrigin } from "@/lib/security";
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024;
@@ -38,16 +38,10 @@ export async function POST(request) {
 
     const extension = EXTENSION_BY_MIME[file.type] || path.extname(file.name || "").toLowerCase() || ".jpg";
     const filename = `${Date.now()}-${crypto.randomBytes(8).toString("hex")}${extension}`;
-    const uploadDir = path.join(process.cwd(), "public", "uploads", "products");
-
-    await mkdir(uploadDir, { recursive: true });
-
     const buffer = Buffer.from(await file.arrayBuffer());
-    await writeFile(path.join(uploadDir, filename), buffer);
+    const url = await saveProductImage(buffer, filename, file.type);
 
-    return NextResponse.json({
-      url: `/uploads/products/${filename}`
-    });
+    return NextResponse.json({ url });
   } catch (error) {
     return handleApiError(error);
   }
