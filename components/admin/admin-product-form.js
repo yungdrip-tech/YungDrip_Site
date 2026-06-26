@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Button from "@/components/button";
+import ConfirmModal from "@/components/confirm-modal";
 import { useAuth } from "@/components/providers/auth-provider";
 import {
   createAdminProduct,
@@ -10,8 +11,12 @@ import {
   updateAdminProduct,
   uploadProductImage
 } from "@/lib/api-client";
-import { DEFAULT_SIZES, PRODUCT_CATEGORIES, SEASONS } from "@/lib/catalog/constants";
+import { DEFAULT_SIZES, PRODUCT_CATEGORIES, PRODUCT_GENDERS, SEASONS } from "@/lib/catalog/constants";
+import { extractGoogleDriveFileId, isGoogleDriveUrl, normalizeImageUrl, normalizeImageUrls } from "@/lib/image-url";
 import { adminBodyTypes, adminStyleTags, skinTones } from "@/lib/style-me-options";
+import { buildStockBySizeForSizes, sumStockBySize } from "@/lib/stock";
+import { calculateSellingPrice, sellingPriceMatchesCalculation } from "@/lib/pricing";
+import { cn } from "@/lib/utils";
 
 const SEASON_OPTIONS = [
   { value: "", label: "Select season" },
@@ -33,14 +38,18 @@ function inputToArray(str) {
 const EMPTY_FORM = {
   name: "",
   price: "",
+  mrp: "",
   description: "",
   season: "",
+  gender: "",
+  saveTag: "",
   category: "",
   images: "",
   sizes: [],
+  stockBySize: {},
   colors: [],
   featured: false,
-  stock: "50",
+  outOfStock: false,
   tagsBodyType: [],
   tagsSkinTone: [],
   tagsStyle: []
@@ -83,6 +92,34 @@ function ChipSelect({ label, hint, options, selected, onChange, tabClass }) {
   );
 }
 
+function AdminImagePreview({ src, alt }) {
+  const [hasError, setHasError] = useState(false);
+
+  useEffect(() => {
+    setHasError(false);
+  }, [src]);
+
+  if (hasError) {
+    return (
+      <div className="flex h-full flex-col items-center justify-center gap-2 p-4 text-center text-sm text-black/50">
+        <p>Preview unavailable</p>
+        <p className="text-xs leading-5 text-black/40">
+          For Google Drive links, set sharing to &quot;Anyone with the link&quot; or upload the image instead.
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <img
+      src={src}
+      alt={alt}
+      className="h-full w-full object-cover"
+      onError={() => setHasError(true)}
+    />
+  );
+}
+
 export default function AdminProductForm({ productId }) {
   const router = useRouter();
   const { user, isLoading: isLoadingAuth } = useAuth();
@@ -96,9 +133,15 @@ export default function AdminProductForm({ productId }) {
   const [isLoadingProduct, setIsLoadingProduct] = useState(isEdit);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
+  const [enableSkinToneTags, setEnableSkinToneTags] = useState(false);
+  const [selectedImages, setSelectedImages] = useState([]);
+  const [confirmModal, setConfirmModal] = useState({ open: false, count: 0 });
+  const [isPriceManual, setIsPriceManual] = useState(false);
 
   const imageList = inputToArray(form.images);
   const sizeOptions = mergeOptions(DEFAULT_SIZES, form.sizes);
+  const totalStock = sumStockBySize(form.stockBySize);
+  const calculatedSellingPrice = calculateSellingPrice(form.mrp, form.saveTag);
   const bodyTypeOptions = mergeOptions(adminBodyTypes, form.tagsBodyType);
   const skinToneOptions = mergeOptions(
     skinTones.map((tone) => tone.value),
@@ -116,21 +159,39 @@ export default function AdminProductForm({ productId }) {
         const product = await fetchProductById(productId);
 
         if (!cancelled && product) {
+          const sizes = Array.isArray(product.sizes) ? product.sizes : [];
+          const stockBySize = buildStockBySizeForSizes(
+            sizes,
+            product.stockBySize,
+            product.stock ?? 0
+          );
+
           setForm({
             name: product.name || "",
             price: String(product.price ?? ""),
+            mrp: product.mrp ? String(product.mrp) : "",
             description: product.description || "",
             season: product.season || "",
+            gender: product.gender || "",
+            saveTag: product.saveTag ? String(product.saveTag) : "",
             category: product.category || "",
-            images: arrayToInput(product.images),
-            sizes: Array.isArray(product.sizes) ? product.sizes : [],
+            images: arrayToInput(normalizeImageUrls(product.images || [])),
+            sizes,
+            stockBySize: Object.fromEntries(
+              sizes.map((size) => [size, String(stockBySize[size] ?? 0)])
+            ),
             colors: Array.isArray(product.colors) ? product.colors : [],
             featured: Boolean(product.featured),
-            stock: String(product.stock ?? 0),
+            outOfStock: Boolean(product.outOfStock),
             tagsBodyType: Array.isArray(product.tags?.bodyType) ? product.tags.bodyType : [],
             tagsSkinTone: Array.isArray(product.tags?.skinTone) ? product.tags.skinTone : [],
             tagsStyle: Array.isArray(product.tags?.style) ? product.tags.style : []
           });
+          setIsPriceManual(
+            !sellingPriceMatchesCalculation(product.price, product.mrp, product.saveTag)
+          );
+          setEnableSkinToneTags(Array.isArray(product.tags?.skinTone) && product.tags.skinTone.length > 0);
+          setSelectedImages([]);
         }
       } catch (loadError) {
         if (!cancelled) {
@@ -154,8 +215,121 @@ export default function AdminProductForm({ productId }) {
     setForm((current) => ({ ...current, [field]: value }));
   }
 
+  function updateMrp(value) {
+    setForm((current) => {
+      const next = { ...current, mrp: value };
+
+      if (!isPriceManual) {
+        const nextPrice = calculateSellingPrice(value, current.saveTag);
+        next.price = nextPrice === null ? "" : String(nextPrice);
+      }
+
+      return next;
+    });
+  }
+
+  function updateSaveTag(value) {
+    setForm((current) => {
+      const next = { ...current, saveTag: value };
+
+      if (!isPriceManual) {
+        const nextPrice = calculateSellingPrice(current.mrp, value);
+        next.price = nextPrice === null ? "" : String(nextPrice);
+      }
+
+      return next;
+    });
+  }
+
+  function updateSellingPrice(value) {
+    setIsPriceManual(true);
+    updateField("price", value);
+  }
+
+  function applyCalculatedSellingPrice() {
+    const nextPrice = calculateSellingPrice(form.mrp, form.saveTag);
+
+    if (nextPrice === null) {
+      setError("Enter MRP first to calculate the selling price.");
+      return;
+    }
+
+    setError("");
+    setIsPriceManual(false);
+    updateField("price", String(nextPrice));
+  }
+
+  function updateSizes(nextSizes) {
+    setForm((current) => {
+      const nextStockBySize = { ...current.stockBySize };
+
+      for (const size of nextSizes) {
+        if (nextStockBySize[size] === undefined) {
+          nextStockBySize[size] = "0";
+        }
+      }
+
+      for (const size of Object.keys(nextStockBySize)) {
+        if (!nextSizes.includes(size)) {
+          delete nextStockBySize[size];
+        }
+      }
+
+      return {
+        ...current,
+        sizes: nextSizes,
+        stockBySize: nextStockBySize
+      };
+    });
+  }
+
+  function updateSizeStock(size, value) {
+    setForm((current) => ({
+      ...current,
+      stockBySize: {
+        ...current.stockBySize,
+        [size]: value
+      }
+    }));
+  }
+
   function setImageList(nextImages) {
     updateField("images", arrayToInput(nextImages));
+    setSelectedImages((current) => current.filter((image) => nextImages.includes(image)));
+  }
+
+  function toggleImageSelection(image) {
+    setSelectedImages((current) =>
+      current.includes(image) ? current.filter((item) => item !== image) : [...current, image]
+    );
+  }
+
+  function selectAllImages() {
+    setSelectedImages([...imageList]);
+  }
+
+  function clearImageSelection() {
+    setSelectedImages([]);
+  }
+
+  function requestBulkImageDelete() {
+    if (!selectedImages.length) {
+      return;
+    }
+
+    if (imageList.length - selectedImages.length < 1) {
+      setError("Keep at least one product image.");
+      return;
+    }
+
+    setConfirmModal({ open: true, count: selectedImages.length });
+  }
+
+  function confirmBulkImageDelete() {
+    const imagesToRemove = new Set(selectedImages);
+    setImageList(imageList.filter((image) => !imagesToRemove.has(image)));
+    setSelectedImages([]);
+    setConfirmModal({ open: false, count: 0 });
   }
 
   function addImageUrl(url) {
@@ -164,7 +338,15 @@ export default function AdminProductForm({ productId }) {
       return;
     }
 
-    setImageList([...imageList, trimmed]);
+    const normalized = normalizeImageUrl(trimmed);
+
+    if (isGoogleDriveUrl(trimmed) && !extractGoogleDriveFileId(trimmed)) {
+      setError("Could not read that Google Drive link. Use a share link or upload the image instead.");
+      return;
+    }
+
+    setError("");
+    setImageList([...imageList, normalized]);
     setImageUrlInput("");
   }
 
@@ -235,6 +417,41 @@ export default function AdminProductForm({ productId }) {
       return;
     }
 
+    if (!form.gender) {
+      setError("Select a gender (Male, Female, or Unisex).");
+      return;
+    }
+
+    if (form.saveTag) {
+      const parsedSaveTag = Number(form.saveTag);
+
+      if (!Number.isInteger(parsedSaveTag) || parsedSaveTag < 0 || parsedSaveTag > 100) {
+        setError("Save tag must be a whole number between 0 and 100.");
+        return;
+      }
+    }
+
+    const parsedMrp = Number(form.mrp);
+
+    if (!Number.isFinite(parsedMrp) || parsedMrp <= 0) {
+      setError("Enter a valid MRP.");
+      return;
+    }
+
+    const parsedPrice = form.price
+      ? Number(form.price)
+      : calculateSellingPrice(form.mrp, form.saveTag);
+
+    if (!Number.isFinite(parsedPrice) || parsedPrice < 0) {
+      setError("Enter a valid selling price or provide MRP and save tag to calculate it.");
+      return;
+    }
+
+    if (parsedMrp < parsedPrice) {
+      setError("MRP must be greater than or equal to the selling price.");
+      return;
+    }
+
     if (!form.category) {
       setError("Select a product category.");
       return;
@@ -243,6 +460,15 @@ export default function AdminProductForm({ productId }) {
     if (!form.sizes.length) {
       setError("Select at least one size.");
       return;
+    }
+
+    for (const size of form.sizes) {
+      const parsedStock = Number(form.stockBySize[size] ?? 0);
+
+      if (!Number.isInteger(parsedStock) || parsedStock < 0) {
+        setError(`Enter a valid stock quantity for size ${size}.`);
+        return;
+      }
     }
 
     if (!form.colors.length) {
@@ -254,18 +480,24 @@ export default function AdminProductForm({ productId }) {
 
     const payload = {
       name: form.name,
-      price: Number(form.price),
+      price: parsedPrice,
+      mrp: parsedMrp,
       description: form.description,
       season: form.season,
+      gender: form.gender,
+      saveTag: form.saveTag ? Number(form.saveTag) : undefined,
       category: form.category,
       images: inputToArray(form.images),
       sizes: form.sizes,
+      stockBySize: Object.fromEntries(
+        form.sizes.map((size) => [size, Number(form.stockBySize[size] ?? 0)])
+      ),
       colors: form.colors,
       featured: form.featured,
-      stock: Number(form.stock),
+      outOfStock: form.outOfStock,
       tags: {
         bodyType: form.tagsBodyType,
-        skinTone: form.tagsSkinTone,
+        skinTone: enableSkinToneTags ? form.tagsSkinTone : [],
         style: form.tagsStyle
       }
     };
@@ -322,19 +554,67 @@ export default function AdminProductForm({ productId }) {
             />
           </label>
 
-          <label className={labelClass}>
-            <span>Price</span>
-            <input
-              type="number"
-              min="0"
-              step="0.01"
-              value={form.price}
-              onChange={(e) => updateField("price", e.target.value)}
-              className={inputClass}
-              placeholder="e.g. 1499"
-              required
-            />
-          </label>
+          <div className="md:col-span-2 grid gap-5 rounded-[1.5rem] border border-black/10 bg-black/[0.02] p-5 md:grid-cols-3">
+            <p className="md:col-span-3 text-sm font-medium text-black/70">Pricing</p>
+
+            <label className={labelClass}>
+              <span>MRP</span>
+              <input
+                type="number"
+                min="0"
+                step="1"
+                value={form.mrp}
+                onChange={(e) => updateMrp(e.target.value)}
+                className={inputClass}
+                placeholder="e.g. 2669"
+                required
+              />
+            </label>
+
+            <label className={labelClass}>
+              <span>Save tag (% off)</span>
+              <input
+                type="number"
+                min="0"
+                max="100"
+                step="1"
+                value={form.saveTag}
+                onChange={(e) => updateSaveTag(e.target.value)}
+                className={inputClass}
+                placeholder="e.g. 51"
+              />
+            </label>
+
+            <label className={labelClass}>
+              <span>Selling price</span>
+              <input
+                type="number"
+                min="0"
+                step="1"
+                value={form.price}
+                onChange={(e) => updateSellingPrice(e.target.value)}
+                className={inputClass}
+                placeholder={calculatedSellingPrice ? String(calculatedSellingPrice) : "Auto-calculated"}
+                required
+              />
+              <span className="text-xs text-black/45">
+                {isPriceManual
+                  ? "Manual override active."
+                  : calculatedSellingPrice !== null
+                    ? `Auto-calculated: ₹${calculatedSellingPrice}`
+                    : "Calculated from MRP and save tag."}
+              </span>
+              {isPriceManual && calculatedSellingPrice !== null ? (
+                <button
+                  type="button"
+                  onClick={applyCalculatedSellingPrice}
+                  className="text-left text-xs font-medium text-black/60 underline-offset-2 hover:underline"
+                >
+                  Use calculated price (₹{calculatedSellingPrice})
+                </button>
+              ) : null}
+            </label>
+          </div>
 
           <label className={labelClass}>
             <span>Season</span>
@@ -347,6 +627,23 @@ export default function AdminProductForm({ productId }) {
               {SEASON_OPTIONS.map((option) => (
                 <option key={option.value || "empty"} value={option.value}>
                   {option.label}
+                </option>
+              ))}
+            </select>
+          </label>
+
+          <label className={labelClass}>
+            <span>Gender</span>
+            <select
+              value={form.gender}
+              onChange={(e) => updateField("gender", e.target.value)}
+              className={inputClass}
+              required
+            >
+              <option value="">Select gender</option>
+              {PRODUCT_GENDERS.map((gender) => (
+                <option key={gender} value={gender}>
+                  {gender}
                 </option>
               ))}
             </select>
@@ -367,20 +664,6 @@ export default function AdminProductForm({ productId }) {
                 </option>
               ))}
             </select>
-          </label>
-
-          <label className={labelClass}>
-            <span>Stock quantity</span>
-            <input
-              type="number"
-              min="0"
-              step="1"
-              value={form.stock}
-              onChange={(e) => updateField("stock", e.target.value)}
-              className={inputClass}
-              placeholder="e.g. 50"
-              required
-            />
           </label>
 
           <label className="flex items-center gap-3 text-sm text-black/60 md:col-span-2">
@@ -439,7 +722,16 @@ export default function AdminProductForm({ productId }) {
                   Add URL
                 </Button>
               </div>
-            ) : (
+            ) : null}
+            {imageMode === "url" ? (
+              <p className="text-xs leading-5 text-black/45">
+                Google Drive share links are converted automatically. The file must be shared as{" "}
+                <span className="font-medium text-black/60">&quot;Anyone with the link&quot;</span>.
+                Upload is more reliable for production.
+              </p>
+            ) : null}
+
+            {imageMode === "upload" ? (
               <label className={`${labelClass} cursor-pointer`}>
                 <span>{isUploadingImage ? "Uploading..." : "Choose one or more images"}</span>
                 <input
@@ -451,26 +743,65 @@ export default function AdminProductForm({ productId }) {
                   className={`${inputClass} cursor-pointer file:mr-4 file:rounded-full file:border-0 file:bg-black file:px-4 file:py-2 file:text-sm file:text-white`}
                 />
               </label>
-            )}
+            ) : null}
 
             {imageList.length ? (
-              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                {imageList.map((image, index) => (
-                  <div
-                    key={`${image}-${index}`}
-                    className="overflow-hidden rounded-[1.25rem] border border-black/10 bg-black/[0.02]"
+              <div className="space-y-3">
+                <div className="flex flex-wrap items-center gap-2">
+                  <Button type="button" variant="secondary" size="sm" onClick={selectAllImages}>
+                    Select all
+                  </Button>
+                  <Button
+                    type="button"
+                    variant="secondary"
+                    size="sm"
+                    onClick={clearImageSelection}
+                    disabled={!selectedImages.length}
                   >
-                    <div className="aspect-[4/5] bg-black/5">
-                      <img src={image} alt={`Product image ${index + 1}`} className="h-full w-full object-cover" />
-                    </div>
-                    <div className="space-y-2 p-3">
-                      <p className="truncate text-xs text-black/50">{image}</p>
-                      <Button type="button" variant="secondary" onClick={() => removeImage(index)}>
-                        Remove
-                      </Button>
-                    </div>
-                  </div>
-                ))}
+                    Clear selection
+                  </Button>
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    size="sm"
+                    onClick={requestBulkImageDelete}
+                    disabled={!selectedImages.length}
+                    className="text-red-600 hover:bg-red-50"
+                  >
+                    Delete selected ({selectedImages.length})
+                  </Button>
+                </div>
+
+                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                  {imageList.map((image, index) => {
+                    const isSelected = selectedImages.includes(image);
+
+                    return (
+                      <div
+                        key={`${image}-${index}`}
+                        className={`overflow-hidden rounded-[1.25rem] border bg-black/[0.02] transition ${
+                          isSelected ? "border-black ring-2 ring-black/10" : "border-black/10"
+                        }`}
+                      >
+                        <label className="relative block aspect-[4/5] cursor-pointer bg-black/5">
+                          <input
+                            type="checkbox"
+                            checked={isSelected}
+                            onChange={() => toggleImageSelection(image)}
+                            className="absolute left-3 top-3 z-10 h-4 w-4 rounded border-black/20"
+                          />
+                          <AdminImagePreview src={image} alt={`Product image ${index + 1}`} />
+                        </label>
+                        <div className="space-y-2 p-3">
+                          <p className="truncate text-xs text-black/50">{image}</p>
+                          <Button type="button" variant="secondary" onClick={() => removeImage(index)}>
+                            Remove
+                          </Button>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             ) : (
               <p className="rounded-[1.25rem] border border-dashed border-black/10 px-4 py-6 text-sm text-black/45">
@@ -480,14 +811,63 @@ export default function AdminProductForm({ productId }) {
           </div>
 
           <div className="grid gap-5 md:grid-cols-2">
-            <ChipSelect
-              label="Sizes"
-              hint="(select all that apply)"
-              options={sizeOptions}
-              selected={form.sizes}
-              onChange={(sizes) => updateField("sizes", sizes)}
-              tabClass={tabClass}
-            />
+            <div className="space-y-5">
+              <ChipSelect
+                label="Sizes"
+                hint="(select all that apply)"
+                options={sizeOptions}
+                selected={form.sizes}
+                onChange={updateSizes}
+                tabClass={tabClass}
+              />
+
+              {form.sizes.length ? (
+                <div className="block space-y-3 text-sm text-black/60">
+                  <label className="flex items-start gap-3 rounded-[1.25rem] border border-black/10 bg-black/[0.02] p-4">
+                    <input
+                      type="checkbox"
+                      checked={form.outOfStock}
+                      onChange={(event) => updateField("outOfStock", event.target.checked)}
+                      className="mt-1 h-4 w-4 rounded"
+                    />
+                    <span>
+                      <span className="block font-medium text-black/75">Mark out of stock</span>
+                      <span className="mt-1 block text-xs leading-5 text-black/45">
+                        Hides this product from purchase on the storefront. Size stock counts are kept so you can
+                        restock later without re-entering them.
+                      </span>
+                    </span>
+                  </label>
+
+                  <div className="flex items-center justify-between gap-3">
+                    <span>Stock by size</span>
+                    <span className="text-xs text-black/45">
+                      {form.outOfStock ? "Unavailable for sale" : `Total: ${totalStock} units`}
+                    </span>
+                  </div>
+                  <div className={cn("grid gap-3 sm:grid-cols-2", form.outOfStock && "opacity-60")}>
+                    {form.sizes.map((size) => (
+                      <label key={size} className="block space-y-2">
+                        <span>{size}</span>
+                        <input
+                          type="number"
+                          min="0"
+                          step="1"
+                          value={form.stockBySize[size] ?? "0"}
+                          onChange={(event) => updateSizeStock(size, event.target.value)}
+                          className={inputClass}
+                          placeholder="0"
+                          disabled={form.outOfStock}
+                          required
+                        />
+                      </label>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <p className="text-sm text-black/45">Select sizes to set stock quantities.</p>
+              )}
+            </div>
 
             <div className="block space-y-2 text-sm text-black/60">
               <span>Colors</span>
@@ -538,7 +918,9 @@ export default function AdminProductForm({ productId }) {
 
       <div className="panel p-8">
         <p className="muted-label mb-2">Style tags</p>
-        <p className="mb-6 text-sm text-black/45">Used for the Style Me recommendation engine. Select all that apply.</p>
+        <p className="mb-6 text-sm text-black/45">
+          Used for the Style Me recommendation engine. Body type and style are recommended; skin tone is optional.
+        </p>
         <div className="grid gap-5 md:grid-cols-3">
           <ChipSelect
             label="Body type"
@@ -548,13 +930,35 @@ export default function AdminProductForm({ productId }) {
             tabClass={tabClass}
           />
 
-          <ChipSelect
-            label="Skin tone"
-            options={skinToneOptions}
-            selected={form.tagsSkinTone}
-            onChange={(tagsSkinTone) => updateField("tagsSkinTone", tagsSkinTone)}
-            tabClass={tabClass}
-          />
+          <div className="space-y-3">
+            <label className="flex items-center gap-3 text-sm text-black/60">
+              <input
+                type="checkbox"
+                checked={enableSkinToneTags}
+                onChange={(event) => {
+                  const enabled = event.target.checked;
+                  setEnableSkinToneTags(enabled);
+                  if (!enabled) {
+                    updateField("tagsSkinTone", []);
+                  }
+                }}
+                className="h-4 w-4 rounded"
+              />
+              <span>Include skin tone tags (optional)</span>
+            </label>
+            {enableSkinToneTags ? (
+              <ChipSelect
+                label="Skin tone"
+                hint="(select all that apply)"
+                options={skinToneOptions}
+                selected={form.tagsSkinTone}
+                onChange={(tagsSkinTone) => updateField("tagsSkinTone", tagsSkinTone)}
+                tabClass={tabClass}
+              />
+            ) : (
+              <p className="text-sm text-black/45">Skin tone tags will not be saved for this product.</p>
+            )}
+          </div>
 
           <ChipSelect
             label="Style"
@@ -578,6 +982,17 @@ export default function AdminProductForm({ productId }) {
           Cancel
         </Button>
       </div>
+
+      <ConfirmModal
+        open={confirmModal.open}
+        onClose={() => setConfirmModal({ open: false, count: 0 })}
+        onConfirm={confirmBulkImageDelete}
+        title="Delete selected images?"
+        description={`Remove ${confirmModal.count} selected image${confirmModal.count === 1 ? "" : "s"} from this product? This cannot be undone.`}
+        confirmLabel="Delete images"
+        cancelLabel="Keep images"
+        variant="danger"
+      />
     </form>
   );
 }

@@ -10,6 +10,7 @@ import { fetchProductsWithFallback } from "@/lib/products-with-fallback";
 import {
   getOutfitRecommendations,
 } from "@/lib/style-ai-recommendation";
+import ProductPrice from "@/components/product-price";
 import { cn, formatCurrency } from "@/lib/utils";
 import { STYLE_AI_DEMO_MODES } from "@/lib/style-ai-test-model";
 
@@ -326,14 +327,11 @@ function OutfitProductCard({
           >
             {product.name}
           </p>
-          <p
-            className={cn(
-              "mt-0.5 text-sm font-semibold",
-              isOnModel ? "text-white/80" : "text-black/70"
-            )}
-          >
-            {formatCurrency(product.price)}
-          </p>
+          <ProductPrice
+            product={product}
+            size="sm"
+            className={cn("mt-0.5", isOnModel ? "[&_span:first-child]:text-white/80 [&_span:nth-child(2)]:text-white/50" : "")}
+          />
           {canTryOnModel ? (
             <p
               className={cn(

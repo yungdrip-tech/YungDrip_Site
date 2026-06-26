@@ -3035,6 +3035,2543 @@
     }
   },
   {
+    "sku": "WW034",
+    "season": "Winter",
+    "name": "Urban Legacy (MPS) — Green",
+    "price": 1313,
+    "description": "Premium Sweatshirt featuring Urban Legacy (MPS) in Green. MRP ₹2669 (51% off).",
+    "category": "Sweatshirts",
+    "images": [
+      "https://images.unsplash.com/photo-1578581926291-cf242593e5a2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb088d5?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Green"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": true,
+    "stock": 0,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest (in)": "42",
+        "Front Length (in)": "26.5",
+        "Across Shoulder (in)": "17"
+      },
+      {
+        "Size": "S",
+        "Chest (in)": "44",
+        "Front Length (in)": "27",
+        "Across Shoulder (in)": "18"
+      },
+      {
+        "Size": "M",
+        "Chest (in)": "46",
+        "Front Length (in)": "27.5",
+        "Across Shoulder (in)": "19"
+      },
+      {
+        "Size": "L",
+        "Chest (in)": "48",
+        "Front Length (in)": "28",
+        "Across Shoulder (in)": "20"
+      },
+      {
+        "Size": "XL",
+        "Chest (in)": "50",
+        "Front Length (in)": "28.5",
+        "Across Shoulder (in)": "21"
+      },
+      {
+        "Size": "XXL",
+        "Chest (in)": "52",
+        "Front Length (in)": "29",
+        "Across Shoulder (in)": "22"
+      }
+    ],
+    "details": {
+      "concept": "Urban Legacy (MPS)",
+      "style": "Sweatshirt",
+      "sizeChartKey": "SWEATSHIRT - PREMIUM - MEN"
+    }
+  },
+  {
+    "sku": "WW035",
+    "season": "Winter",
+    "name": "Art is You (MPS) — Black",
+    "price": 1444,
+    "description": "Premium Sweatshirt featuring Art is You (MPS) in Black. MRP ₹2669 (46% off).",
+    "category": "Sweatshirts",
+    "images": [
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb088d5?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578581926291-cf242593e5a2?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Black"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": true,
+    "stock": 1,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest (in)": "42",
+        "Front Length (in)": "26.5",
+        "Across Shoulder (in)": "17"
+      },
+      {
+        "Size": "S",
+        "Chest (in)": "44",
+        "Front Length (in)": "27",
+        "Across Shoulder (in)": "18"
+      },
+      {
+        "Size": "M",
+        "Chest (in)": "46",
+        "Front Length (in)": "27.5",
+        "Across Shoulder (in)": "19"
+      },
+      {
+        "Size": "L",
+        "Chest (in)": "48",
+        "Front Length (in)": "28",
+        "Across Shoulder (in)": "20"
+      },
+      {
+        "Size": "XL",
+        "Chest (in)": "50",
+        "Front Length (in)": "28.5",
+        "Across Shoulder (in)": "21"
+      },
+      {
+        "Size": "XXL",
+        "Chest (in)": "52",
+        "Front Length (in)": "29",
+        "Across Shoulder (in)": "22"
+      }
+    ],
+    "details": {
+      "concept": "Art is You (MPS)",
+      "style": "Sweatshirt",
+      "sizeChartKey": "SWEATSHIRT - PREMIUM - MEN"
+    }
+  },
+  {
+    "sku": "WW036",
+    "season": "Winter",
+    "name": "Smoke (WPS) — Black",
+    "price": 1313,
+    "description": "Premium Sweatshirt featuring Smoke (WPS) in Black. MRP ₹2669 (51% off).",
+    "category": "Sweatshirts",
+    "images": [
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb088d5?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578581926291-cf242593e5a2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Black"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": true,
+    "stock": 1,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Bust (in)": "42",
+        "Front Length (in)": "26.5",
+        "Across Shoulder (in)": "17"
+      },
+      {
+        "Size": "S",
+        "Bust (in)": "44",
+        "Front Length (in)": "27",
+        "Across Shoulder (in)": "18"
+      },
+      {
+        "Size": "M",
+        "Bust (in)": "46",
+        "Front Length (in)": "27.5",
+        "Across Shoulder (in)": "19"
+      },
+      {
+        "Size": "L",
+        "Bust (in)": "48",
+        "Front Length (in)": "28",
+        "Across Shoulder (in)": "20"
+      },
+      {
+        "Size": "XL",
+        "Bust (in)": "50",
+        "Front Length (in)": "28.5",
+        "Across Shoulder (in)": "21"
+      },
+      {
+        "Size": "XXL",
+        "Bust (in)": "52",
+        "Front Length (in)": "29",
+        "Across Shoulder (in)": "22"
+      }
+    ],
+    "details": {
+      "concept": "Smoke (WPS)",
+      "style": "Sweatshirt",
+      "sizeChartKey": "SWEATSHIRT - PREMIUM - WOMEN"
+    }
+  },
+  {
+    "sku": "WW037",
+    "season": "Winter",
+    "name": "Bad Habits (WPS) — White",
+    "price": 1444,
+    "description": "Premium Sweatshirt featuring Bad Habits (WPS) in White. MRP ₹2799 (49% off).",
+    "category": "Sweatshirts",
+    "images": [
+      "https://images.unsplash.com/photo-1578581926291-cf242593e5a2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb088d5?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "White"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 1,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Bust (in)": "42",
+        "Front Length (in)": "26.5",
+        "Across Shoulder (in)": "17"
+      },
+      {
+        "Size": "S",
+        "Bust (in)": "44",
+        "Front Length (in)": "27",
+        "Across Shoulder (in)": "18"
+      },
+      {
+        "Size": "M",
+        "Bust (in)": "46",
+        "Front Length (in)": "27.5",
+        "Across Shoulder (in)": "19"
+      },
+      {
+        "Size": "L",
+        "Bust (in)": "48",
+        "Front Length (in)": "28",
+        "Across Shoulder (in)": "20"
+      },
+      {
+        "Size": "XL",
+        "Bust (in)": "50",
+        "Front Length (in)": "28.5",
+        "Across Shoulder (in)": "21"
+      },
+      {
+        "Size": "XXL",
+        "Bust (in)": "52",
+        "Front Length (in)": "29",
+        "Across Shoulder (in)": "22"
+      }
+    ],
+    "details": {
+      "concept": "Bad Habits (WPS)",
+      "style": "Sweatshirt",
+      "sizeChartKey": "SWEATSHIRT - PREMIUM - WOMEN"
+    }
+  },
+  {
+    "sku": "WW038",
+    "season": "Winter",
+    "name": "Flower (C.S) — Off White",
+    "price": 1444,
+    "description": "Casual Casual Sweatshirt/ Unisex featuring Flower (C.S) in Off White. MRP ₹2599 (45% off).",
+    "category": "Sweatshirts",
+    "images": [
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb088d5?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578581926291-cf242593e5a2?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Off White"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest / Bust (in)": "42",
+        "Front Length (in)": "26.5",
+        "Across Shoulder (in)": "17"
+      },
+      {
+        "Size": "S",
+        "Chest / Bust (in)": "44",
+        "Front Length (in)": "27",
+        "Across Shoulder (in)": "18"
+      },
+      {
+        "Size": "M",
+        "Chest / Bust (in)": "46",
+        "Front Length (in)": "27.5",
+        "Across Shoulder (in)": "19"
+      },
+      {
+        "Size": "L",
+        "Chest / Bust (in)": "48",
+        "Front Length (in)": "28",
+        "Across Shoulder (in)": "20"
+      },
+      {
+        "Size": "XL",
+        "Chest / Bust (in)": "50",
+        "Front Length (in)": "28.5",
+        "Across Shoulder (in)": "21"
+      },
+      {
+        "Size": "XXL",
+        "Chest / Bust (in)": "52",
+        "Front Length (in)": "29",
+        "Across Shoulder (in)": "22"
+      }
+    ],
+    "details": {
+      "concept": "Flower (C.S)",
+      "style": "Casual Sweatshirt/ Unisex",
+      "sizeChartKey": "SWEATSHIRT - CASUAL WEAR - UNISEX"
+    }
+  },
+  {
+    "sku": "WW039",
+    "season": "Winter",
+    "name": "green Car (C.S) — Green",
+    "price": 1286,
+    "description": "Casual Casual Sweatshirt/ Unisex featuring green Car (C.S) in Green. MRP ₹2599 (51% off).",
+    "category": "Sweatshirts",
+    "images": [
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb088d5?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578581926291-cf242593e5a2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Green"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest / Bust (in)": "42",
+        "Front Length (in)": "26.5",
+        "Across Shoulder (in)": "17"
+      },
+      {
+        "Size": "S",
+        "Chest / Bust (in)": "44",
+        "Front Length (in)": "27",
+        "Across Shoulder (in)": "18"
+      },
+      {
+        "Size": "M",
+        "Chest / Bust (in)": "46",
+        "Front Length (in)": "27.5",
+        "Across Shoulder (in)": "19"
+      },
+      {
+        "Size": "L",
+        "Chest / Bust (in)": "48",
+        "Front Length (in)": "28",
+        "Across Shoulder (in)": "20"
+      },
+      {
+        "Size": "XL",
+        "Chest / Bust (in)": "50",
+        "Front Length (in)": "28.5",
+        "Across Shoulder (in)": "21"
+      },
+      {
+        "Size": "XXL",
+        "Chest / Bust (in)": "52",
+        "Front Length (in)": "29",
+        "Across Shoulder (in)": "22"
+      }
+    ],
+    "details": {
+      "concept": "green Car (C.S)",
+      "style": "Casual Sweatshirt/ Unisex",
+      "sizeChartKey": "SWEATSHIRT - CASUAL WEAR - UNISEX"
+    }
+  },
+  {
+    "sku": "WW040",
+    "season": "Winter",
+    "name": "Kage (C.S) — Grey",
+    "price": 1286,
+    "description": "Casual Casual Sweatshirt/ Unisex featuring Kage (C.S) in Grey. MRP ₹2599 (51% off).",
+    "category": "Sweatshirts",
+    "images": [
+      "https://images.unsplash.com/photo-1578581926291-cf242593e5a2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb088d5?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Grey"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest / Bust (in)": "42",
+        "Front Length (in)": "26.5",
+        "Across Shoulder (in)": "17"
+      },
+      {
+        "Size": "S",
+        "Chest / Bust (in)": "44",
+        "Front Length (in)": "27",
+        "Across Shoulder (in)": "18"
+      },
+      {
+        "Size": "M",
+        "Chest / Bust (in)": "46",
+        "Front Length (in)": "27.5",
+        "Across Shoulder (in)": "19"
+      },
+      {
+        "Size": "L",
+        "Chest / Bust (in)": "48",
+        "Front Length (in)": "28",
+        "Across Shoulder (in)": "20"
+      },
+      {
+        "Size": "XL",
+        "Chest / Bust (in)": "50",
+        "Front Length (in)": "28.5",
+        "Across Shoulder (in)": "21"
+      },
+      {
+        "Size": "XXL",
+        "Chest / Bust (in)": "52",
+        "Front Length (in)": "29",
+        "Across Shoulder (in)": "22"
+      }
+    ],
+    "details": {
+      "concept": "Kage (C.S)",
+      "style": "Casual Sweatshirt/ Unisex",
+      "sizeChartKey": "SWEATSHIRT - CASUAL WEAR - UNISEX"
+    }
+  },
+  {
+    "sku": "WW041",
+    "season": "Winter",
+    "name": "Euphoria — Black",
+    "price": 1523,
+    "description": "Premium Hoodies featuring Euphoria in Black. MRP ₹3099 (51% off).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Black"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 12,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Bust (in)": "45",
+        "Front Length (in)": "27"
+      },
+      {
+        "Size": "S",
+        "Bust (in)": "47",
+        "Front Length (in)": "27.5"
+      },
+      {
+        "Size": "M",
+        "Bust (in)": "49",
+        "Front Length (in)": "28.5"
+      },
+      {
+        "Size": "L",
+        "Bust (in)": "51",
+        "Front Length (in)": "29.5"
+      },
+      {
+        "Size": "XL",
+        "Bust (in)": "53",
+        "Front Length (in)": "30.5"
+      },
+      {
+        "Size": "XXL",
+        "Bust (in)": "55",
+        "Front Length (in)": "31.5"
+      }
+    ],
+    "details": {
+      "concept": "Euphoria",
+      "style": "Hoodies",
+      "sizeChartKey": "HOODIES - PREMIUM - WOMEN"
+    }
+  },
+  {
+    "sku": "WW042",
+    "season": "Winter",
+    "name": "Girl Face / Brown face — Brown",
+    "price": 1523,
+    "description": "Premium Hoodies featuring Girl Face / Brown face in Brown. MRP ₹3099 (51% off).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Brown"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 13,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Bust (in)": "45",
+        "Front Length (in)": "27"
+      },
+      {
+        "Size": "S",
+        "Bust (in)": "47",
+        "Front Length (in)": "27.5"
+      },
+      {
+        "Size": "M",
+        "Bust (in)": "49",
+        "Front Length (in)": "28.5"
+      },
+      {
+        "Size": "L",
+        "Bust (in)": "51",
+        "Front Length (in)": "29.5"
+      },
+      {
+        "Size": "XL",
+        "Bust (in)": "53",
+        "Front Length (in)": "30.5"
+      },
+      {
+        "Size": "XXL",
+        "Bust (in)": "55",
+        "Front Length (in)": "31.5"
+      }
+    ],
+    "details": {
+      "concept": "Girl Face / Brown face",
+      "style": "Hoodies",
+      "sizeChartKey": "HOODIES - PREMIUM - WOMEN"
+    }
+  },
+  {
+    "sku": "WW043",
+    "season": "Winter",
+    "name": "Wing — Off-white",
+    "price": 1523,
+    "description": "Premium Hoodies featuring Wing in Off-white. MRP ₹3199 (53% off).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Off-white"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 11,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Bust (in)": "45",
+        "Front Length (in)": "27"
+      },
+      {
+        "Size": "S",
+        "Bust (in)": "47",
+        "Front Length (in)": "27.5"
+      },
+      {
+        "Size": "M",
+        "Bust (in)": "49",
+        "Front Length (in)": "28.5"
+      },
+      {
+        "Size": "L",
+        "Bust (in)": "51",
+        "Front Length (in)": "29.5"
+      },
+      {
+        "Size": "XL",
+        "Bust (in)": "53",
+        "Front Length (in)": "30.5"
+      },
+      {
+        "Size": "XXL",
+        "Bust (in)": "55",
+        "Front Length (in)": "31.5"
+      }
+    ],
+    "details": {
+      "concept": "Wing",
+      "style": "Hoodies",
+      "sizeChartKey": "HOODIES - PREMIUM - WOMEN"
+    }
+  },
+  {
+    "sku": "WW044",
+    "season": "Winter",
+    "name": "Cold Stare — Black",
+    "price": 1575,
+    "description": "Premium Hoodies featuring Cold Stare in Black. MRP ₹3099 (50% off).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Black"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 9,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest (in)": "45",
+        "Front Length (in)": "27"
+      },
+      {
+        "Size": "S",
+        "Chest (in)": "47",
+        "Front Length (in)": "27.5"
+      },
+      {
+        "Size": "M",
+        "Chest (in)": "49",
+        "Front Length (in)": "28.5"
+      },
+      {
+        "Size": "L",
+        "Chest (in)": "51",
+        "Front Length (in)": "29.5"
+      },
+      {
+        "Size": "XL",
+        "Chest (in)": "53",
+        "Front Length (in)": "30.5"
+      },
+      {
+        "Size": "XXL",
+        "Chest (in)": "55",
+        "Front Length (in)": "31.5"
+      }
+    ],
+    "details": {
+      "concept": "Cold Stare",
+      "style": "Hoodies",
+      "sizeChartKey": "HOODIES - PREMIUM - MEN"
+    }
+  },
+  {
+    "sku": "WW045",
+    "season": "Winter",
+    "name": "Street clash- brown — Brown",
+    "price": 1575,
+    "description": "Premium Hoodies featuring Street clash- brown in Brown. MRP ₹3099 (50% off).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Brown"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 7,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest (in)": "45",
+        "Front Length (in)": "27"
+      },
+      {
+        "Size": "S",
+        "Chest (in)": "47",
+        "Front Length (in)": "27.5"
+      },
+      {
+        "Size": "M",
+        "Chest (in)": "49",
+        "Front Length (in)": "28.5"
+      },
+      {
+        "Size": "L",
+        "Chest (in)": "51",
+        "Front Length (in)": "29.5"
+      },
+      {
+        "Size": "XL",
+        "Chest (in)": "53",
+        "Front Length (in)": "30.5"
+      },
+      {
+        "Size": "XXL",
+        "Chest (in)": "55",
+        "Front Length (in)": "31.5"
+      }
+    ],
+    "details": {
+      "concept": "Street clash- brown",
+      "style": "Hoodies",
+      "sizeChartKey": "HOODIES - PREMIUM - MEN"
+    }
+  },
+  {
+    "sku": "WW046",
+    "season": "Winter",
+    "name": "Speed King — Off-white",
+    "price": 1575,
+    "description": "Premium Hoodies featuring Speed King in Off-white. MRP ₹3199 (51% off).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Off-white"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 7,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest (in)": "45",
+        "Front Length (in)": "27"
+      },
+      {
+        "Size": "S",
+        "Chest (in)": "47",
+        "Front Length (in)": "27.5"
+      },
+      {
+        "Size": "M",
+        "Chest (in)": "49",
+        "Front Length (in)": "28.5"
+      },
+      {
+        "Size": "L",
+        "Chest (in)": "51",
+        "Front Length (in)": "29.5"
+      },
+      {
+        "Size": "XL",
+        "Chest (in)": "53",
+        "Front Length (in)": "30.5"
+      },
+      {
+        "Size": "XXL",
+        "Chest (in)": "55",
+        "Front Length (in)": "31.5"
+      }
+    ],
+    "details": {
+      "concept": "Speed King",
+      "style": "Hoodies",
+      "sizeChartKey": "HOODIES - PREMIUM - MEN"
+    }
+  },
+  {
+    "sku": "WW047",
+    "season": "Winter",
+    "name": "Young Blood — Red",
+    "price": 1680,
+    "description": "Premium Casual Hoodies/ Unisex featuring Young Blood in Red. MRP ₹2899 (43% off).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Red"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 9,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest/Bust (in)": "45",
+        "Front Length (in)": "27"
+      },
+      {
+        "Size": "S",
+        "Chest/Bust (in)": "47",
+        "Front Length (in)": "27.5"
+      },
+      {
+        "Size": "M",
+        "Chest/Bust (in)": "49",
+        "Front Length (in)": "28.5"
+      },
+      {
+        "Size": "L",
+        "Chest/Bust (in)": "51",
+        "Front Length (in)": "29.5"
+      },
+      {
+        "Size": "XL",
+        "Chest/Bust (in)": "53",
+        "Front Length (in)": "30.5"
+      },
+      {
+        "Size": "XXL",
+        "Chest/Bust (in)": "55",
+        "Front Length (in)": "31.5"
+      }
+    ],
+    "details": {
+      "concept": "Young Blood",
+      "style": "Casual Hoodies/ Unisex",
+      "sizeChartKey": "HOODIES - CASUAL WEAR - UNISEX"
+    }
+  },
+  {
+    "sku": "WW048",
+    "season": "Winter",
+    "name": "Insurgence — Red",
+    "price": 1575,
+    "description": "Casual Casual Hoodies/ Unisex featuring Insurgence in Red. MRP ₹2999 (48% off).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Red"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 6,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest/Bust (in)": "45",
+        "Front Length (in)": "27"
+      },
+      {
+        "Size": "S",
+        "Chest/Bust (in)": "47",
+        "Front Length (in)": "27.5"
+      },
+      {
+        "Size": "M",
+        "Chest/Bust (in)": "49",
+        "Front Length (in)": "28.5"
+      },
+      {
+        "Size": "L",
+        "Chest/Bust (in)": "51",
+        "Front Length (in)": "29.5"
+      },
+      {
+        "Size": "XL",
+        "Chest/Bust (in)": "53",
+        "Front Length (in)": "30.5"
+      },
+      {
+        "Size": "XXL",
+        "Chest/Bust (in)": "55",
+        "Front Length (in)": "31.5"
+      }
+    ],
+    "details": {
+      "concept": "Insurgence",
+      "style": "Casual Hoodies/ Unisex",
+      "sizeChartKey": "HOODIES - CASUAL WEAR - UNISEX"
+    }
+  },
+  {
+    "sku": "WW049",
+    "season": "Winter",
+    "name": "Ferrari — Off White",
+    "price": 1575,
+    "description": "Casual Casual Hoodies/ Unisex featuring Ferrari in Off White. MRP ₹3299 (53% off).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Off White"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 10,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest/Bust (in)": "45",
+        "Front Length (in)": "27"
+      },
+      {
+        "Size": "S",
+        "Chest/Bust (in)": "47",
+        "Front Length (in)": "27.5"
+      },
+      {
+        "Size": "M",
+        "Chest/Bust (in)": "49",
+        "Front Length (in)": "28.5"
+      },
+      {
+        "Size": "L",
+        "Chest/Bust (in)": "51",
+        "Front Length (in)": "29.5"
+      },
+      {
+        "Size": "XL",
+        "Chest/Bust (in)": "53",
+        "Front Length (in)": "30.5"
+      },
+      {
+        "Size": "XXL",
+        "Chest/Bust (in)": "55",
+        "Front Length (in)": "31.5"
+      }
+    ],
+    "details": {
+      "concept": "Ferrari",
+      "style": "Casual Hoodies/ Unisex",
+      "sizeChartKey": "HOODIES - CASUAL WEAR - UNISEX"
+    }
+  },
+  {
+    "sku": "WW050",
+    "season": "Winter",
+    "name": "imperious — Black",
+    "price": 1470,
+    "description": "Premium Crop hoodies featuring imperious in Black. MRP ₹2499 (42% off).",
+    "category": "Crop Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Black"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest (in)": "38",
+        "Length": "16"
+      },
+      {
+        "Size": "S",
+        "Chest (in)": "40",
+        "Length": "17"
+      },
+      {
+        "Size": "M",
+        "Chest (in)": "42",
+        "Length": "18"
+      },
+      {
+        "Size": "L",
+        "Chest (in)": "44",
+        "Length": "19"
+      },
+      {
+        "Size": "XL",
+        "Chest (in)": "46",
+        "Length": "20"
+      },
+      {
+        "Size": "XXL",
+        "Chest (in)": "48",
+        "Length": "21"
+      }
+    ],
+    "details": {
+      "concept": "imperious",
+      "style": "Crop hoodies",
+      "sizeChartKey": "Crop Hoodie"
+    }
+  },
+  {
+    "sku": "WW051",
+    "season": "Winter",
+    "name": "Speed car — White",
+    "price": 1418,
+    "description": "Casual Crop hoodies featuring Speed car in White. MRP ₹2299 (39% off).",
+    "category": "Crop Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "White"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest (in)": "38",
+        "Length": "16"
+      },
+      {
+        "Size": "S",
+        "Chest (in)": "40",
+        "Length": "17"
+      },
+      {
+        "Size": "M",
+        "Chest (in)": "42",
+        "Length": "18"
+      },
+      {
+        "Size": "L",
+        "Chest (in)": "44",
+        "Length": "19"
+      },
+      {
+        "Size": "XL",
+        "Chest (in)": "46",
+        "Length": "20"
+      },
+      {
+        "Size": "XXL",
+        "Chest (in)": "48",
+        "Length": "21"
+      }
+    ],
+    "details": {
+      "concept": "Speed car",
+      "style": "Crop hoodies",
+      "sizeChartKey": "Crop Hoodie"
+    }
+  },
+  {
+    "sku": "WW052",
+    "season": "Winter",
+    "name": "hotter — Black",
+    "price": 1418,
+    "description": "Casual Crop hoodies featuring hotter in Black. MRP ₹2299 (39% off).",
+    "category": "Crop Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Black"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest (in)": "38",
+        "Length": "16"
+      },
+      {
+        "Size": "S",
+        "Chest (in)": "40",
+        "Length": "17"
+      },
+      {
+        "Size": "M",
+        "Chest (in)": "42",
+        "Length": "18"
+      },
+      {
+        "Size": "L",
+        "Chest (in)": "44",
+        "Length": "19"
+      },
+      {
+        "Size": "XL",
+        "Chest (in)": "46",
+        "Length": "20"
+      },
+      {
+        "Size": "XXL",
+        "Chest (in)": "48",
+        "Length": "21"
+      }
+    ],
+    "details": {
+      "concept": "hotter",
+      "style": "Crop hoodies",
+      "sizeChartKey": "Crop Hoodie"
+    }
+  },
+  {
+    "sku": "WW053",
+    "season": "Winter",
+    "name": "flower — Green",
+    "price": 1129,
+    "description": "Casual Crop hoodies featuring flower in Green. MRP ₹2299 (51% off).",
+    "category": "Crop Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Green"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest (in)": "38",
+        "Length": "16"
+      },
+      {
+        "Size": "S",
+        "Chest (in)": "40",
+        "Length": "17"
+      },
+      {
+        "Size": "M",
+        "Chest (in)": "42",
+        "Length": "18"
+      },
+      {
+        "Size": "L",
+        "Chest (in)": "44",
+        "Length": "19"
+      },
+      {
+        "Size": "XL",
+        "Chest (in)": "46",
+        "Length": "20"
+      },
+      {
+        "Size": "XXL",
+        "Chest (in)": "48",
+        "Length": "21"
+      }
+    ],
+    "details": {
+      "concept": "flower",
+      "style": "Crop hoodies",
+      "sizeChartKey": "Crop Hoodie"
+    }
+  },
+  {
+    "sku": "WW054",
+    "season": "Winter",
+    "name": "GTA — Maroon",
+    "price": 1313,
+    "description": "Premium Zip Hoodie featuring GTA in Maroon. MRP ₹2499 (48% off).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL",
+      "XXXL"
+    ],
+    "colors": [
+      "Maroon"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 1,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest": "41",
+        "Length": "26",
+        "Shoulder": "22.5"
+      },
+      {
+        "Size": "S",
+        "Chest": "43",
+        "Length": "27",
+        "Shoulder": "23"
+      },
+      {
+        "Size": "M",
+        "Chest": "45",
+        "Length": "28",
+        "Shoulder": "23.5"
+      },
+      {
+        "Size": "L",
+        "Chest": "47",
+        "Length": "29",
+        "Shoulder": "24"
+      },
+      {
+        "Size": "XL",
+        "Chest": "49",
+        "Length": "30",
+        "Shoulder": "24.5"
+      },
+      {
+        "Size": "XXL",
+        "Chest": "51",
+        "Length": "31",
+        "Shoulder": "25"
+      },
+      {
+        "Size": "XXXL",
+        "Chest": "53",
+        "Length": "32",
+        "Shoulder": "25.5"
+      }
+    ],
+    "details": {
+      "concept": "GTA",
+      "style": "Zip Hoodie",
+      "sizeChartKey": "zip hoodie - unisex"
+    }
+  },
+  {
+    "sku": "WW055",
+    "season": "Winter",
+    "name": "Matrix — Black",
+    "price": 1313,
+    "description": "Premium Zip Hoodie featuring Matrix in Black. MRP ₹2499 (48% off).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL",
+      "XXXL"
+    ],
+    "colors": [
+      "Black"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 1,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest": "41",
+        "Length": "26",
+        "Shoulder": "22.5"
+      },
+      {
+        "Size": "S",
+        "Chest": "43",
+        "Length": "27",
+        "Shoulder": "23"
+      },
+      {
+        "Size": "M",
+        "Chest": "45",
+        "Length": "28",
+        "Shoulder": "23.5"
+      },
+      {
+        "Size": "L",
+        "Chest": "47",
+        "Length": "29",
+        "Shoulder": "24"
+      },
+      {
+        "Size": "XL",
+        "Chest": "49",
+        "Length": "30",
+        "Shoulder": "24.5"
+      },
+      {
+        "Size": "XXL",
+        "Chest": "51",
+        "Length": "31",
+        "Shoulder": "25"
+      },
+      {
+        "Size": "XXXL",
+        "Chest": "53",
+        "Length": "32",
+        "Shoulder": "25.5"
+      }
+    ],
+    "details": {
+      "concept": "Matrix",
+      "style": "Zip Hoodie",
+      "sizeChartKey": "zip hoodie - unisex"
+    }
+  },
+  {
+    "sku": "WW056",
+    "season": "Winter",
+    "name": "Stranger things — Black",
+    "price": 1260,
+    "description": "Premium Zip Hoodie featuring Stranger things in Black. MRP ₹2499 (50% off).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL",
+      "XXXL"
+    ],
+    "colors": [
+      "Black"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest": "41",
+        "Length": "26",
+        "Shoulder": "22.5"
+      },
+      {
+        "Size": "S",
+        "Chest": "43",
+        "Length": "27",
+        "Shoulder": "23"
+      },
+      {
+        "Size": "M",
+        "Chest": "45",
+        "Length": "28",
+        "Shoulder": "23.5"
+      },
+      {
+        "Size": "L",
+        "Chest": "47",
+        "Length": "29",
+        "Shoulder": "24"
+      },
+      {
+        "Size": "XL",
+        "Chest": "49",
+        "Length": "30",
+        "Shoulder": "24.5"
+      },
+      {
+        "Size": "XXL",
+        "Chest": "51",
+        "Length": "31",
+        "Shoulder": "25"
+      },
+      {
+        "Size": "XXXL",
+        "Chest": "53",
+        "Length": "32",
+        "Shoulder": "25.5"
+      }
+    ],
+    "details": {
+      "concept": "Stranger things",
+      "style": "Zip Hoodie",
+      "sizeChartKey": "zip hoodie - unisex"
+    }
+  },
+  {
+    "sku": "WW057",
+    "season": "Winter",
+    "name": "white-eyes — White",
+    "price": 1260,
+    "description": "Casual Zip Hoodie featuring white-eyes in White. MRP ₹2899 (57% off).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL",
+      "XXXL"
+    ],
+    "colors": [
+      "White"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest": "41",
+        "Length": "26",
+        "Shoulder": "22.5"
+      },
+      {
+        "Size": "S",
+        "Chest": "43",
+        "Length": "27",
+        "Shoulder": "23"
+      },
+      {
+        "Size": "M",
+        "Chest": "45",
+        "Length": "28",
+        "Shoulder": "23.5"
+      },
+      {
+        "Size": "L",
+        "Chest": "47",
+        "Length": "29",
+        "Shoulder": "24"
+      },
+      {
+        "Size": "XL",
+        "Chest": "49",
+        "Length": "30",
+        "Shoulder": "24.5"
+      },
+      {
+        "Size": "XXL",
+        "Chest": "51",
+        "Length": "31",
+        "Shoulder": "25"
+      },
+      {
+        "Size": "XXXL",
+        "Chest": "53",
+        "Length": "32",
+        "Shoulder": "25.5"
+      }
+    ],
+    "details": {
+      "concept": "white-eyes",
+      "style": "Zip Hoodie",
+      "sizeChartKey": "zip hoodie - unisex"
+    }
+  },
+  {
+    "sku": "WW058",
+    "season": "Winter",
+    "name": "white- fight club — White",
+    "price": 1260,
+    "description": "Casual Zip Hoodie featuring white- fight club in White. MRP ₹2899 (57% off).",
+    "category": "Hoodies",
+    "images": [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL",
+      "XXXL"
+    ],
+    "colors": [
+      "White"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 1,
+    "sizeChart": [
+      {
+        "Size": "XS",
+        "Chest": "41",
+        "Length": "26",
+        "Shoulder": "22.5"
+      },
+      {
+        "Size": "S",
+        "Chest": "43",
+        "Length": "27",
+        "Shoulder": "23"
+      },
+      {
+        "Size": "M",
+        "Chest": "45",
+        "Length": "28",
+        "Shoulder": "23.5"
+      },
+      {
+        "Size": "L",
+        "Chest": "47",
+        "Length": "29",
+        "Shoulder": "24"
+      },
+      {
+        "Size": "XL",
+        "Chest": "49",
+        "Length": "30",
+        "Shoulder": "24.5"
+      },
+      {
+        "Size": "XXL",
+        "Chest": "51",
+        "Length": "31",
+        "Shoulder": "25"
+      },
+      {
+        "Size": "XXXL",
+        "Chest": "53",
+        "Length": "32",
+        "Shoulder": "25.5"
+      }
+    ],
+    "details": {
+      "concept": "white- fight club",
+      "style": "Zip Hoodie",
+      "sizeChartKey": "zip hoodie - unisex"
+    }
+  },
+  {
+    "sku": "WW059",
+    "season": "Winter",
+    "name": "Kaboom — Black",
+    "price": 1313,
+    "description": "Premium Joggers featuring Kaboom in Black. MRP ₹2299 (43% off).",
+    "category": "Bottoms",
+    "images": [
+      "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506629905607-8f0b66e06f27?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Black"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 1,
+    "sizeChart": [
+      {
+        "Size": "S",
+        "Waist": "28",
+        "Hip": "38",
+        "Thigh": "23",
+        "Inseam": "29",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "M",
+        "Waist": "30",
+        "Hip": "40",
+        "Thigh": "24",
+        "Inseam": "29.5",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "L",
+        "Waist": "32",
+        "Hip": "42",
+        "Thigh": "25",
+        "Inseam": "30",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "XL",
+        "Waist": "34",
+        "Hip": "44",
+        "Thigh": "26",
+        "Inseam": "30.5",
+        "Outseam": "41.5"
+      }
+    ],
+    "details": {
+      "concept": "Kaboom",
+      "style": "Joggers",
+      "sizeChartKey": "Unisex Joggers"
+    }
+  },
+  {
+    "sku": "WW060",
+    "season": "Winter",
+    "name": "Fight club — White",
+    "price": 1313,
+    "description": "Premium Joggers featuring Fight club in White. MRP ₹2299 (43% off).",
+    "category": "Bottoms",
+    "images": [
+      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506629905607-8f0b66e06f27?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "White"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 4,
+    "sizeChart": [
+      {
+        "Size": "S",
+        "Waist": "28",
+        "Hip": "38",
+        "Thigh": "23",
+        "Inseam": "29",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "M",
+        "Waist": "30",
+        "Hip": "40",
+        "Thigh": "24",
+        "Inseam": "29.5",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "L",
+        "Waist": "32",
+        "Hip": "42",
+        "Thigh": "25",
+        "Inseam": "30",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "XL",
+        "Waist": "34",
+        "Hip": "44",
+        "Thigh": "26",
+        "Inseam": "30.5",
+        "Outseam": "41.5"
+      }
+    ],
+    "details": {
+      "concept": "Fight club",
+      "style": "Joggers",
+      "sizeChartKey": "Unisex Joggers"
+    }
+  },
+  {
+    "sku": "WW061",
+    "season": "Winter",
+    "name": "Street Club / Fight club — Brown",
+    "price": 1313,
+    "description": "Premium Joggers featuring Street Club / Fight club in Brown. MRP ₹2299 (43% off).",
+    "category": "Bottoms",
+    "images": [
+      "https://images.unsplash.com/photo-1506629905607-8f0b66e06f27?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Brown"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 0,
+    "sizeChart": [
+      {
+        "Size": "S",
+        "Waist": "28",
+        "Hip": "38",
+        "Thigh": "23",
+        "Inseam": "29",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "M",
+        "Waist": "30",
+        "Hip": "40",
+        "Thigh": "24",
+        "Inseam": "29.5",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "L",
+        "Waist": "32",
+        "Hip": "42",
+        "Thigh": "25",
+        "Inseam": "30",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "XL",
+        "Waist": "34",
+        "Hip": "44",
+        "Thigh": "26",
+        "Inseam": "30.5",
+        "Outseam": "41.5"
+      }
+    ],
+    "details": {
+      "concept": "Street Club / Fight club",
+      "style": "Joggers",
+      "sizeChartKey": "Unisex Joggers"
+    }
+  },
+  {
+    "sku": "WW062",
+    "season": "Winter",
+    "name": "Skull — Lavender",
+    "price": 1313,
+    "description": "Premium Joggers featuring Skull in Lavender. MRP ₹2299 (43% off).",
+    "category": "Bottoms",
+    "images": [
+      "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506629905607-8f0b66e06f27?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Lavender"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 7,
+    "sizeChart": [
+      {
+        "Size": "S",
+        "Waist": "28",
+        "Hip": "38",
+        "Thigh": "23",
+        "Inseam": "29",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "M",
+        "Waist": "30",
+        "Hip": "40",
+        "Thigh": "24",
+        "Inseam": "29.5",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "L",
+        "Waist": "32",
+        "Hip": "42",
+        "Thigh": "25",
+        "Inseam": "30",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "XL",
+        "Waist": "34",
+        "Hip": "44",
+        "Thigh": "26",
+        "Inseam": "30.5",
+        "Outseam": "41.5"
+      }
+    ],
+    "details": {
+      "concept": "Skull",
+      "style": "Joggers",
+      "sizeChartKey": "Unisex Joggers"
+    }
+  },
+  {
+    "sku": "WW063",
+    "season": "Winter",
+    "name": "Speed car — Blue",
+    "price": 1250,
+    "description": "Casual Joggers featuring Speed car in Blue. MRP ₹2299 (46% off).",
+    "category": "Bottoms",
+    "images": [
+      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506629905607-8f0b66e06f27?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Blue"
+    ],
+    "tags": {
+      "bodyType": [
+        "Slim",
+        "Athletic",
+        "Regular",
+        "Heavy"
+      ],
+      "skinTone": [
+        "Fair",
+        "Light",
+        "Medium",
+        "Olive",
+        "Dark"
+      ],
+      "style": [
+        "Streetwear"
+      ]
+    },
+    "featured": false,
+    "stock": 4,
+    "sizeChart": [
+      {
+        "Size": "S",
+        "Waist": "28",
+        "Hip": "38",
+        "Thigh": "23",
+        "Inseam": "29",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "M",
+        "Waist": "30",
+        "Hip": "40",
+        "Thigh": "24",
+        "Inseam": "29.5",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "L",
+        "Waist": "32",
+        "Hip": "42",
+        "Thigh": "25",
+        "Inseam": "30",
+        "Outseam": "41.5"
+      },
+      {
+        "Size": "XL",
+        "Waist": "34",
+        "Hip": "44",
+        "Thigh": "26",
+        "Inseam": "30.5",
+        "Outseam": "41.5"
+      }
+    ],
+    "details": {
+      "concept": "Speed car",
+      "style": "Joggers",
+      "sizeChartKey": "Unisex Joggers"
+    }
+  },
+  {
     "sku": "1",
     "season": "Summer",
     "name": "Oversized Premium T-Shirt — Bright Orange",

@@ -10,8 +10,11 @@ function readJson(relativePath) {
 }
 
 const winterCollection = readJson("data/winterCollection.json");
+const updatedWinterCollection = readJson("data/updatedwintercollection.json");
 const summerCollection = readJson("data/summercollection.json");
-const products = buildCatalogFromSources(winterCollection, summerCollection).map(({ _id, ...product }) => product);
+const products = buildCatalogFromSources(winterCollection, summerCollection, updatedWinterCollection).map(
+  ({ _id, ...product }) => product
+);
 const outputPath = path.join(rootDir, "data", "seed-products.json");
 
 fs.writeFileSync(outputPath, `${JSON.stringify(products, null, 2)}\n`);

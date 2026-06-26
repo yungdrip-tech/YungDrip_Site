@@ -4,7 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { cn, formatCurrency } from "@/lib/utils";
+import ProductBadges from "@/components/product-badges";
+import ProductPrice from "@/components/product-price";
+import { cn } from "@/lib/utils";
 
 export default function ProductCard({ product, priority = false, className }) {
   const secondaryImage = product.images[1] || product.images[0];
@@ -17,6 +19,9 @@ export default function ProductCard({ product, priority = false, className }) {
     >
       <Link href={`/product/${product._id}`} className="block">
         <div className="relative aspect-[4/5] overflow-hidden bg-neutral-100">
+          <div className="absolute left-3 top-3 z-10">
+            <ProductBadges product={product} variant="overlay" />
+          </div>
           <Image
             src={product.images[0]}
             alt={product.name}
@@ -39,9 +44,10 @@ export default function ProductCard({ product, priority = false, className }) {
             <p className="text-xs uppercase tracking-[0.28em] text-black/45">
               {product.category}
               {product.season ? ` · ${product.season}` : ""}
+              {product.gender ? ` · ${product.gender}` : ""}
             </p>
             <h3 className="mt-2 text-[1.55rem] font-semibold leading-tight">{product.name}</h3>
-            <p className="mt-3 text-xs uppercase tracking-[0.2em] text-black/55">{formatCurrency(product.price)}</p>
+            <ProductPrice product={product} size="sm" className="mt-3" />
           </div>
           <div className="rounded-full border border-black/10 p-2 transition group-hover:border-black group-hover:bg-black group-hover:text-white">
             <ArrowUpRight className="h-4 w-4" />

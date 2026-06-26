@@ -1,23 +1,42 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Check, Sparkles } from "lucide-react";
 import Button from "@/components/button";
 import StyleAIModal from "@/components/style-ai-modal";
 import { useCart } from "@/components/providers/cart-provider";
-import { cn, formatCurrency } from "@/lib/utils";
+import ProductBadges from "@/components/product-badges";
+import ProductPrice from "@/components/product-price";
+import { getFirstInStockSize, getStockForSize, getTotalStock } from "@/lib/stock";
+import { cn } from "@/lib/utils";
 
 export default function ProductPurchasePanel({ product }) {
   const availableSizes = Array.isArray(product.sizes) ? product.sizes : [];
   const availableColors = Array.isArray(product.colors) ? product.colors : [];
-  const [selectedSize, setSelectedSize] = useState(availableSizes[0] || "");
+  const [selectedSize, setSelectedSize] = useState(() => getFirstInStockSize(product));
   const [selectedColor, setSelectedColor] = useState(availableColors[0] || "");
   const [isAdding, setIsAdding] = useState(false);
   const [styleAIOpen, setStyleAIOpen] = useState(false);
   const { addItem } = useCart();
-  const canAddToCart = Boolean(selectedSize && selectedColor);
-  const availableStock = Number.isInteger(product.stock) ? product.stock : null;
-  const isOutOfStock = availableStock !== null && availableStock <= 0;
+  const selectedStock = getStockForSize(product, selectedSize);
+  const totalStock = getTotalStock(product);
+  const isSelectedOutOfStock = selectedStock !== null && selectedStock <= 0;
+  const isFullyOutOfStock = totalStock <= 0;
+  const canAddToCart = Boolean(selectedSize && selectedColor && !isSelectedOutOfStock);
+
+  useEffect(() => {
+    const nextSize = getFirstInStockSize(product);
+
+    if (!nextSize) {
+      return;
+    }
+
+    const currentStock = getStockForSize(product, selectedSize);
+
+    if (!selectedSize || currentStock === null || currentStock <= 0) {
+      setSelectedSize(nextSize);
+    }
+  }, [product, selectedSize]);
 
   async function handleAddToCart() {
     if (!canAddToCart) {
@@ -46,10 +65,13 @@ export default function ProductPurchasePanel({ product }) {
           </span>
         ) : null}
       </div>
-      <p className="mt-4 text-2xl font-semibold">{formatCurrency(product.price)}</p>
-      {availableStock !== null ? (
-        <p className={cn("mt-2 text-sm", isOutOfStock ? "text-red-600" : "text-black/55")}>
-          {isOutOfStock ? "Out of stock" : `${availableStock} in stock`}
+      <ProductBadges product={product} className="mt-4" />
+      <ProductPrice product={product} size="md" showDiscount className="mt-3" />
+      {selectedStock !== null ? (
+        <p className={cn("mt-2 text-sm", isSelectedOutOfStock ? "text-red-600" : "text-black/55")}>
+          {isSelectedOutOfStock
+            ? `${selectedSize} is out of stock`
+            : `${selectedStock} left in ${selectedSize}${totalStock !== selectedStock ? ` · ${totalStock} total` : ""}`}
         </p>
       ) : null}
       <p className="mt-5 leading-7 text-black/65">{product.description}</p>
@@ -58,21 +80,28 @@ export default function ProductPurchasePanel({ product }) {
         <div>
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-black/55">Size</p>
           <div className="flex flex-wrap gap-3">
-            {availableSizes.map((size) => (
-              <button
-                key={size}
-                type="button"
-                onClick={() => setSelectedSize(size)}
-                className={cn(
-                  "rounded-full border px-4 py-2 text-sm transition",
-                  selectedSize === size
-                    ? "border-ink bg-ink text-white"
-                    : "border-black/10 bg-white hover:border-black/20"
-                )}
-              >
-                {size}
-              </button>
-            ))}
+            {availableSizes.map((size) => {
+              const sizeStock = getStockForSize(product, size);
+              const isUnavailable = sizeStock !== null && sizeStock <= 0;
+
+              return (
+                <button
+                  key={size}
+                  type="button"
+                  onClick={() => setSelectedSize(size)}
+                  disabled={isUnavailable}
+                  className={cn(
+                    "rounded-full border px-4 py-2 text-sm transition",
+                    selectedSize === size
+                      ? "border-ink bg-ink text-white"
+                      : "border-black/10 bg-white hover:border-black/20",
+                    isUnavailable && "cursor-not-allowed opacity-40 line-through"
+                  )}
+                >
+                  {size}
+                </button>
+              );
+            })}
             {availableSizes.length === 0 ? (
               <p className="text-sm text-black/55">Size information is currently unavailable.</p>
             ) : null}
@@ -105,14 +134,16 @@ export default function ProductPurchasePanel({ product }) {
       </div>
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-        <Button onClick={handleAddToCart} className="min-w-[220px]" disabled={!canAddToCart || isAdding || isOutOfStock}>
+        <Button onClick={handleAddToCart} className="min-w-[220px]" disabled={!canAddToCart || isAdding}>
           {isAdding ? (
             <span className="inline-flex items-center gap-2">
               <Check className="h-4 w-4" />
               Added
             </span>
-          ) : isOutOfStock ? (
+          ) : isFullyOutOfStock ? (
             "Out of Stock"
+          ) : isSelectedOutOfStock ? (
+            "Select Available Size"
           ) : (
             "Add to Cart"
           )}

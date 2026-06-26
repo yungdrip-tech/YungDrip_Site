@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import ConfirmModal from "@/components/confirm-modal";
 import { useAuth } from "@/components/providers/auth-provider";
 import { fetchAdminUsers, updateAdminUserRole } from "@/lib/api-client";
 import { formatDate } from "@/lib/utils";
@@ -11,6 +12,7 @@ export default function AdminUserList() {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [updatingId, setUpdatingId] = useState("");
+  const [roleChangeTarget, setRoleChangeTarget] = useState(null);
 
   useEffect(() => {
     if (!currentUser?.isAdmin) {
@@ -45,13 +47,12 @@ export default function AdminUserList() {
     };
   }, [currentUser?.isAdmin]);
 
-  async function handleRoleToggle(userId, currentRole) {
-    const nextRole = currentRole === "admin" ? "user" : "admin";
-    const confirm = window.confirm(
-      `Change this user's role to "${nextRole}"?`
-    );
+  async function handleRoleToggleConfirm() {
+    if (!roleChangeTarget) {
+      return;
+    }
 
-    if (!confirm) return;
+    const { userId, nextRole } = roleChangeTarget;
 
     try {
       setUpdatingId(userId);
@@ -60,6 +61,7 @@ export default function AdminUserList() {
       setUsers((current) =>
         current.map((u) => (u._id === userId ? payload.user : u))
       );
+      setRoleChangeTarget(null);
     } catch (updateError) {
       setError(updateError.message);
     } finally {
@@ -123,7 +125,12 @@ export default function AdminUserList() {
               {!isSelf ? (
                 <button
                   type="button"
-                  onClick={() => handleRoleToggle(u._id, u.role)}
+                  onClick={() =>
+                    setRoleChangeTarget({
+                      userId: u._id,
+                      nextRole: u.role === "admin" ? "user" : "admin"
+                    })
+                  }
                   disabled={updatingId === u._id}
                   className="flex-shrink-0 rounded-full border border-black/10 px-4 py-2 text-xs uppercase tracking-[0.18em] transition hover:border-black/20 hover:bg-black/5 disabled:opacity-50"
                 >
@@ -138,6 +145,25 @@ export default function AdminUserList() {
           );
         })}
       </div>
+
+      <ConfirmModal
+        open={Boolean(roleChangeTarget)}
+        onClose={() => {
+          if (!updatingId) {
+            setRoleChangeTarget(null);
+          }
+        }}
+        onConfirm={handleRoleToggleConfirm}
+        title="Change user role?"
+        description={
+          roleChangeTarget
+            ? `Change this user's role to "${roleChangeTarget.nextRole}"?`
+            : undefined
+        }
+        confirmLabel="Change role"
+        cancelLabel="Cancel"
+        isLoading={Boolean(updatingId)}
+      />
     </div>
   );
 }

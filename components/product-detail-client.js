@@ -12,6 +12,8 @@ import { fetchProductById, fetchProducts } from "@/lib/api-client";
 import { getCatalogProductById } from "@/lib/catalog";
 import ProductSpecsPanel from "@/components/product-specs-panel";
 
+const STOCK_REFRESH_MS = 15000;
+
 function ProductDetailSkeleton() {
   return (
     <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
@@ -79,6 +81,56 @@ export default function ProductDetailClient({ productId }) {
     };
   }, [productId]);
 
+  useEffect(() => {
+    if (!productId || isLoading || error) {
+      return undefined;
+    }
+
+    let cancelled = false;
+
+    async function refreshProductStock() {
+      try {
+        const freshProduct = await fetchProductById(productId);
+
+        if (cancelled || !freshProduct) {
+          return;
+        }
+
+        setProduct((current) =>
+          current
+            ? {
+                ...current,
+                stock: freshProduct.stock,
+                stockBySize: freshProduct.stockBySize,
+                outOfStock: freshProduct.outOfStock,
+                sizes: freshProduct.sizes
+              }
+            : freshProduct
+        );
+      } catch {
+        // Keep the last loaded product if stock refresh fails.
+      }
+    }
+
+    const intervalId = window.setInterval(refreshProductStock, STOCK_REFRESH_MS);
+    const handleFocus = () => refreshProductStock();
+    const handleVisibility = () => {
+      if (document.visibilityState === "visible") {
+        refreshProductStock();
+      }
+    };
+
+    window.addEventListener("focus", handleFocus);
+    document.addEventListener("visibilitychange", handleVisibility);
+
+    return () => {
+      cancelled = true;
+      window.clearInterval(intervalId);
+      window.removeEventListener("focus", handleFocus);
+      document.removeEventListener("visibilitychange", handleVisibility);
+    };
+  }, [productId, isLoading, error]);
+
   if (isLoading) {
     return <ProductDetailSkeleton />;
   }
@@ -102,11 +154,9 @@ export default function ProductDetailClient({ productId }) {
   return (
     <>
       <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-        <Reveal>
-          <ProductGallery images={product.images} alt={product.name} />
-        </Reveal>
+        <ProductGallery images={product.images} alt={product.name} />
         <Reveal delay={0.08}>
-          <div className="space-y-4">
+          <div className="space-y-4 lg:sticky lg:top-24 lg:self-start">
             <ProductPurchasePanel product={product} />
             <ProductSpecsPanel product={product} />
             <OutfitRecommendationModal product={product} />

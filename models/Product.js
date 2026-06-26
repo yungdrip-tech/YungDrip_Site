@@ -14,6 +14,10 @@ const productSchema = new Schema(
       required: true,
       min: 0
     },
+    mrp: {
+      type: Number,
+      min: 0
+    },
     description: {
       type: String,
       required: true,
@@ -74,6 +78,16 @@ const productSchema = new Schema(
       min: 0,
       default: 0
     },
+    stockBySize: {
+      type: Map,
+      of: Number,
+      default: {}
+    },
+    outOfStock: {
+      type: Boolean,
+      default: false,
+      index: true
+    },
     sku: {
       type: String,
       trim: true,
@@ -84,6 +98,16 @@ const productSchema = new Schema(
       type: String,
       enum: ["Winter", "Summer"],
       index: true
+    },
+    gender: {
+      type: String,
+      enum: ["Male", "Female", "Unisex"],
+      index: true
+    },
+    saveTag: {
+      type: Number,
+      min: 0,
+      max: 100
     },
     details: {
       fit: { type: String, trim: true },

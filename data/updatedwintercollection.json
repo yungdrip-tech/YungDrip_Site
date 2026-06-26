@@ -1,0 +1,632 @@
+[
+  {
+    "category": "Sweatshirt",
+    "subcategory": "Men",
+    "design": "Urban Legacy (MPS)",
+    "color": "Green",
+    "quality": "Premium",
+    "stock": {
+      "S": 0,
+      "M": 0,
+      "L": 0,
+      "XL": 0,
+      "XXL": 0,
+      "total": 0
+    },
+    "pricing": {
+      "mrp": 2669,
+      "save_tag_pct": "51",
+      "price_with_gst": 1313
+    },
+    "link": ""
+  },
+  {
+    "category": "Sweatshirt",
+    "subcategory": "Men",
+    "design": "Art is You (MPS)",
+    "color": "Black",
+    "quality": "Premium",
+    "stock": {
+      "S": 0,
+      "M": 0,
+      "L": 1,
+      "XL": 0,
+      "XXL": 0,
+      "total": 1
+    },
+    "pricing": {
+      "mrp": 2669,
+      "save_tag_pct": "46",
+      "price_with_gst": 1444
+    },
+    "link": ""
+  },
+  {
+    "category": "Sweatshirt",
+    "subcategory": "Women",
+    "design": "Smoke (WPS)",
+    "color": "Black",
+    "quality": "Premium",
+    "stock": {
+      "S": 0,
+      "M": 0,
+      "L": 1,
+      "XL": 0,
+      "XXL": 0,
+      "total": 1
+    },
+    "pricing": {
+      "mrp": 2669,
+      "save_tag_pct": "51",
+      "price_with_gst": 1313
+    },
+    "link": ""
+  },
+  {
+    "category": "Sweatshirt",
+    "subcategory": "Women",
+    "design": "Bad Habits (WPS)",
+    "color": "White",
+    "quality": "Premium",
+    "stock": {
+      "S": 0,
+      "M": 0,
+      "L": 1,
+      "XL": 0,
+      "XXL": 0,
+      "total": 1
+    },
+    "pricing": {
+      "mrp": 2799,
+      "save_tag_pct": "49",
+      "price_with_gst": 1444
+    },
+    "link": "https://drive.google.com/file/d/10QDrWYZaJxgsSwnhoVHBrxHeXlYt1eOe/view?usp=sharing"
+  },
+  {
+    "category": "Casual Sweatshirt/ Unisex",
+    "subcategory": "",
+    "design": "Flower (C.S)",
+    "color": "off white",
+    "quality": "Casual",
+    "stock": {
+      "S": 0,
+      "M": 0,
+      "L": 0,
+      "XL": 0,
+      "XXL": 0,
+      "total": 0
+    },
+    "pricing": {
+      "mrp": 2599,
+      "save_tag_pct": "45",
+      "price_with_gst": 1444
+    },
+    "link": "https://drive.google.com/file/d/1BSOy-UmHkDo6dSM-jAVDsX5lzHUF5yuW/view?usp=sharing"
+  },
+  {
+    "category": "Casual Sweatshirt/ Unisex",
+    "subcategory": "",
+    "design": "green Car (C.S)",
+    "color": "Green",
+    "quality": "Casual",
+    "stock": {
+      "S": 0,
+      "M": 0,
+      "L": 0,
+      "XL": 0,
+      "XXL": 0,
+      "total": 0
+    },
+    "pricing": {
+      "mrp": 2599,
+      "save_tag_pct": "51",
+      "price_with_gst": 1286
+    },
+    "link": ""
+  },
+  {
+    "category": "Casual Sweatshirt/ Unisex",
+    "subcategory": "",
+    "design": "Kage (C.S)",
+    "color": "Grey",
+    "quality": "Casual",
+    "stock": {
+      "S": 0,
+      "M": 0,
+      "L": 0,
+      "XL": 0,
+      "XXL": 0,
+      "total": 0
+    },
+    "pricing": {
+      "mrp": 2599,
+      "save_tag_pct": "51",
+      "price_with_gst": 1286
+    },
+    "link": ""
+  },
+  {
+    "category": "Hoodies",
+    "subcategory": "Women",
+    "design": "Euphoria",
+    "color": "Black",
+    "quality": "Premium",
+    "stock": {
+      "S": 0,
+      "M": 1,
+      "L": 2,
+      "XL": 4,
+      "XXL": 5,
+      "total": 12
+    },
+    "pricing": {
+      "mrp": 3099,
+      "save_tag_pct": "51",
+      "price_with_gst": 1523
+    },
+    "link": "https://drive.google.com/file/d/1U1DBKv0Cu2smN4mdG6r5bpWGCntKn-9K/view?usp=sharing"
+  },
+  {
+    "category": "Hoodies",
+    "subcategory": "Women",
+    "design": "Girl Face / Brown face",
+    "color": "Brown",
+    "quality": "Premium",
+    "stock": {
+      "S": 1,
+      "M": 1,
+      "L": 5,
+      "XL": 3,
+      "XXL": 3,
+      "total": 13
+    },
+    "pricing": {
+      "mrp": 3099,
+      "save_tag_pct": "51",
+      "price_with_gst": 1523
+    },
+    "link": ""
+  },
+  {
+    "category": "Hoodies",
+    "subcategory": "Women",
+    "design": "Wing",
+    "color": "off-white",
+    "quality": "Premium",
+    "stock": {
+      "S": 0,
+      "M": 2,
+      "L": 4,
+      "XL": 3,
+      "XXL": 2,
+      "total": 11
+    },
+    "pricing": {
+      "mrp": 3199,
+      "save_tag_pct": "53",
+      "price_with_gst": 1523
+    },
+    "link": ""
+  },
+  {
+    "category": "Hoodies",
+    "subcategory": "Men",
+    "design": "Cold Stare",
+    "color": "Black",
+    "quality": "Premium",
+    "stock": {
+      "S": 0,
+      "M": 2,
+      "L": 2,
+      "XL": 4,
+      "XXL": 1,
+      "total": 9
+    },
+    "pricing": {
+      "mrp": 3099,
+      "save_tag_pct": "50",
+      "price_with_gst": 1575
+    },
+    "link": "https://drive.google.com/file/d/1pqyC1MIyRZU9wIYiSuvbkZYj_xBm9XfR/view?usp=sharing"
+  },
+  {
+    "category": "Hoodies",
+    "subcategory": "Men",
+    "design": "Street clash- brown",
+    "color": "Brown",
+    "quality": "Premium",
+    "stock": {
+      "S": 0,
+      "M": 0,
+      "L": 3,
+      "XL": 2,
+      "XXL": 2,
+      "total": 7
+    },
+    "pricing": {
+      "mrp": 3099,
+      "save_tag_pct": "50",
+      "price_with_gst": 1575
+    },
+    "link": "https://drive.google.com/file/d/1dmTpzOkK_4aSUC4GQ9eC6rYnPk_3K1Rd/view?usp=sharing"
+  },
+  {
+    "category": "Hoodies",
+    "subcategory": "Men",
+    "design": "Speed King",
+    "color": "off-white",
+    "quality": "Premium",
+    "stock": {
+      "S": 0,
+      "M": 1,
+      "L": 2,
+      "XL": 3,
+      "XXL": 1,
+      "total": 7
+    },
+    "pricing": {
+      "mrp": 3199,
+      "save_tag_pct": "51",
+      "price_with_gst": 1575
+    },
+    "link": "https://drive.google.com/file/d/18oTkiFe_FuQf6U_k6gzs1fDt9nzDO7SJ/view?usp=sharing"
+  },
+  {
+    "category": "Casual Hoodies/ Unisex",
+    "subcategory": "",
+    "design": "Young Blood",
+    "color": "Red",
+    "quality": "Premium",
+    "stock": {
+      "S": 0,
+      "M": 0,
+      "L": 4,
+      "XL": 3,
+      "XXL": 2,
+      "total": 9
+    },
+    "pricing": {
+      "mrp": 2899,
+      "save_tag_pct": "43",
+      "price_with_gst": 1680
+    },
+    "link": ""
+  },
+  {
+    "category": "Casual Hoodies/ Unisex",
+    "subcategory": "",
+    "design": "Insurgence",
+    "color": "Red",
+    "quality": "Casual",
+    "stock": {
+      "S": 0,
+      "M": 0,
+      "L": 2,
+      "XL": 2,
+      "XXL": 2,
+      "total": 6
+    },
+    "pricing": {
+      "mrp": 2999,
+      "save_tag_pct": "48",
+      "price_with_gst": 1575
+    },
+    "link": "https://drive.google.com/file/d/1BSOy-UmHkDo6dSM-jAVDsX5lzHUF5yuW/view?usp=sharing"
+  },
+  {
+    "category": "Casual Hoodies/ Unisex",
+    "subcategory": "",
+    "design": "Ferrari",
+    "color": "Off white",
+    "quality": "Casual",
+    "stock": {
+      "S": 0,
+      "M": 1,
+      "L": 2,
+      "XL": 5,
+      "XXL": 2,
+      "total": 10
+    },
+    "pricing": {
+      "mrp": 3299,
+      "save_tag_pct": "53",
+      "price_with_gst": 1575
+    },
+    "link": "https://drive.google.com/file/d/1H500CtnEI-z9rBgjOZ1sCbk0dHoJlCZ-/view?usp=sharing"
+  },
+  {
+    "category": "Crop hoodies",
+    "subcategory": "",
+    "design": "imperious",
+    "color": "Black",
+    "quality": "Premium",
+    "stock": {
+      "S": 0,
+      "M": 0,
+      "L": 0,
+      "XL": 0,
+      "XXL": 0,
+      "total": 0
+    },
+    "pricing": {
+      "mrp": 2499,
+      "save_tag_pct": "42",
+      "price_with_gst": 1470
+    },
+    "link": "https://drive.google.com/file/d/10QDrWYZaJxgsSwnhoVHBrxHeXlYt1eOe/view?usp=sharing"
+  },
+  {
+    "category": "Crop hoodies",
+    "subcategory": "",
+    "design": "Speed car",
+    "color": "White",
+    "quality": "Casual",
+    "stock": {
+      "S": 0,
+      "M": 0,
+      "L": 0,
+      "XL": 0,
+      "XXL": 0,
+      "total": 0
+    },
+    "pricing": {
+      "mrp": 2299,
+      "save_tag_pct": "39",
+      "price_with_gst": 1418
+    },
+    "link": "https://drive.google.com/file/d/109eic-_u8Me5TqjDTVMOMyG2qjfLBeko/view?usp=sharing"
+  },
+  {
+    "category": "Crop hoodies",
+    "subcategory": "",
+    "design": "hotter",
+    "color": "Black",
+    "quality": "Casual",
+    "stock": {
+      "S": 0,
+      "M": 0,
+      "L": 0,
+      "XL": 0,
+      "XXL": 0,
+      "total": 0
+    },
+    "pricing": {
+      "mrp": 2299,
+      "save_tag_pct": "39",
+      "price_with_gst": 1418
+    },
+    "link": "https://drive.google.com/file/d/1zJjpBvDVIesa0g2u_PglXQ16-kOr44cW/view?usp=sharing"
+  },
+  {
+    "category": "Crop hoodies",
+    "subcategory": "",
+    "design": "flower",
+    "color": "Green",
+    "quality": "Casual",
+    "stock": {
+      "S": 0,
+      "M": 0,
+      "L": 0,
+      "XL": 0,
+      "XXL": 0,
+      "total": 0
+    },
+    "pricing": {
+      "mrp": 2299,
+      "save_tag_pct": "51",
+      "price_with_gst": 1129
+    },
+    "link": "https://drive.google.com/file/d/1mUGnSGuPH-acnWT2pCKHEHFBT0oEv0-y/view?usp=drive_link"
+  },
+  {
+    "category": "Zip Hoodie",
+    "subcategory": "",
+    "design": "GTA",
+    "color": "maroon",
+    "quality": "Premium",
+    "stock": {
+      "S": 1,
+      "M": 0,
+      "L": 0,
+      "XL": 0,
+      "XXL": 0,
+      "total": 1
+    },
+    "pricing": {
+      "mrp": 2499,
+      "save_tag_pct": "48",
+      "price_with_gst": 1313
+    },
+    "link": ""
+  },
+  {
+    "category": "Zip Hoodie",
+    "subcategory": "",
+    "design": "Matrix",
+    "color": "black",
+    "quality": "Premium",
+    "stock": {
+      "S": 1,
+      "M": 0,
+      "L": 0,
+      "XL": 0,
+      "XXL": 0,
+      "total": 1
+    },
+    "pricing": {
+      "mrp": 2499,
+      "save_tag_pct": "48",
+      "price_with_gst": 1313
+    },
+    "link": ""
+  },
+  {
+    "category": "Zip Hoodie",
+    "subcategory": "",
+    "design": "Stranger things",
+    "color": "black",
+    "quality": "Premium",
+    "stock": {
+      "S": 0,
+      "M": 0,
+      "L": 0,
+      "XL": 0,
+      "XXL": 0,
+      "total": 0
+    },
+    "pricing": {
+      "mrp": 2499,
+      "save_tag_pct": "50",
+      "price_with_gst": 1260
+    },
+    "link": ""
+  },
+  {
+    "category": "Zip Hoodie",
+    "subcategory": "",
+    "design": "white-eyes",
+    "color": "white",
+    "quality": "Casual",
+    "stock": {
+      "S": 0,
+      "M": 0,
+      "L": 0,
+      "XL": 0,
+      "XXL": 0,
+      "total": 0
+    },
+    "pricing": {
+      "mrp": 2899,
+      "save_tag_pct": "57",
+      "price_with_gst": 1260
+    },
+    "link": ""
+  },
+  {
+    "category": "Zip Hoodie",
+    "subcategory": "",
+    "design": "white- fight club",
+    "color": "white",
+    "quality": "Casual",
+    "stock": {
+      "S": 0,
+      "M": 1,
+      "L": 0,
+      "XL": 0,
+      "XXL": 0,
+      "total": 1
+    },
+    "pricing": {
+      "mrp": 2899,
+      "save_tag_pct": "57",
+      "price_with_gst": 1260
+    },
+    "link": ""
+  },
+  {
+    "category": "Joggers",
+    "subcategory": "",
+    "design": "Kaboom",
+    "color": "Black",
+    "quality": "Premium",
+    "stock": {
+      "S": 0,
+      "M": 0,
+      "L": 1,
+      "XL": 0,
+      "XXL": 0,
+      "total": 1
+    },
+    "pricing": {
+      "mrp": 2299,
+      "save_tag_pct": "43",
+      "price_with_gst": 1313
+    },
+    "link": ""
+  },
+  {
+    "category": "Joggers",
+    "subcategory": "",
+    "design": "Fight club",
+    "color": "White",
+    "quality": "Premium",
+    "stock": {
+      "S": 0,
+      "M": 3,
+      "L": 1,
+      "XL": 0,
+      "XXL": 0,
+      "total": 4
+    },
+    "pricing": {
+      "mrp": 2299,
+      "save_tag_pct": "43",
+      "price_with_gst": 1313
+    },
+    "link": ""
+  },
+  {
+    "category": "Joggers",
+    "subcategory": "",
+    "design": "Street Club / Fight club",
+    "color": "Brown",
+    "quality": "Premium",
+    "stock": {
+      "S": 0,
+      "M": 0,
+      "L": 0,
+      "XL": 0,
+      "XXL": 0,
+      "total": 0
+    },
+    "pricing": {
+      "mrp": 2299,
+      "save_tag_pct": "43",
+      "price_with_gst": 1313
+    },
+    "link": ""
+  },
+  {
+    "category": "Joggers",
+    "subcategory": "",
+    "design": "Skull",
+    "color": "Lavender",
+    "quality": "Premium",
+    "stock": {
+      "S": 1,
+      "M": 3,
+      "L": 2,
+      "XL": 1,
+      "XXL": 0,
+      "total": 7
+    },
+    "pricing": {
+      "mrp": 2299,
+      "save_tag_pct": "43",
+      "price_with_gst": 1313
+    },
+    "link": ""
+  },
+  {
+    "category": "Joggers",
+    "subcategory": "",
+    "design": "Speed car",
+    "color": "blue",
+    "quality": "Casual",
+    "stock": {
+      "S": 3,
+      "M": 1,
+      "L": 0,
+      "XL": 0,
+      "XXL": 0,
+      "total": 4
+    },
+    "pricing": {
+      "mrp": 2299,
+      "save_tag_pct": "46",
+      "price_with_gst": 1250
+    },
+    "link": ""
+  }
+]

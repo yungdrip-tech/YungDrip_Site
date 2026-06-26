@@ -3,10 +3,13 @@
 import Image from "next/image";
 import { useDeferredValue, useEffect, useState } from "react";
 import Button from "@/components/button";
+import ConfirmModal from "@/components/confirm-modal";
 import { useAuth } from "@/components/providers/auth-provider";
-import { deleteAdminProduct, fetchProducts } from "@/lib/api-client";
+import { deleteAdminProduct, fetchProducts, updateAdminProduct } from "@/lib/api-client";
 import { getCategories } from "@/lib/product-utils";
-import { formatCurrency } from "@/lib/utils";
+import ProductBadges from "@/components/product-badges";
+import ProductPrice from "@/components/product-price";
+import { formatStockBySizeSummary, isProductOutOfStock } from "@/lib/stock";
 
 const sortOptions = [
   { value: "default", label: "Newest first" },
@@ -38,6 +41,8 @@ export default function AdminProductList() {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [deletingId, setDeletingId] = useState("");
+  const [togglingStockId, setTogglingStockId] = useState("");
+  const [deleteTarget, setDeleteTarget] = useState(null);
 
   const deferredSearch = useDeferredValue(search);
 
@@ -110,8 +115,12 @@ export default function AdminProductList() {
     };
   }, [user?.isAdmin, deferredSearch, selectedCategory, selectedSeason, selectedSort]);
 
-  async function handleDelete(id, name) {
-    if (!window.confirm(`Delete "${name}"? This cannot be undone.`)) return;
+  async function handleDeleteConfirm() {
+    if (!deleteTarget) {
+      return;
+    }
+
+    const { id } = deleteTarget;
 
     try {
       setDeletingId(id);
@@ -119,10 +128,28 @@ export default function AdminProductList() {
       await deleteAdminProduct(id);
       setProducts((current) => current.filter((p) => p._id !== id));
       setTotalCount((current) => Math.max(0, current - 1));
+      setDeleteTarget(null);
     } catch (deleteError) {
       setError(deleteError.message);
     } finally {
       setDeletingId("");
+    }
+  }
+
+  async function handleToggleOutOfStock(product) {
+    const nextOutOfStock = !product.outOfStock;
+
+    try {
+      setTogglingStockId(product._id);
+      setError("");
+      const updatedProduct = await updateAdminProduct(product._id, { outOfStock: nextOutOfStock });
+      setProducts((current) =>
+        current.map((item) => (item._id === product._id ? { ...item, ...updatedProduct } : item))
+      );
+    } catch (toggleError) {
+      setError(toggleError.message);
+    } finally {
+      setTogglingStockId("");
     }
   }
 
@@ -275,24 +302,43 @@ export default function AdminProductList() {
                       Featured
                     </span>
                   ) : null}
+                  {isProductOutOfStock(product) ? (
+                    <span className="rounded-full bg-red-100 px-2 py-0.5 text-[10px] uppercase tracking-[0.15em] text-red-700">
+                      Out of stock
+                    </span>
+                  ) : null}
+                  <ProductBadges product={product} />
                 </div>
                 <p className="mt-0.5 text-sm text-black/55">
-                  {product.category} • {formatCurrency(product.price)}
-                  {product.sku ? ` • SKU ${product.sku}` : ""}
+                  {product.category}
+                  {product.sku ? ` · SKU ${product.sku}` : ""}
                 </p>
+                <ProductPrice product={product} size="sm" className="mt-1" />
                 <p className="mt-0.5 text-xs text-black/40">
                   Sizes: {product.sizes?.join(", ")} · Colors: {product.colors?.join(", ")} · Stock:{" "}
-                  {product.stock ?? 0}
+                  {formatStockBySizeSummary(product)}
                 </p>
               </div>
 
               <div className="flex flex-shrink-0 items-center gap-2">
+                <Button
+                  variant="secondary"
+                  size="sm"
+                  onClick={() => handleToggleOutOfStock(product)}
+                  disabled={togglingStockId === product._id}
+                >
+                  {togglingStockId === product._id
+                    ? "Updating..."
+                    : isProductOutOfStock(product)
+                      ? "Mark in stock"
+                      : "Mark out of stock"}
+                </Button>
                 <Button href={`/admin/products/${product._id}`} asChild variant="secondary">
                   Edit
                 </Button>
                 <Button
                   variant="ghost"
-                  onClick={() => handleDelete(product._id, product.name)}
+                  onClick={() => setDeleteTarget({ id: product._id, name: product.name })}
                   disabled={deletingId === product._id}
                   className="text-red-600 hover:bg-red-50"
                 >
@@ -303,6 +349,24 @@ export default function AdminProductList() {
           ))}
         </div>
       )}
+
+      <ConfirmModal
+        open={Boolean(deleteTarget)}
+        onClose={() => {
+          if (!deletingId) {
+            setDeleteTarget(null);
+          }
+        }}
+        onConfirm={handleDeleteConfirm}
+        title="Delete product?"
+        description={
+          deleteTarget ? `Delete "${deleteTarget.name}"? This cannot be undone.` : undefined
+        }
+        confirmLabel="Delete product"
+        cancelLabel="Keep product"
+        variant="danger"
+        isLoading={Boolean(deletingId)}
+      />
     </div>
   );
 }

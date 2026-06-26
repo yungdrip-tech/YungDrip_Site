@@ -38,9 +38,7 @@ function isValidProductForCart(product, selection) {
   );
 }
 
-function getAvailableStock(product) {
-  return Number.isInteger(product?.stock) ? product.stock : null;
-}
+import { getStockForSize } from "@/lib/stock";
 
 export function CartProvider({ children }) {
   const { user, isLoading: authLoading } = useAuth();
@@ -149,10 +147,15 @@ export function CartProvider({ children }) {
       return false;
     }
 
-    const availableStock = getAvailableStock(product);
+    if (product.outOfStock) {
+      showToast(`${product.name} is currently out of stock.`);
+      return false;
+    }
+
+    const availableStock = getStockForSize(product, selection.size);
 
     if (availableStock !== null && availableStock <= 0) {
-      showToast(`${product.name} is out of stock.`);
+      showToast(`${product.name} is out of stock in ${selection.size}.`);
       return false;
     }
 
@@ -174,7 +177,7 @@ export function CartProvider({ children }) {
       const nextQuantity = existingItem ? existingItem.quantity + 1 : 1;
 
       if (availableStock !== null && nextQuantity > availableStock) {
-        showToast(`Only ${availableStock} left in stock.`);
+        showToast(`Only ${availableStock} left in ${selection.size}.`);
         return currentItems;
       }
 

@@ -13,11 +13,16 @@ async function loadCatalogProducts() {
   const winterCollection = JSON.parse(
     fs.readFileSync(path.join(process.cwd(), "data", "winterCollection.json"), "utf8")
   );
+  const updatedWinterCollection = JSON.parse(
+    fs.readFileSync(path.join(process.cwd(), "data", "updatedwintercollection.json"), "utf8")
+  );
   const summerCollection = JSON.parse(
     fs.readFileSync(path.join(process.cwd(), "data", "summercollection.json"), "utf8")
   );
 
-  return buildCatalogFromSources(winterCollection, summerCollection).map(({ _id, ...product }) => product);
+  return buildCatalogFromSources(winterCollection, summerCollection, updatedWinterCollection).map(
+    ({ _id, ...product }) => product
+  );
 }
 
 function normalizeSeedProducts(items) {
